@@ -103,7 +103,7 @@ namespace Microsoft.Web.Portal.Common
             {
                 if (_mediaStorage == null)
                 {
-                    _mediaStorage = GetValue("Orchard.DevOffice.Common.MediaStorage");
+                    _mediaStorage = GetValue("Microsoft.Web.Portal.MediaStorage");
                 }
                 return _mediaStorage;
             }
@@ -121,7 +121,7 @@ namespace Microsoft.Web.Portal.Common
             {
                 if (_themeAssetStorage == null)
                 {
-                    _themeAssetStorage = GetValue("Orchard.DevOffice.Common.ThemeAssetStorage");
+                    _themeAssetStorage = GetValue("Microsoft.Web.Portal.ThemeAssetStorage");
                 }
                 return _themeAssetStorage;
             }
@@ -139,7 +139,7 @@ namespace Microsoft.Web.Portal.Common
             {
                 if (_scriptStorage == null)
                 {
-                    _scriptStorage = GetValue("Orchard.DevOffice.Common.ScriptStorage");
+                    _scriptStorage = GetValue("Microsoft.Web.Portal.ScriptStorage");
                 }
                 return _scriptStorage;
             }
@@ -157,7 +157,7 @@ namespace Microsoft.Web.Portal.Common
             {
                 if (_styleStorage == null)
                 {
-                    _styleStorage = GetValue("Orchard.DevOffice.Common.StyleStorage");
+                    _styleStorage = GetValue("Microsoft.Web.Portal.StyleStorage");
                 }
                 return _styleStorage;
             }
