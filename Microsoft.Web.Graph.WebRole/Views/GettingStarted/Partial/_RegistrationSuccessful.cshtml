@@ -1,0 +1,20 @@
+﻿<div class="card-question" id="registration-successful" style="display:none">
+    <div class=""><h1>Registration Successful!</h1></div>
+    <div id="app-info-box">
+        <p id="registeredText">Thanks for registering your app. By the way, we also set the Redirect URI on your behalf so it can work with our code sample.</p>
+        <br />
+        <div id="registered-form">
+            <form role="form">
+                <div class="form-group" id="appIdFieldGroup">
+                    <label id="appIdLabel" title="The auto-generated app ID.">App ID <i class="fa fa-question-circle"></i> :</label> @*TODO add label to registerApp.js*@
+                    <input readonly id="appIdField" class="form-control" type="text" name="appId" value="FILLER" /> @*TODO: dynamically add value = app id from querystring*@
+                </div>
+                <div class="form-group" id="redirectUriFieldGroup">
+                    <label id="redirectUriLabel" class="" title="The URI to which we will redirect in response to an OAuth 2.0 request." for="redirectUri">Redirect URI <i class="fa fa-question-circle"></i> :</label>
+                    <input readonly id="redirectUriField" class="form-control" type="text" name="redirectUri" value="FILLER2" /> @*TODO: add redirect from querystring. was value="@Model.redirectUri" *@
+                    <div id="redirect-uri-error-div" class="ms-font-color-error ms-font-l"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

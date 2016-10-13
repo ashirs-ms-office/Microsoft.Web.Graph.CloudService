@@ -1,0 +1,25 @@
+﻿<script>
+    function DownloadEmbeddedCodeSample() {
+        if (platformId == null || platformId == "" || platformId == undefined) {
+            alert("Error: platform name should not be empty, please select the platform");
+            return;
+        }
+
+        codeSamplePackageAndDownload(platformId, registerAppParams.clientId, registerAppParams.redirectUri);
+
+        // TBD: need to enable it once appinsights.js issue is fixed
+        //appInsights.trackEvent("ClientID--" + client_id);
+    }
+</script>
+<div class="card" id="register-app" name="4. Setup & Register" isblocking="true">
+    @if (Session[Graph.GettingStarted.Utils.Constants.userLoggedInStr] == null ||
+        (bool)Session[Graph.GettingStarted.Utils.Constants.userLoggedInStr] == false)
+    {
+        @Html.Partial("./Partial/_AppRegistrationIntro")
+
+    }
+    else
+    {
+        @Html.Partial("./Partial/_AppRegistrationForm")
+    }
+</div>

@@ -217,8 +217,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Index.zh-cn.resx</DependentUpon>
     </Compile>
+    <Compile Include="Util\AppRegistration.cs" />
+    <Compile Include="Util\AppScopes.cs" />
+    <Compile Include="Util\Base64UrlDecoder.cs" />
     <Compile Include="Util\BlobManager.cs" />
+    <Compile Include="Util\Constants.cs" />
     <Compile Include="Util\DocContentManager.cs" />
+    <Compile Include="Util\InputValidation.cs" />
+    <Compile Include="Util\RequestHelper.cs" />
+    <Compile Include="Util\ServiceInfo.cs" />
+    <Compile Include="Util\SettingsHelper.cs" />
+    <Compile Include="Util\TokenHelper.cs" />
     <Compile Include="Util\XmlReader.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="WebRole.cs" />
@@ -226,6 +235,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\getting-started-styles\fabric.min.css" />
+    <Content Include="Content\getting-started-styles\gettingStarted.css" />
+    <Content Include="Content\getting-started-styles\jquery.json-view.min.css" />
     <Content Include="Content\graph-explorer-styles\api-explorer.css" />
     <Content Include="Content\graph-explorer-styles\bootstrap.css" />
     <Content Include="Content\graph-explorer-styles\ngProgress.css" />
@@ -248,6 +260,26 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\getting-started-scripts\browserInfo.js" />
+    <Content Include="Scripts\getting-started-scripts\embeddedCodeSample.js" />
+    <Content Include="Scripts\getting-started-scripts\FileSaver.js" />
+    <Content Include="Scripts\getting-started-scripts\gettingStarted.js" />
+    <None Include="Scripts\getting-started-scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\getting-started-scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\getting-started-scripts\jquery.json-view.min.js" />
+    <Content Include="Scripts\getting-started-scripts\jszip-utils.js" />
+    <Content Include="Scripts\getting-started-scripts\jszip.js" />
+    <Content Include="Scripts\getting-started-scripts\LogSignedIn.js" />
+    <Content Include="Scripts\getting-started-scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\getting-started-scripts\navBar.js" />
+    <Content Include="Scripts\getting-started-scripts\registerApp.js" />
+    <Content Include="Scripts\getting-started-scripts\respond.js" />
+    <Content Include="Scripts\getting-started-scripts\tryitout.js" />
+    <Content Include="Scripts\getting-started-scripts\tryitout.min.js" />
+    <Content Include="Scripts\getting-started-scripts\userPlatformManager.js" />
+    <Content Include="Scripts\getting-started-scripts\Utils.js" />
+    <Content Include="Scripts\getting-started-scripts\websiteContent.js" />
+    <None Include="Scripts\getting-started-scripts\_references.js" />
     <Content Include="Scripts\graph-explorer-scripts\ace.js" />
     <Content Include="Scripts\graph-explorer-scripts\adal-angular.js" />
     <Content Include="Scripts\graph-explorer-scripts\adal.js" />
@@ -301,6 +333,21 @@
     <Content Include="Views\DocPage\_DocToc.cshtml" />
     <Content Include="Views\DocPage\NotFound.cshtml" />
     <Content Include="Views\GettingStarted\Index.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\Error.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\reg.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_AppRegistrationForm.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_AppRegistrationIntro.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_FirstCall.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_Intro.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_Layout.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_LoginPartial.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_NextStep.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_RegisterApp.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_RegistrationSuccessful.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_Setup.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_SetupPlatform.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_SetupProject.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_tryitout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

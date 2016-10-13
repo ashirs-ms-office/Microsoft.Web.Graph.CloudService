@@ -4,7 +4,7 @@ using Microsoft.Practices.Unity.Configuration;
 using Microsoft.Web.Portal.Common.Culture;
 using Microsoft.Web.Portal.Common.Logging;
 using Microsoft.Web.Portal.Common.Telemetry;
-
+using Microsoft.Web.Portal.Common;
 namespace Microsoft.Web.Graph.WebRole.App_Start
 {
     /// <summary>
@@ -39,9 +39,8 @@ namespace Microsoft.Web.Graph.WebRole.App_Start
             // container.LoadConfiguration();
 
             // Register your types here
-            Portal.Common.Environment env = new Portal.Common.Environment();
-            container.RegisterType<ICultureService, CultureService>(new InjectionConstructor(new string [] { env.DefaultCulture, env.SupportedCultures}));
-            container.RegisterType<ILogger, Log4NetLogger>(new InjectionConstructor(env.ApplicationName));
+            container.RegisterType<ICultureService, CultureService>(new InjectionConstructor(new string [] { Portal.Common.Environment.DefaultCulture, Portal.Common.Environment.SupportedCultures}));
+            container.RegisterType<ILogger, Log4NetLogger>(new InjectionConstructor(Portal.Common.Environment.ApplicationName));
             container.RegisterType<ITelemetry, ApplicationInsightsTelemetry>();
         }
     }

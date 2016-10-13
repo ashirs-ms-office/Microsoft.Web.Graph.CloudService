@@ -1,0 +1,35 @@
+﻿<div class="card" id="try-it-out" name="2. Try it out">
+    <div class=""><h1>Try it out</h1></div>
+    <p>Pick an API, try different values, and choose the <strong>Try</strong> button to see the responses from a sample tenant.</p>
+    <hr />
+    <!-- Service Container-->
+    <div id="serviceOptions" class="services-container"></div>
+    <hr />
+    <div id="challengeBox">
+        <div id="sampleURL" class="restCall">
+            <span class="httpVerb">GET</span>     <span id="urlValue"></span>
+        </div>
+    </div>
+    <div id="parameterDetails">
+    </div>
+    <div id="tryError" class="ms-font-color-error ms-font-l"></div>
+   
+    <button type="button" class="try-button" value="Try" id="invokeurlBtn">
+        Try&nbsp;&nbsp
+        <span class="icon_seemore"></span>
+    </button>
+    <div id="response-container" hidden>
+        <div>           
+            <p>
+                <strong>Response Body</strong>
+                <i id="CopyCodeLink" style="cursor:pointer" class="fa fa-files-o hidden"></i>
+            </p>
+
+        </div>
+        <div id="" class="lang-js json">
+            <pre class="prettyprint lang-js json code-container">
+            <code id="responseBody" class="prettyprint lang-js json"></code>
+            </pre>
+        </div>
+    </div>
+</div><!--card-->

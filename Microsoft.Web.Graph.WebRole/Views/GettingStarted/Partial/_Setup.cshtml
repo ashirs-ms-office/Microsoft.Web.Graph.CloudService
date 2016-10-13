@@ -1,0 +1,59 @@
+﻿<div class="card" id="setup" name="3. Pick platform" isblocking="true">
+    <h1>Pick the platform you'll be building for</h1>
+    <p>Build a simple app that connects to Office 365 and calls the Microsoft Graph API. After you pick your platform, you'll walk through getting the right tools, registering your app, and running the code.</p>
+    <div id="pickPlatform">
+        <div class="tabs">
+            <button id="option-android" class="col-xs-12 col-sm-4 platformOptionBlock">
+                <img src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_android_grey_34x41.png") alt="Android" /><br />
+                <span>Android</span>
+            </button>
+            <button id="option-angular" class="col-xs-12 col-sm-4 platformOptionBlock">
+                <img src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_angular_grey_40x41.png") alt="Angular" /><br />
+                <span>Angular</span>
+            </button>
+            <button id="option-dotnet" class="col-xs-12 col-sm-4 platformOptionBlock">
+                <img src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_asp_grey_40x41.png") alt=".Net" /><br />
+                <span>ASP.NET MVC</span>
+            </button>
+            <button id="option-ios-swift" class="col-xs-12 col-sm-4 platformOptionBlock">
+                <img src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_ios_grey_40x41.png") alt="iOS" /><br />
+                <span>iOS Swift</span>
+            </button>
+            <button id="option-ios-objective-c" class="col-xs-12 col-sm-4 platformOptionBlock">
+                <img src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_ios_grey_40x41.png") alt="iOS" /><br />
+                <span>iOS Objective-C</span>
+            </button>
+            <button id="option-node" class="col-xs-12 col-sm-4 platformOptionBlock">
+                <img src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_nodejs_grey_41x41.png") alt="Node" /><br />
+                <span>Node.js</span>
+            </button>
+            <button id="option-php" class="col-xs-12 col-sm-4 platformOptionBlock">
+                <img src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_php_grey_41x41.png") alt="PHP" /><br />
+                <span>PHP</span>
+            </button>
+            @*<button id="option-python" class="col-xs-12 col-sm-4 platformOptionBlock">
+                <img src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_python_grey_41x41.png") alt="Python" /><br />
+                <span>Python</span>
+            </button>*@ 
+            <button id="option-ruby" class="col-xs-12 col-sm-4 platformOptionBlock">
+                <img src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_ruby_grey_41x41.png") alt="Ruby" /><br />
+                <span>Ruby</span>
+            </button>
+            @*<span class="col-xs-12 col-lg-2"></span> TODO: replace when python is back*@
+            @*<span class="col-xs-12 col-lg-3"></span>*@
+            <button id="option-windowsuniversal" class="col-xs-12 col-sm-4 platformOptionBlock">
+                <img src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_windows_grey_40x41.png") alt="Windows Universal" /><br />
+                <span>Windows Universal</span>
+            </button>
+            <button id="option-xamarin" class="col-xs-12 col-sm-4 platformOptionBlock">
+                <img style="width:41px;height:41px;" src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_xamarin_grey_.png") alt="Xamarin" /><br />
+                <span>Xamarin</span>
+            </button>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div id="pickPlatformDisableDiv" hidden class="yellowNote">
+        <p><strong>Note: </strong> You can not change the platform once an app has been registered. To change the platform, please <a onclick="window.location.href = window.location.href.split('?')[0];">click here</a> to start over.</p>
+    </div>
+</div>

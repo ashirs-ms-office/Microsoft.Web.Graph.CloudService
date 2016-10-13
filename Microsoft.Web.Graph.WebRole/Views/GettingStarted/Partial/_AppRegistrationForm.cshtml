@@ -1,0 +1,107 @@
+﻿<div>
+    <h1>Registration Successful!</h1>
+    <div id="signed-in-display" class="ms-Grid-row">
+        <div class="ms-Grid-col ms-u-sm12">
+            <span class="ms-font-xl">Welcome <strong>@Session[Graph.GettingStarted.Utils.Constants.azureUserTagStr]</strong>!</span>
+            <span class="ms-font-l">(Wrong account? No problem, @Html.ActionLink(T("Sign out").ToString(), "SignOut", "Account", routeValues: new { area = "Graph.GettingStarted" }, htmlAttributes: new { id = "signoutLink" }))</span>
+            <br />
+            <br />
+            <p>Since you've signed in, register the app below. As this registration will be for the sample app, it will only have the <b>Mail.Send</b> permission.</p><br />
+        </div>
+    </div>
+    <div id="registration-form">
+        <form role="form">
+            <div class="form-group">
+                <label for="appName" title="The display name for your application.">App name <i class="fa fa-question-circle"></i> :</label>
+                <input id="appNameField" class="form-control" type="text" name="appName" placeholder="Enter a name for your app here." />
+                <div id="app-name-error-div" class="ms-font-color-error ms-font-l"></div>
+            </div>
+            <div class="form-group hidden">
+                <label class="ms-Label" for="appType" title="A web app represents a web application, a web API, or both. A native client can be installed on a user's device or computer.">App type <i class="fa fa-question-circle"></i> :</label>
+                <input id="appTypeField" class="form-control" type="text" name="appType" value="Web App" disabled />
+            </div>
+            <div class="form-group" id="signOnUrlFieldGroup">
+                <label class="" title="The URL where users can sign in and use your app." for="signOnUrl">Sign on URL <i class="fa fa-question-circle"></i>:</label>
+                <input readonly id="signOnUrlField" class="form-control" type="text" name="signOnUri" value="@Model.signOnUri" />
+                <div id="sign-onUrl-error-div" class="ms-font-color-error ms-font-l"></div>
+            </div>
+            <div class="form-group" id="appIdUriFieldGroup" hidden>
+                <label class="" for="appIdUri">App ID URI <i class="fa fa-question-circle"></i> :</label>
+                <input id="appIdUriField" class="form-control" type="text" name="appIdUri" value="@Model.appIdUri" disabled />
+                <div id="app-id-uri-error-div" class="ms-font-color-error ms-font-l"></div>
+            </div>
+            <div class="form-group" id="redirectUriFieldGroup">
+                <label id="redirectUriLabel" class="" title="The URI to which we will redirect in response to an OAuth 2.0 request." for="redirectUri">Redirect URI <i class="fa fa-question-circle"></i> :</label>
+                <input readonly id="redirectUriField" class="form-control" type="text" name="redirectUri" value="@Model.redirectUri" />
+                <div id="redirect-uri-error-div" class="ms-font-color-error ms-font-l"></div>
+            </div>
+            <div class="form-group hidden" id="tenantFieldGroup">
+                <label id="tenantLabel" class="" title="" for="tenant">Tenant <i class="fa fa-question-circle"></i> :</label>
+                <input readonly id="tenantField" class="form-control" type="text" name="tenant" value="@Model.tenantName" />
+                <div id="tenant-error-div" class="ms-font-color-error ms-font-l"></div>
+            </div>
+            <div class="form-group hidden">
+                <label title="Default permissions in below table will be assigned to your app. Read user profile permission will be also assigned which is not shown below.">App permissions <i class="fa fa-question-circle"></i> :</label>
+                <div id="app-reg-permission-table">
+                    <div id="app-reg-permission">
+                        <table style="width:30%; min-width:240px" class="table table-bordered">
+                            <tr>
+                                <th class="permissions outlook">
+                                    <img src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_mailgrey_22x16.png") alt="Mail" />
+                                    Mail
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="permissions outlook">
+                                    <div>
+                                        <!--Read User mail-->
+                                        <input name="mailRead" class="ms-ChoiceField-input" id="mailRead" type="checkbox" disabled> Mail.Read</input>
+                                        <br /><br />
+
+                                        <!--Read and Write user mail-->
+                                        <input name="mailWrite" class="ms-ChoiceField-input" id="mailWrite" type="checkbox" disabled> Mail.ReadWrite</input>
+                                        <br /><br />
+
+                                        <!--Send Mail as a user-->
+                                        <input name="mailSend" class="ms-ChoiceField-input" id="mailSend" type="checkbox" disabled checked /> Mail.Send</input>
+                                        <br /><br />
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            <button id="register-button" class="register-button" onclick="registerApp()" title="">
+                <span>
+                    Register App&nbsp;&nbsp
+                    <img src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_goarrow_22x22.png") alt="go" />
+                </span>
+            </button>
+        </form>
+    </div>
+
+    <div id="registration-progress" class="code-container"></div>
+    <div id="registration-result" class="hidden note">
+        <div class="ms-font-xl">
+            <strong>Registration Successful!</strong>
+        </div>
+        <div class="ms-TextField marginTop10">
+            <label class="" for="clientId">Client ID:</label>
+            <input id="clientIdField" class="form-control" type="text" name="clientId" value="" readonly style="cursor: text" />
+        </div>
+        <div class="ms-TextField marginTop10" id="app-reg-client-secret">
+            <label class="" for="clientSecret">Client Secret:</label>
+            <input id="clientSecretField" class="form-control" type="text" name="clientSecret" value="" readonly style="cursor: text" />
+        </div>
+        <div class="spacer20">            
+        </div>
+    </div>
+    <div id="reg-error_display" hidden>
+        <p class="ms-font-color-error ms-font-l">The following error occurred while processing your request:</p>
+        <ul>
+            <li><p id="reg-error_msg" class="ms-font-color-error ms-font-l">err</p></li>
+        </ul>
+    </div>
+</div>

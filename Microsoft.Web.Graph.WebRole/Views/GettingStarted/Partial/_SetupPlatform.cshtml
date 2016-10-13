@@ -1,0 +1,22 @@
+﻿@if (Session[Graph.GettingStarted.Utils.Constants.platformNameTagStr] != null)
+{
+    <script>
+        $(document).ready(function () {
+            updatePlatform("#" + "@Session[Graph.GettingStarted.Utils.Constants.platformNameTagStr]", currentProduct);
+        });
+    </script>
+}
+@if (Session[Graph.GettingStarted.Utils.Constants.productNameTagStr] != null)
+{
+    <script>
+        $(document).ready(function () {
+            hidePlatformsWithoutSamples(currentProduct);
+        });
+    </script>
+}
+
+<div class="card-question" id="SetupPlatform" style="display:none">
+    <div id="ShowDocumentationDiv">
+    </div>
+</div>
+

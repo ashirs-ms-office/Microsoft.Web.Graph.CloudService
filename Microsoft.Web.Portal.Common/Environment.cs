@@ -41,12 +41,12 @@ namespace Microsoft.Web.Portal.Common
         /// <summary>
         /// ApplicationName
         /// </summary>
-        private string _applicationName;
+        private static string _applicationName;
 
         /// <summary>
         /// Name for currently running application
         /// </summary>
-        public string ApplicationName
+        public static string ApplicationName
         {
             get
             {
@@ -60,9 +60,9 @@ namespace Microsoft.Web.Portal.Common
         #endregion
 
         #region Default Culture
-        private string _defaultCulture;
+        private static string _defaultCulture;
 
-        public string DefaultCulture
+        public static string DefaultCulture
         {
             get
             {
@@ -76,9 +76,9 @@ namespace Microsoft.Web.Portal.Common
         #endregion
 
         #region Supported Culture
-        private string _supportedCultures;
+        private static string _supportedCultures;
 
-        public string SupportedCultures
+        public static string SupportedCultures
         {
             get
             {
@@ -91,6 +91,116 @@ namespace Microsoft.Web.Portal.Common
         }
         #endregion
 
+        private static string _mediaStorage;
 
+        /// <summary>
+        /// Media Storage that needs to be used it can be a CDN, or Azure Blob Storage
+        /// if nothing is defined local file systme would be returned which is an empty string
+        /// </summary>
+        public static string MediaStorage
+        {
+            get
+            {
+                if (_mediaStorage == null)
+                {
+                    _mediaStorage = GetValue("Orchard.DevOffice.Common.MediaStorage");
+                }
+                return _mediaStorage;
+            }
+        }
+
+        private static string _themeAssetStorage;
+
+        /// <summary>
+        /// Theme Storage that needs to be used it can be a CDN, or Azure Blob Storage
+        /// if nothing is defined local file systme would be returned which is an empty string
+        /// </summary>
+        public static string ThemeAssetStorage
+        {
+            get
+            {
+                if (_themeAssetStorage == null)
+                {
+                    _themeAssetStorage = GetValue("Orchard.DevOffice.Common.ThemeAssetStorage");
+                }
+                return _themeAssetStorage;
+            }
+        }
+
+        private static string _scriptStorage;
+
+        /// <summary>
+        /// Theme Storage that needs to be used it can be a CDN, or Azure Blob Storage
+        /// if nothing is defined local file systme would be returned which is an empty string
+        /// </summary>
+        private static string ScriptStorage
+        {
+            get
+            {
+                if (_scriptStorage == null)
+                {
+                    _scriptStorage = GetValue("Orchard.DevOffice.Common.ScriptStorage");
+                }
+                return _scriptStorage;
+            }
+        }
+
+        private static string _styleStorage;
+
+        /// <summary>
+        /// Theme Storage that needs to be used it can be a CDN, or Azure Blob Storage
+        /// if nothing is defined local file systme would be returned which is an empty string
+        /// </summary>
+        private static string StyleStorage
+        {
+            get
+            {
+                if (_styleStorage == null)
+                {
+                    _styleStorage = GetValue("Orchard.DevOffice.Common.StyleStorage");
+                }
+                return _styleStorage;
+            }
+        }
+
+        /// <summary>
+        /// Returns the asset url depending on the storage defined in the config
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static string GetMediaUrl(string url)
+        {
+            return MediaStorage + url;
+        }
+
+        /// <summary>
+        /// Returns the asset url depending on the storage defined in the config
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static string GetThemeAssetUrl(string url)
+        {
+            return ThemeAssetStorage + url;
+        }
+
+        /// <summary>
+        /// Returns the asset url depending on the storage defined in the config
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static string GetScriptUrl(string url)
+        {
+            return ScriptStorage + url;
+        }
+
+        /// <summary>
+        /// Returns the asset url depending on the storage defined in the config
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static string GetStyleUrl(string url)
+        {
+            return StyleStorage + url;
+        }
     }
 }

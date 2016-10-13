@@ -1,0 +1,1238 @@
+﻿/*html {
+    background-color: #f4f4f4;
+    background-image: -webkit-linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
+    background-image: linear-gradient(270deg,rgb(230,233,233) 0%,rgb(216,221,221) 100%);
+    -webkit-font-smoothing: antialiased;
+}
+*/
+
+
+/*body {
+    margin: 0 auto;
+    padding: 2em 2em 4em;
+    background-color: #F4F4F4 !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    position:relative;
+}*/
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+    font-weight: 600;
+    /*line-height: 20px;*/
+    margin-top:20px !important;
+}
+
+h1 {
+    font-size:35px;
+}
+
+h3 {
+    margin-bottom:20px;
+}
+
+/*
+a {
+    cursor: pointer;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+samp {
+    display: none;
+}
+*/
+
+#o365-progressTrackerContainer.fixed-navbar{
+    margin-top: 20px;
+}
+
+
+.imgGS {
+    /*-webkit-animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;*/
+    /*animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;*/
+    background: transparent;
+    /*border: 10px solid rgba(0, 0, 0, 0.12);*/
+    border-radius: 4px;
+    display: block;
+    margin: auto;
+    max-width: 95%;
+}
+
+/*
+.img {
+    margin-left:0px;
+    border:0px;
+}
+
+.ht {
+        height:800px;
+    }
+*/
+
+.restCall {
+    color: black;
+    padding: 10px;
+    padding-left: 20px;
+    background: rgba(210,210,210,1);
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    height:auto;
+}
+
+.loading {
+    background: url("https://devofficecdn.azureedge.net/media/Default/GettingStarted/Progressbar.gif") no-repeat;
+    background-color: #ffffff;
+    background-position: 75px center;
+    width: 100%;
+}
+
+/* try it out */
+
+#invokeurlBtn {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#paramTable {
+    margin-bottom: 0px !important; /*set margin to 0 for param try it out table */
+}
+
+.code-container {
+    overflow: auto;
+    max-height: 400px;
+}
+
+.httpVerb {
+    margin-right: 10px;
+    color: #454545;
+}
+
+.services-container {
+    text-align:center;
+    height:auto;
+}
+
+.serviceOptionBlock {  
+    float: left;
+    background-color: rgba(242,242,242,1);
+    padding: 5px;   
+    height:160px;
+    cursor:pointer;
+    border-style:solid;
+    border-color:white;
+    color:#1570A6;
+}
+
+.serviceOptionBlock.click {
+    background-color:rgba(80,80,80,1);
+    color:white;
+}
+
+.serviceOptionBlock:hover {
+    box-shadow: 0 0 3px #888888;
+}
+
+.serviceOptionBlock p {
+    color:black;
+}
+
+.serviceOptionBlock.click p {
+    color:white;
+}
+
+@media screen and (-ms-high-contrast:active) {
+
+    .serviceOptionBlock.click p {
+        text-decoration:underline !important;        
+    }
+}
+
+.serviceOptionBlock span {
+    margin-bottom:10px;     
+    font-size:55px; 
+    display:block;
+}
+
+.try-button {
+    background: rgba(80,80,80,1);
+    padding: 7px 12px;
+    border-radius: 0px;
+    border: 0px;
+    -moz-border-image: none;
+    -o-border-image: none;
+    -webkit-border-image: none;
+    border-image: none;
+    color: white !important;
+    width:100%;
+    min-width: 70px;
+    /*margin-top: 10px;*/
+    margin-bottom: 10px;
+    white-space: nowrap;
+    height: 40px;
+}
+
+    .try-button:hover {
+        color: white;
+        border: 0px;
+        background-color: black;
+    }
+    .try-button .icon_seemore {
+        font-size:inherit;
+        margin:0;
+    }
+
+/* copy response body */
+.noshow {
+    display:none;
+}
+/* set up */
+#pickPlatform .tabs .platformOptionBlock {
+    width: 20%; /*What fraction of full grid width does one platform button take up?*/
+    min-width:100px;
+    float: left;
+    background-color: rgba(242,242,242,1);  
+    padding:30px;
+    /*margin: 5px;*/
+    height:140px;
+    text-align:center;
+    cursor: pointer;
+    border-style:solid;
+    border-color:white;
+}
+
+#pickPlatform .tabs .platformOptionBlock.selected {
+    /*width: 23%;*/
+    min-width:100px;
+    float: left;
+    background:rgba(80,80,80,1); 
+    padding:30px;
+    /*margin: 5px;*/
+    height:140px;
+    text-align:center;
+    color:rgba(242,242,242,1);
+    border-style:solid;
+    border-color:white;
+}
+
+    #pickPlatform .tabs .platformOptionBlock:hover {
+        box-shadow:0 0 3px #888888;
+        z-index: 100;
+    }
+
+#pickPlatform .platformOptionBlock span {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#pickPlatform img {
+    margin-bottom:20px;
+}
+
+/* get setup and registration */
+.register-link-button {
+    background: rgba(80,80,80,1);
+    padding: 7px 12px;
+    border-radius: 0;
+    border: 0;
+    -moz-border-image: none;
+    -o-border-image: none;
+    -webkit-border-image: none;
+    border-image: none;
+    color: white !important;
+    width: 406px;
+    min-width: 70px;
+    margin-right:5px;
+    margin-top:10px;   
+    white-space: nowrap;
+}
+
+    .register-link-button:hover{
+        border: 0px;
+        background-color: black;
+    }
+
+#secretNeededMessage{
+    margin-bottom: 10px;
+}
+
+#mobileMessage{
+    margin-top: 70px;
+}
+
+/* Code */
+.download-button {
+    background: rgba(80,80,80,1);
+    padding: 7px 12px;
+    border-radius: 0;
+    border: 0;
+    -moz-border-image: none;
+    -o-border-image: none;
+    -webkit-border-image: none;
+    border-image: none;
+    color: white !important;
+    width:45%;
+    min-width: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*white-space: nowrap;*/
+    /*height: 40px;*/
+    display:inline-block;
+}
+
+    .download-button:hover {
+        color: white;
+        border: 0;
+        background-color: black;
+    }
+
+
+  /* all set */
+.allset {
+    margin-top:50px;
+    margin-bottom:50px;
+    text-align:center;
+}
+
+.allset img{
+    width:80%;
+}
+
+/* additional resources */
+.resourceOption {
+    background-color: rgba(242,242,242,1);
+    padding-left:5px;
+    padding-right:5px;
+    height:210px;
+    text-align:center;
+    cursor:pointer;
+    border-style:solid;
+    border-color:white;
+}
+    .resourceOption p {
+        font-size: 15px;
+        margin: 10px;
+    }
+    .resourceOption table{
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .resourceOption table tr td p{
+        margin:0;
+    }
+
+/* add-in page select client*/
+.clientOptionLarge {
+    background-color: rgba(242,242,242,1);
+    padding: 1px;
+    height:160px;
+    cursor:pointer;
+    border-style:solid;
+    border-color:white;
+}
+.clientOptionLarge.click {  
+    background-color:rgba(210,210,210,1);  
+}  
+
+.clientOptionLarge:hover {  
+    box-shadow:0 0 3px #888888;  
+}  
+
+.clientOption {
+    background-color: rgba(242,242,242,1);
+    padding: 5px;
+    height:160px;
+    cursor:pointer;
+    border-style:solid;
+    border-color:white;
+}
+.clientOption.click {
+    background-color:rgba(210,210,210,1);
+}
+
+.clientOption:hover {
+    box-shadow:0 0 3px #888888;
+}
+
+.clients-container{
+    height:auto;
+    padding:0;
+    margin:0;
+}
+
+.clientOption img {
+    height:60px;
+    width:60px;
+    margin: 20px auto;
+}
+
+.fit50percent {
+    width:49%;
+}
+
+/* add-in page build */
+.napa-button {
+    background: rgba(80,80,80,1);
+    padding: 7px 12px;
+    border-radius: 0px;
+    border: 0px;
+    -moz-border-image: none;
+    -o-border-image: none;
+    -webkit-border-image: none;
+    border-image: none;
+    color: white !important;
+    width:100%;
+    min-width: 70px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    height: 40px;
+    text-align:center;
+}
+
+    .napa-button:hover {
+        color: white;
+        border: 0px;
+        background-color: black;
+    }
+
+    /* register app */
+#register-app .button {
+    background: rgba(80,80,80,1);
+    padding: 7px 12px;
+    border-radius: 0px;
+    border: 0px;
+    -moz-border-image: none;
+    -o-border-image: none;
+    -webkit-border-image: none;
+    border-image: none;
+    color: white !important;
+    width:100%;
+    min-width: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    height: 40px;
+    cursor:pointer;
+}
+
+    #register-app .button:hover, #register-app .button:focus {
+        color: white;
+        border: 0;
+        background-color: black;
+    }
+
+#fineprint .button {
+    background: rgba(80,80,80,1);
+    padding: 7px 12px;
+    border-radius: 0px;
+    border: 0px;
+    -moz-border-image: none;
+    -o-border-image: none;
+    -webkit-border-image: none;
+    border-image: none;
+    color: white !important;
+    width:30%;
+    min-width: 70px;
+    margin:0 auto;
+    white-space: nowrap;
+    height: 40px;
+    cursor:pointer;
+}
+
+/* registration form */
+#app-reg-permission .table {
+    background-color: rgba(242,242,242,1);   
+}
+
+#app-reg-permission .table th{
+    text-align: center;
+    border:2px solid white;
+    border-bottom-width:4px;
+    background-color:gainsboro;
+}
+
+#app-reg-permission .table td {
+    width:15%;     
+    -ms-word-break:break-all;
+    word-break: break-all;
+    font-size:12px;
+    border:2px solid white;
+}
+
+#app-reg-signin .icon_seemore, #signup-new-account .icon_seemore, #more-playground .icon_seemore, #build-downloadFromGithub .icon_seemore, #register-button .icon_seemore{
+    font-size:inherit;
+    margin:0;
+}
+
+.register-button {
+    background: rgba(80,80,80,1);
+    padding: 7px 12px;
+    border-radius: 0px;
+    border: 0px;
+    -moz-border-image: none;
+    -o-border-image: none;
+    -webkit-border-image: none;
+    border-image: none;
+    color: white !important;
+    width:100%;
+    min-width: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    height: 40px;
+}
+
+    .register-button:hover {
+        color: white;
+        border: 0px;
+        background-color: black;
+    }
+
+/* call out */
+.callout {
+    position: absolute;
+    right: -160px;
+    padding: 20px;
+    background-color: white;
+    min-width: 150px;
+    min-height: 120px;
+}
+
+    .callout::after {
+        content: "";
+        position: absolute;
+        right: 135px;
+        width: 0;
+        height: 0;
+        border-top: 13px solid transparent;
+        border-right: 26px solid white;
+        border-bottom: 13px solid transparent;
+    }
+
+
+
+/*@-webkit-keyframes colorize {
+    0% {
+        -webkit-filter: grayscale(100%);
+    }
+    100% {
+        -webkit-filter: grayscale(0%);
+    }
+}
+
+@keyframes colorize {
+    0% {
+        filter: grayscale(100%);
+    }
+    100% {
+        filter: grayscale(0%);
+    }
+}
+
+.link {
+    text-decoration: underline !important;
+}
+
+.buffer {
+    height:450px;
+}
+
+.scroll-area {
+    margin-top:50px;
+}
+*/
+
+#main {
+    /*background-color:#f4f4f4;*/
+    /*position:relative;
+    width: 900px;*/
+    left:auto;
+    right:auto;
+    margin: 0 auto 0 auto; 
+    padding: 0 32px 64px;
+    /*background-color: #F4F4F4 !important;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    /*line-height: 24px;*/
+    /*box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);*/
+}
+
+
+/*#toolbarContainer {
+    display: table;
+    table-layout: fixed;
+    width: 100%; 
+
+    text-align: center;
+    line-height: 3em;
+}
+.toolbar {
+
+   width: 100%;   
+}*/
+
+.card, .card-more {
+    height: auto;
+    min-height: 200px;
+    border-color: white;
+    background-color: white !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    border: 1px solid #ddd;
+}
+
+.card-question {
+    min-height: 60%;
+    border-color: white;
+    background-color: white !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    border: 1px solid #ddd;
+}
+
+/* for the standalone app registration page*/
+.card-standalone >.card {
+    border:none;
+}
+
+.octocatlogo {
+    border: 0;
+    margin: 0;
+    display: inline;
+}
+
+#progress {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+    #progress li {
+        display: inline-block;
+        text-align: center;
+        line-height: 3em;
+    }
+
+#progress li.done {
+    color: black;
+    border-bottom: 4px solid #da3f26 !important;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+#progress li.todo {
+    color: silver;
+    border-bottom: 4px solid silver;
+}
+
+.note {
+    background-color: #eee;
+    display: block;
+    padding: 20px 15px 10px;
+    margin-top: 5px;
+    position: relative;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-left-color: #89c402;
+}
+
+.yellowNote{
+    background-color: #fff2cc;
+    padding: 10px;
+}
+
+.hidden2 {
+    opacity: 0;
+}
+
+.hiddenCard {
+    display:none;
+}
+
+.visible2 {
+    opacity: 1;
+}
+/* this code is causing issue in alignment for navbar
+.video {
+    float:right;
+    width:400px;
+}
+*/
+
+#introContent {
+    float: left;
+    display: inline;
+    width: 450px;
+}
+
+/* Responsive CSS Style for Phone */
+@media(max-width:500px) {
+    #main {
+        width: auto;
+        padding:5px;
+    }
+}
+@media(max-width:700px){
+    /*Platform buttons full-width on small screens*/
+    #pickPlatform .tabs .platformOptionBlock{
+        width: 100%;
+    }
+}
+/*Responsive CSS Styles*/
+@media (max-width: 895px) {
+    body {
+        padding: initial;
+    }
+
+    #navBarList {
+        display: none !important;
+        height: 0;
+    }
+
+    #main {
+        width: auto;
+    }
+
+    .card, .card-question {
+        height: auto;
+        padding: 10px 10px 10px 10px;
+    }
+
+    .container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    #paramTable, .callout {
+        display: none;
+    }
+
+    #intro {
+        height: auto;
+    }
+
+    /*for create new account link*/
+    .ms-Grid-col {
+        clear: both;
+        margin-top: 10px;
+    }
+}
+
+/*NavBar CSS Styles*/
+.cardNavBar {
+    background-color:#1570A6;
+    display: flex;
+    /*Trick to make navbar full-width when position is not fixed.*/
+    width: 100vw;
+    margin-left: calc(-1 * ((100vw - 100%) / 2));
+}
+
+.cardNavBar.navbar-fixed-top{
+    top: 0;
+    z-index:100;
+ }
+
+#navBarList {
+    margin: 0px auto;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    width:918px;
+    height: 50px;
+    /*background-color: #F4F4F4;*/
+    z-index: 99;
+    text-align: left;
+}
+
+#navBarList li {
+    display: inline-block;
+    text-align: center;
+    line-height: 3em;
+    border-bottom: 4px solid rgb(210,210,210);
+    width:auto;
+}
+
+#navBarList li::after {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    /*background-color: silver;*/
+    color: red;
+}
+
+#navBarList li a {
+    color:white;
+}
+
+#navBarList li a:focus, a:hover {
+    text-decoration:none;
+}
+
+@media screen and (-ms-high-contrast:active) {
+
+    .navBarList-underline {
+        text-decoration:underline !important;
+    }
+}
+
+#navBarList li.activating.card-done a{
+    color:white;
+}
+#navBarList li.card-done a {
+    color:#bed4eb;
+    transition: all .2s ease-in-out;
+    -webkit-transition:all .2s ease-in-out;
+
+}
+#navBarList li.card-done {
+    color: black;
+    border-bottom: 4px solid #bed4eb;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+
+#navBarList li.activating.card-done {
+    color: black;
+    border-bottom: 4px solid white;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    background-color:#21476c;
+}
+
+#navBarList li.card-done::after {
+    width: 0;
+    height: 0;
+    border-top: 2px solid transparent;
+    border-left: 400px solid green;
+    border-bottom: 2px solid transparent;
+}
+
+.cardTrackerContainer div.card {
+    float: left;
+    background-color: white;
+}
+
+/* end NavBar CSS Styles*/
+
+.android-note {    
+    color:gray;
+    font-size:8px;
+    font-style:italic;
+}
+
+.spacer40 {
+    height: 40px;
+}
+
+.spacer30 {
+    height: 30px;
+}
+
+.buttonCenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spacer20 {
+    margin-top: 20px;
+}
+
+.right-spacer10 {
+    margin-right:10px;
+}
+
+.video2 {
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+.productsTable td {
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+/* Button */
+
+.button {
+    background: #1570A6;
+    padding: 7px 12px;
+    border-radius: 0px;
+    border: 0px;
+    -moz-border-image: none;
+    -o-border-image: none;
+    -webkit-border-image: none;
+    border-image: none;
+    color: white !important;
+    min-width: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+    .button:hover {
+        color: white;
+        border: 0px;
+        background-color: #005a9e;
+    }
+
+
+pre.response {
+    overflow: auto;
+    height: 300px;
+}
+
+#challengeBox-details {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#parameterDetails {
+    line-height: 16px;
+    background-color: #EEE;
+}
+
+.highlight {
+    border-color: red;
+}
+/* tabs */
+.tabs {
+    display: inline-block;
+    margin: 20px auto 0;
+}
+
+.question .tabs {
+    margin: 30px auto 0;
+}
+
+.tabs li {
+    display: inline-block;
+    margin: 0;
+    font-size: 15px;
+}
+
+    /*
+.tabs li:first-child a {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.tabs li:last-child a {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+*/
+
+    .tabs li:nth-child(even) a {
+        margin: 0 -1px;
+    }
+
+.sticky-bubble {
+    position: fixed;
+    left: 87%;
+    background: #da3f26;
+    color: black;
+    font-size: 15px;
+    padding: 5px;
+    width: auto;
+    height: 50px;
+    padding-top: 10px;
+    text-align: center;
+    box-shadow: 2px 3px 5px #888;
+    float: left;
+}
+
+/*animate cards*/
+.animated {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        -moz-transform: translate3d(0, 100%, 0);
+        -ms-transform: translate3d(0, 100%, 0);
+        -o-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        -moz-transform: translate3d(0, 100%, 0);
+        -ms-transform: translate3d(0, 100%, 0);
+        -o-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    -moz-animation-name: fadeInUp;
+    -o-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.marginTop10 {
+    margin-top:10px;
+}
+
+/* Begin Add-ins page CSS */
+.imgSelectApp {
+    height: 40px;
+    width: auto;
+    border: none;
+}
+
+.imgAddinType {
+
+    border:0px; 
+    margin:20px 0 20px 0; 
+    display:block; 
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+#introText {
+    clear: both;
+}
+
+.btn-default {
+    background-image: none;
+}
+
+.buildList {
+    padding-left: 20px;
+    list-style-type:decimal;
+}
+
+/*list with prefix STEP*/
+.stepsOrderedList {
+	 counter-reset: item;
+    list-style-type: none;
+}
+
+.stepsOrderedList > li:before {
+    content: 'Step ' counter(item, decimal) '. ';
+    counter-increment: item;
+    font-weight:bold;
+}
+
+.stepsOrderedList > li {
+    padding-bottom:1em;
+}
+
+
+.ulSquare {
+    list-style-type: square;
+    padding-left:2em;
+}
+
+/* End Add-ins page CSS */
+
+/*numbered list*/
+.numberedList {
+	counter-reset: list-counter;
+}
+.numberedList dt:before {
+	content: counter(list-counter);
+	counter-increment: list-counter;
+}
+
+/*TBD: we need to move this to generic button class*/
+.responsive-btn {
+    white-space: normal;
+    width: 10px;
+}
+.disableClick{
+    pointer-events: none;
+}
+
+.btn-success {
+    margin-bottom: 20px;
+}
+
+/*#choicescontainer {
+    min-width:450px;
+}*/
+
+#chooseApiEndpointNew,#chooseApiEndpointExisting{
+    width:47%; 
+    float:left;
+    min-width:180px;    
+    margin-top:0;
+    margin-left:5px;
+    margin-right:5px;
+    margin-bottom:10px;
+    padding:20px;
+    line-height:1.5;
+}
+
+#graphIllustration,#graphOldApi {
+    width:100%;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+
+#chooseYourAPIEndpoint {
+    position:relative;
+    height: auto;
+    text-align: center;
+    width:auto;
+    max-width:400px;
+    background-color: #0072c6;
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size:x-large;
+    margin:20px auto;
+    margin-bottom:-20px;
+    z-index:2;
+}
+
+.graphApiReference {
+    color:white;
+    text-align:center;
+    background-color:rgba(68,35,89,1);
+    padding:10px;
+    margin-top:20px;
+    margin-bottom:77px;
+}
+
+.graphApiReference a{
+    color:white;
+}
+
+.individualApiReference {
+    color:white;
+    text-align:center;
+    background-color:rgba(68,35,89,1);
+    padding:10px;
+    margin:10px;
+    width:43%;
+    float:left;
+    min-width:120px;
+}
+
+.individualApiReference a{
+    color:white;
+    font-size:14px;
+}
+
+@media(max-width:500px) {
+    #chooseApiEndpointNew,#chooseApiEndpointExisting {
+        width: auto;
+        padding:10px;
+    }
+}
+
+@media(max-width:600px) {
+    .permissionImage {
+        display:none;
+    }
+}
+
+@media(max-width:961px) {
+    .individualApiReference {
+        float:none;
+    }
+}
+
+.fineprintModal {
+    display: none;
+    position: fixed;
+    background-color: rgba(119,119,119,.7);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1001;
+}
+
+.fineprintInner {
+    display: table;
+    overflow: hidden;
+    height: 100%;
+    width: 100%
+}   
+
+.fineprintRow {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.fineprintCol {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    width: 90%;
+    position: relative;
+}
+
+.fineprintContainer {
+    position: relative;  
+    height: auto;
+    max-height:550px;
+    overflow:auto;
+    border: 10px solid #fff;
+    background-color: #fff;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.fineprintContainer ol {
+    padding-left:40px;
+    list-style-type:disc;
+}

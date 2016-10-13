@@ -1,0 +1,34 @@
+﻿<div class="card" id="setup-project" name="5. Code">
+    <div class=""><h1>Start coding</h1></div>
+    <div id="use-starter-project">
+        <p id="downloadText">Download our code sample to get going. This sample will introduce you to authentication and send an email from your acccount.</p>
+        <br />
+        
+        <div id="registration-form">
+            <form role="form">
+                <div id="app-secret-prompt">
+                    <p>Please re-enter the App Secret that you generated and saved:</p>
+                    <div class="form-group" id="appPasswordFieldGroup">
+                        @*<label id="appPasswordLabel" class="" title="The password associated with the App ID." for="appPassword">App Password <i class="fa fa-question-circle"></i> :</label>*@
+                        <input id="appPasswordField" class="form-control" type="text" name="appId" placeholder="<App Secret Here>" />
+                        <div id="redirect-uri-error-div" class="ms-font-color-error ms-font-l"></div>
+                    </div>
+                </div>
+                <button class="download-button" type="button" value="Download starter project" id="downloadCodeSampleButtonSdk" onclick="registerAppParams.clientSecret = $('#appPasswordField').val(); codeSamplePackageAndDownload(platformId, registerAppParams.clientId, registerAppParams.clientSecret, registerAppParams.redirectUri, registerAppParams.signonUri, true); setAllSetDiv();">
+                    Download the SDK based code sample&nbsp;&nbsp;
+                    @*<img class="img-white-foreground" src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_downloadarrow_22x22.png") alt="download" />*@
+                    </button>
+                <button class="download-button" type="button" value="Download starter project" id="downloadCodeSampleButtonRest" onclick="registerAppParams.clientSecret = $('#appPasswordField').val(); codeSamplePackageAndDownload(platformId, registerAppParams.clientId, registerAppParams.clientSecret, registerAppParams.redirectUri, registerAppParams.signonUri, false); setAllSetDiv();">
+                    Download the REST based code sample&nbsp;&nbsp;
+                    @*<img class="img-white-foreground" src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_downloadarrow_22x22.png") alt="download" />*@
+                </button> 
+            </form>
+        </div>
+
+
+
+    </div>
+    <div id="write-code-from-scratch" hidden></div>
+    <div id="suggestionlistId" hidden></div>
+    <div id="post-download-instructions" hidden class="note"></div>
+</div>
