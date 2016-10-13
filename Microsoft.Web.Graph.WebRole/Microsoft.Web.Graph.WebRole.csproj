@@ -35,6 +35,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -184,6 +185,7 @@
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\DocPageController.cs" />
+    <Compile Include="Controllers\GettingStartedController.cs" />
     <Compile Include="Controllers\GraphExplorerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\FrontDoorCertValidator.cs" />
@@ -298,6 +300,7 @@
     <Content Include="Views\DocPage\_DocContent.cshtml" />
     <Content Include="Views\DocPage\_DocToc.cshtml" />
     <Content Include="Views\DocPage\NotFound.cshtml" />
+    <Content Include="Views\GettingStarted\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
