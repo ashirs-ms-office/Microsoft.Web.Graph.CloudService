@@ -217,17 +217,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Index.zh-cn.resx</DependentUpon>
     </Compile>
-    <Compile Include="Util\AppRegistration.cs" />
-    <Compile Include="Util\AppScopes.cs" />
     <Compile Include="Util\Base64UrlDecoder.cs" />
     <Compile Include="Util\BlobManager.cs" />
     <Compile Include="Util\Constants.cs" />
     <Compile Include="Util\DocContentManager.cs" />
     <Compile Include="Util\InputValidation.cs" />
-    <Compile Include="Util\RequestHelper.cs" />
-    <Compile Include="Util\ServiceInfo.cs" />
-    <Compile Include="Util\SettingsHelper.cs" />
-    <Compile Include="Util\TokenHelper.cs" />
     <Compile Include="Util\XmlReader.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="WebRole.cs" />
@@ -333,15 +327,7 @@
     <Content Include="Views\DocPage\_DocToc.cshtml" />
     <Content Include="Views\DocPage\NotFound.cshtml" />
     <Content Include="Views\GettingStarted\Index.cshtml" />
-    <Content Include="Views\GettingStarted\Partial\Error.cshtml" />
-    <Content Include="Views\GettingStarted\Partial\reg.cshtml" />
-    <Content Include="Views\GettingStarted\Partial\_AppRegistrationForm.cshtml" />
-    <Content Include="Views\GettingStarted\Partial\_AppRegistrationIntro.cshtml" />
-    <Content Include="Views\GettingStarted\Partial\_FirstCall.cshtml" />
     <Content Include="Views\GettingStarted\Partial\_Intro.cshtml" />
-    <Content Include="Views\GettingStarted\Partial\_Layout.cshtml" />
-    <Content Include="Views\GettingStarted\Partial\_LoginPartial.cshtml" />
-    <Content Include="Views\GettingStarted\Partial\_NextStep.cshtml" />
     <Content Include="Views\GettingStarted\Partial\_RegisterApp.cshtml" />
     <Content Include="Views\GettingStarted\Partial\_RegistrationSuccessful.cshtml" />
     <Content Include="Views\GettingStarted\Partial\_Setup.cshtml" />

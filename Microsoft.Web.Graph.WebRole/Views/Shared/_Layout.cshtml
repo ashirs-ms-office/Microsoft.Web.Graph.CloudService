@@ -10,7 +10,9 @@
     <meta http-equiv="Cache-control" content="@Model.CacheControl">
     <title>@Model.PageTitle</title>
     <script src="@Model.OptimizelyUrl"></script>
-   
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
     @*Application Insight start*@
     <script>
         @*AppInsights telemetry*@
