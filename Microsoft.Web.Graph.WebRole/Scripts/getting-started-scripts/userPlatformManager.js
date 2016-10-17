@@ -160,21 +160,8 @@ function setRedirectUri(platformId) {
 
 function sendPlatformInfoToServer(platformId)
 {
-    //var urltosend = "/GettingStarted/Main/platform/" + platformId;
-    
-    //var dataToSend = {
-    //    "platformid": platformId
-    //};
-
-    //dataToSend = AddAntiForgeryToken(dataToSend);
-
-    //$.ajax({
-    //    url: urltosend,
-    //    type: "POST",
-    //    data:dataToSend
-    //});
-
-    setCookie("platform", platformId);
+    //todo: ashirs, check if setcookie is required
+    //setCookie("platform", platformId);
     ga('send', 'event', 'O365path-Rest', 'Setup-' + platformId);
     MscomCustomEvent('ms.InteractionType', '4', 'ms.controlname', 'O365apis', 'ms.ea_action', 'SelectPlatform', 'ms.contentproperties', platformId);
 }
