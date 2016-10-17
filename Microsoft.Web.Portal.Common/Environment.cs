@@ -7,7 +7,7 @@ namespace Microsoft.Web.Portal.Common
     /// <summary>
     /// Class representing Runt time environment configuration
     /// </summary>
-    public class Environment
+    public class RunTimeEnvironment
     {
 
         /// <summary>

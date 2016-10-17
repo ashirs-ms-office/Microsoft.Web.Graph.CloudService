@@ -16,7 +16,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels
         /// retruns true if current request is from Test environment false otherwise
         /// 
         /// Note:
-        /// tbd: it should be coming from an Environment class
+        /// tbd: it should be coming from an RunTimeEnvironment class
         /// </summary>
         private bool IsTestEnvironment
         {

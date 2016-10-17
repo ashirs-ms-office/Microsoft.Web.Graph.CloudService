@@ -42,14 +42,16 @@
 @{
     //SetMeta(httpEquiv: "X-UA-Compatible", content: "IE=edge,chrome=1");
 
+    //@Styles.Render("./Content/css");
     @Styles.Render("./Content/getting-started-styles/gettingStarted.css")
-    @Styles.Render("./Content/getting-started-styles/json-view.min.css")
+    @Styles.Render("./Content/getting-started-styles/jquery.json-view.min.css")
     @Styles.Render("https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css")
     @Styles.Render("https://appsforoffice.microsoft.com/fabric/1.0/fabric.components.min.css")
     @Styles.Render("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
 
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
+
     @Scripts.Render("./Scripts/getting-started-scripts/Utils.js")
     @Scripts.Render("./Scripts/getting-started-scripts/navBar.js")
     @Scripts.Render("./Scripts/getting-started-scripts/userPlatformManager.js")

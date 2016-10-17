@@ -24,6 +24,18 @@
         appInsights.trackPageView();
     </script>
     @*Application Insight end*@
+
+    <script>
+    var runTimeEnv = {};
+    // storage name that is defined in the config
+    window.runTimeEnv.mediaStorage = "@Microsoft.Web.Portal.Common.RunTimeEnvironment.MediaStorage";
+
+    // returns the full url of the asset
+    // input:=> url: relative url
+    window.runTimeEnv.getMediaUrl = function (url) {
+        return window.runTimeEnv.mediaStorage + url;
+    }
+    </script>
 </head>
 
 <body>
