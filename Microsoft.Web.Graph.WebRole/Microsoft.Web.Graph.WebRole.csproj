@@ -197,6 +197,11 @@
     <Compile Include="Models\DocSets.cs" />
     <Compile Include="Models\Toc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\GettingStarted\Index.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Index.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\GraphExplorer\Index.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -240,8 +245,10 @@
     </Content>
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <EmbeddedResource Include="Resources\GettingStarted\Index.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Index.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\GraphExplorer\Index.zh-cn.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Index.zh-cn.Designer.cs</LastGenOutput>
@@ -290,8 +297,6 @@
     <Content Include="Scripts\graph-explorer-scripts\mode-javascript.js" />
     <Content Include="Scripts\graph-explorer-scripts\ngprogress.min.js" />
     <Content Include="Scripts\graph-explorer-scripts\ui-bootstrap-tpls-0.14.3.min.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -343,7 +348,6 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\GraphExplorer\Index.ja-jp.resx">

@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MS_GRAPH_QUICK_START" xml:space="preserve">
+    <value>Microsoft Graph Quick Start</value>
+  </data>
+  <data name="MS_GRAPH_QUICK_START_DESCRIPTION" xml:space="preserve">
+    <value>This quick start will let you try out calls, register your app, and download a sample app that connects to data using Microsoft Graph. The sample app sends an email on a user's behalf. It will show you how to authenticate and make calls to Microsoft Graph using a school or work or a Microsoft account.</value>
+  </data>
+  <data name="ON_ERROR" xml:space="preserve">
+    <value>&lt;h4&gt;Something weird has happened&lt;/h4&gt;
+&lt;p&gt;Please try again&lt;/p&gt;</value>
+  </data>
+  <data name="PICK_PLATFORM_DESCRIPTION" xml:space="preserve">
+    <value>Build a simple app that connects to Office 365 and calls the Microsoft Graph API. After you pick your platform, you'll walk through getting the right tools, registering your app, and running the code.</value>
+  </data>
+  <data name="PICK_PLATFORM_NOTE" xml:space="preserve">
+    <value>Note: You can not change the platform once an app has been registered. To change the platform, please click here to start over.</value>
+  </data>
+  <data name="PICK_PLATFORM_TITLE" xml:space="preserve">
+    <value>Pick the platform you'll be building for</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_ANDROID" xml:space="preserve">
+    <value>&lt;p&gt;If you haven't already, install &lt;a href="https://developer.android.com/sdk/index.html" target="_blank"&gt;Android Studio&lt;/a&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_ANGULAR" xml:space="preserve">
+    <value>&lt;p&gt;If you haven't already, install &lt;a href="https://nodejs.org/" target="_blank"&gt;Node.js&lt;/a&gt; and &lt;a href="https://bower.io/" target="_blank"&gt;Bower&lt;/a&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_DOTNET" xml:space="preserve">
+    <value>&lt;p&gt;If you haven't already, install &lt;a href="https://www.visualstudio.com/vs-2015-product-editions" target="_blank"&gt;Visual Studio 2015 Community or Enterprise&lt;/a&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_IOS" xml:space="preserve">
+    <value>&lt;ul&gt;
+    &lt;li&gt;1. If you haven't already, download and install Xcode on your Mac.&lt;/li&gt;
+    &lt;li&gt;
+        2. Run the following commands to install and set up the &lt;a href="http://cocoapods.org/" target="_blank"&gt;CocoaPods&lt;/a&gt; dependency manager.&lt;br /&gt;
+        &lt;b&gt;sudo gem install cocoapods&lt;/b&gt;&lt;br /&gt;
+        &lt;b&gt;pod setup&lt;/b&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_IOS_OBJECTIVE_C" xml:space="preserve">
+    <value>&lt;ul&gt;
+    &lt;li&gt;
+        1. Download and install Xcode on your Mac. You can find it &lt;a href="https://developer.apple.com/download/more/" target="_blank"&gt;here&lt;/a&gt;.&lt;br /&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        2. Run the following commands to install and set up the &lt;a href="http://cocoapods.org/" target="_blank"&gt;CocoaPods&lt;/a&gt; dependency manager.&lt;br /&gt;
+        &lt;b&gt;sudo gem install cocoapods&lt;/b&gt;&lt;br /&gt;
+        &lt;b&gt;pod setup&lt;/b&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_IOS_SWIFT" xml:space="preserve">
+    <value>&lt;ul&gt;
+    &lt;li&gt;
+        1. Download and install Xcode 7.3.1 on your Mac. You can find it &lt;a href="https://developer.apple.com/download/more/" target="_blank"&gt;here&lt;/a&gt;.&lt;br /&gt;
+        &lt;p class="yellowNote"&gt;&lt;b&gt;Note:&lt;/b&gt; The sample was tested on Xcode 7.3.1.  This sample does not yet support XCode 8 and iOS10, which uses the Swift 3.0 framework.&lt;/p&gt;
+&lt;/li&gt;
+    &lt;li&gt;
+        2. Run the following commands to install and set up the &lt;a href="http://cocoapods.org/" target="_blank"&gt;CocoaPods&lt;/a&gt; dependency manager.&lt;br /&gt;
+        &lt;b&gt;sudo gem install cocoapods&lt;/b&gt;&lt;br /&gt;
+        &lt;b&gt;pod setup&lt;/b&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_JAVASCRIPT" xml:space="preserve">
+    <value>1. Get your favorite text editor. You can write JavaScript in many different IDEs and since none provide a significant advantage for developing with the Office 365 APIs, choose your favorite and get started. [Brackets](http://brackets.io/), [Sublime Text](http://www.sublimetext.com/), [WebStorm](https://www.jetbrains.com/webstorm/), and [Visual Studio](http://www.visualstudio.com/downloads) are popular choices.</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_NODEJS" xml:space="preserve">
+    <value>&lt;ul&gt;
+    &lt;li&gt;Download and install Node.js and npm.&lt;/li&gt;
+&lt;/ul&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_PHP" xml:space="preserve">
+    <value>&lt;p&gt;If you haven't already, download and install PHP version 5.6.0 or later.&lt;/p&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_PYTHON" xml:space="preserve">
+    <value>&lt;p&gt;If you haven't already, you need to download and install the following tools:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;- Python 3.4.2.&lt;/li&gt;
+    &lt;li&gt;- Django 1.7.1.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Be sure you can run a localhost web server before continuing.&lt;/p&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_RUBY" xml:space="preserve">
+    <value>&lt;p&gt;If you haven’t already, download and install Ruby on Rails. Be sure you can run a localhost web server before continuing.&lt;/p&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_UWP" xml:space="preserve">
+    <value>&lt;p&gt;
+    To get set up:
+    &lt;ul&gt;
+        &lt;li&gt;
+            1. Install &lt;a href="https://www.visualstudio.com/vs-2015-product-editions" target="_blank"&gt;Visual Studio 2015 Community or Enterprise&lt;/a&gt;.          
+        &lt;/li&gt;
+        &lt;li&gt;
+            2. Verify Windows 10 &lt;a href="https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx" target="_blank"&gt;development mode&lt;/a&gt; is enabled. 
+        &lt;/li&gt;
+        &lt;li&gt;
+            3. Make sure that you've installed the tools for Windows 10 development.
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/p&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_XAMARIN" xml:space="preserve">
+    <value>&lt;p&gt;
+    To get set up:
+    &lt;ul&gt;
+        &lt;li&gt;
+            1. Install &lt;a href="https://www.visualstudio.com/vs-2015-product-editions" target="_blank"&gt;Visual Studio 2015 Community or Enterprise&lt;/a&gt;.
+        &lt;/li&gt;
+        &lt;li&gt;
+            2. Install &lt;a href="https://www.xamarin.com/visual-studio" target="_blank"&gt;Xamarin for Visual Studio&lt;/a&gt;.
+        &lt;/li&gt;
+        &lt;li&gt;
+            3. Verify Windows 10 &lt;a href="https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx" target="_blank"&gt;development mode&lt;/a&gt; is enabled.
+        &lt;/li&gt;
+        &lt;li&gt;
+            4. Make sure that you've installed the tools for Windows 10 development.
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/p&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_TITLE_ANDROID" xml:space="preserve">
+    <value>Get set up for Android development</value>
+  </data>
+  <data name="PLATFORM_SETUP_TITLE_ANGULAR" xml:space="preserve">
+    <value>Get set up for Angular development</value>
+  </data>
+  <data name="PLATFORM_SETUP_TITLE_DOTNET" xml:space="preserve">
+    <value>Get set up for ASP.NET MVC development</value>
+  </data>
+  <data name="PLATFORM_SETUP_TITLE_IOS" xml:space="preserve">
+    <value>Get set up for iOS development</value>
+  </data>
+  <data name="PLATFORM_SETUP_TITLE_JAVASCRIPT" xml:space="preserve">
+    <value># Before you begin</value>
+  </data>
+  <data name="PLATFORM_SETUP_TITLE_NODEJS" xml:space="preserve">
+    <value>Get set up for Node.js development</value>
+  </data>
+  <data name="PLATFORM_SETUP_TITLE_PHP" xml:space="preserve">
+    <value>&lt;h1&gt;Get set up for PHP development&lt;/h1&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_TITLE_PYTHON" xml:space="preserve">
+    <value>&lt;h1 id="before-you-begin"&gt;Get set up for Python development&lt;/h1&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_TITLE_RUBY" xml:space="preserve">
+    <value>&lt;h1 id="before-you-begin"&gt;Get set up for Ruby development&lt;/h1&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_TITLE_UWP" xml:space="preserve">
+    <value>&lt;h1 id="get-setup"&gt;Get set up for Universal Windows Platform (UWP) development&lt;/h1&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_TITLE_XAMARIN" xml:space="preserve">
+    <value>&lt;h1 id="get-setup"&gt;Get set up for Xamarin development&lt;/h1&gt;</value>
+  </data>
+  <data name="POST_DOWNLOAD_INSTRUCTION" xml:space="preserve">
+    <value>Almost there! To get it running: Unzip downloaded package, open solution, and run.&lt;p&gt;To see how this sample was created, please see our getting started &lt;a href='http://graph.microsoft.io/en-us/docs/platform/xamarin' target='_blank'&gt;walkthrough&lt;/a&gt;.&lt;/p&gt;</value>
+    <comment>UWP/xamarin</comment>
+  </data>
+  <data name="POST_DOWNLOAD_INSTRUCTION_ANDROID" xml:space="preserve">
+    <value>Almost there! To get it running: Unzip downloaded package, open solution, and run.&lt;p&gt;To see how this sample was created, please see our getting started &lt;a href='http://graph.microsoft.io/en-us/docs/platform/aspnetmvc' target='_blank'&gt;walkthrough&lt;/a&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="POST_DOWNLOAD_INSTRUCTION_ANGULAR" xml:space="preserve">
+    <value>Almost there! To run the code sample:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;1. Unzip the downloaded package to a folder, and go to that folder in your command-line tool. &lt;/li&gt;&lt;li&gt;2. Run &lt;b&gt;npm install&lt;/b&gt; and &lt;b&gt;bower install hello&lt;/b&gt; to install project dependencies. &lt;/li&gt;&lt;li&gt;3.Run &lt;b&gt;npm start&lt;/b&gt; and go to &lt;a href='http://localhost:8080/' target='_blank'&gt;http://localhost:8080/&lt;/a&gt; in your web browser. &lt;/li&gt;&lt;/ul&gt;&lt;p&gt;To see how this sample was created, please see our getting started &lt;a href='http://graph.microsoft.io/en-us/docs/platform/angular' target='_blank'&gt;walkthrough&lt;/a&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="POST_DOWNLOAD_INSTRUCTION_DOTNET" xml:space="preserve">
+    <value>Almost there! To get it running: Unzip downloaded package, open solution, and run.&lt;p&gt;To see how this sample was created, please see our getting started &lt;a href='http://graph.microsoft.io/en-us/docs/platform/aspnetmvc' target='_blank'&gt;walkthrough&lt;/a&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="POST_DOWNLOAD_INSTRUCTION_IOS_OBJECTIVE_C" xml:space="preserve">
+    <value>Almost there! To get it running:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;1. Unzip the downloaded package. &lt;/li&gt;&lt;li&gt;2. Navigate to the swift or objective-c project folder.&lt;/li&gt;&lt;li&gt;3. Run pod install.&lt;/li&gt;&lt;li&gt;4. Open the workspace in Xcode and run.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;To see how this sample was created, please see our getting started &lt;a href='http://graph.microsoft.io/en-us/docs/platform/ios' target='_blank'&gt;walkthrough&lt;/a&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="POST_DOWNLOAD_INSTRUCTION_IOS_SWIFT" xml:space="preserve">
+    <value>Almost there! To get it running:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;1. Unzip the downloaded package. &lt;/li&gt;&lt;li&gt;2. Navigate to the swift or objective-c project folder.&lt;/li&gt;&lt;li&gt;3. Run pod install.&lt;/li&gt;&lt;li&gt;4. Open the workspace in Xcode and run.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;To see how this sample was created, please see our getting started &lt;a href='http://graph.microsoft.io/en-us/docs/platform/ios' target='_blank'&gt;walkthrough&lt;/a&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="POST_DOWNLOAD_INSTRUCTION_JAVASCRIPT" xml:space="preserve">
+    <value>Thanks! Your project is on its way from GitHub. To continue: Unzip downloaded package and run.</value>
+  </data>
+  <data name="POST_DOWNLOAD_INSTRUCTION_NODE" xml:space="preserve">
+    <value>Almost there! To get it running: Unzip downloaded package, change directory to the project and run:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;npm install&lt;/b&gt;&lt;/li&gt;&lt;li&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;npm start&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;Then open your browser to the specified port (i.e. &lt;a href='http://localhost:3000' target='_blank'&gt;http://localhost:3000&lt;/a&gt;).&lt;p&gt;To see how this sample was created, please see our getting started &lt;a href='http://graph.microsoft.io/en-us/docs/platform/nodejs' target='_blank'&gt;walkthrough&lt;/a&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="POST_DOWNLOAD_INSTRUCTION_PHP" xml:space="preserve">
+    <value>Almost there! To get it running:  Unzip downloaded package. Run the command &lt;b&gt;composer install&lt;/b&gt; to install the required dependencies and &lt;b&gt;php –S 0.0.0.0:8000 –t app&lt;/b&gt; to start the web server. Access the app at &lt;a href='http://localhost:8000' target='_blank'&gt;http://localhost:8000&lt;/a&gt;.&lt;p&gt;To see how this sample was created, please see our getting started &lt;a href='http://graph.microsoft.io/en-us/docs/platform/php' target='_blank'&gt;walkthrough&lt;/a&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="POST_DOWNLOAD_INSTRUCTION_PYTHON" xml:space="preserve">
+    <value>Almost there! To get it running: &lt;br/&gt;&lt;ul&gt;&lt;li&gt;1. Unzip downloaded package, navigate to the folder. &lt;/li&gt;&lt;li&gt;2. Install the &lt;a href='http://www.python-requests.org/en/latest/' target='_blank'&gt;Requests: HTTP for Humans&lt;/a&gt; library by running &lt;b&gt;pip install requests&lt;/b&gt;.&lt;/li&gt;&lt;li&gt;3. Run &lt;b&gt;python manage.py migrate&lt;/b&gt; to initialize the database for the app. &lt;/li&gt;&lt;li&gt;4. Then run &lt;b&gt;python manage.py runserver&lt;/b&gt; to start your server.&lt;/li&gt;&lt;li&gt;5. Go to &lt;a href='http://127.0.0.1:8000' target='_blank'&gt;http://127.0.0.1:8000&lt;/a&gt; in your web browser.&lt;/li&gt;&lt;/ul&gt;</value>
+  </data>
+  <data name="POST_DOWNLOAD_INSTRUCTION_RUBY" xml:space="preserve">
+    <value>Almost there! To get it running:&lt;br/&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;1. Unzip downloaded package and go to the folder. &lt;/li&gt;&lt;li&gt;2. If you don't already  have bundler and rack, you can install them with the following command: &lt;br/&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;gem install bundler rack&lt;/b&gt;. &lt;/li&gt;&lt;li&gt;3. Install the Rails application and dependencies with the following command: &lt;br/&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;bundle install&lt;/b&gt;&lt;/li&gt;&lt;li&gt;4. To start the Rails application, type the following command: &lt;br /&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;rackup -p 3000&lt;/b&gt;&lt;/li&gt;&lt;li&gt;5. Go to &lt;a href='http://localhost:3000' target='_blank'&gt;http://localhost:3000&lt;/a&gt; in your web browser. &lt;/li&gt;&lt;/ul&gt;&lt;p&gt;To see how this sample was created, please see our getting started &lt;a href='http://graph.microsoft.io/en-us/docs/platform/ruby' target='_blank'&gt;walkthrough&lt;/a&gt;.&lt;/p&gt;</value>
+  </data>
+  <data name="REGISTER_APP_DESCRIPTION" xml:space="preserve">
+    <value>To register your app, we will take you to the &lt;i&gt;Microsoft Application Registration portal&lt;/i&gt; where you will be able to get an App ID and redirect URL. You will need either a &lt;a href="http://dev.office.com/devprogram"&gt;school or work&lt;/a&gt; or &lt;a href="https://signup.live.com/signup?wa=wsignin1.0&amp;ct=1473983465&amp;rver=6.6.6556.0&amp;wp=MBI_SSL&amp;wreply=https%3a%2f%2foutlook.live.com%2fowa%2f&amp;id=292841&amp;CBCXT=out&amp;cobrandid=90015&amp;bk=1473983466&amp;uiflavor=web&amp;uaid=3b7bae8746264c1bacf1db2b315745cc&amp;mkt=EN-US&amp;lc=1033&amp;lic=1"&gt;Microsoft account&lt;/a&gt;.</value>
+  </data>
+  <data name="REGISTER_APP_DESCRIPTION_MOBILE" xml:space="preserve">
+    <value>To register your app, we will take you to the &lt;i&gt;Microsoft Application Registration portal&lt;/i&gt; where you will be able to get an App ID and redirect URL. You will need either a &lt;a href="http://dev.office.com/devprogram"&gt;school or work&lt;/a&gt; or &lt;a href="https://signup.live.com/signup?wa=wsignin1.0&amp;ct=1473983465&amp;rver=6.6.6556.0&amp;wp=MBI_SSL&amp;wreply=https%3a%2f%2foutlook.live.com%2fowa%2f&amp;id=292841&amp;CBCXT=out&amp;cobrandid=90015&amp;bk=1473983466&amp;uiflavor=web&amp;uaid=3b7bae8746264c1bacf1db2b315745cc&amp;mkt=EN-US&amp;lc=1033&amp;lic=1"&gt;Microsoft account&lt;/a&gt;. &lt;div id="mobileFirstMessage"&gt;This sample app will work for most users*.&lt;/div&gt;</value>
+  </data>
+  <data name="REGISTER_APP_NOTE" xml:space="preserve">
+    <value />
+  </data>
+  <data name="REGISTER_APP_NOTE_MOBILE" xml:space="preserve">
+    <value>&lt;b&gt;*Building an app for enterprise users only?&lt;/b&gt; Use Azure Active Directory V1. Here is &lt;a id="fineprintlink" style="cursor: pointer"&gt;why&lt;/a&gt;. &lt;a id="v1Link" href="#"&gt;Get Started with this code sample&lt;/a&gt;.</value>
+  </data>
+  <data name="REGISTER_APP_SECRET_PROMPT" xml:space="preserve">
+    <value>Please re-enter the App Secret that you generated and saved:</value>
+  </data>
+  <data name="REGISTER_APP_SUCCESS_MSG" xml:space="preserve">
+    <value>Thanks for registering your app. By the way, we also set the Redirect URI on your behalf so it can work with our code sample.</value>
+  </data>
+  <data name="REGISTER_APP_SUCCESS_TITLE" xml:space="preserve">
+    <value>Registration Successful!</value>
+  </data>
+  <data name="REGISTER_APP_TITLE" xml:space="preserve">
+    <value>Register the sample app</value>
+  </data>
+  <data name="TRY_OUT_DESCRIPTION" xml:space="preserve">
+    <value>Pick an API, try different values, and choose the Try button to see the responses from a sample tenant.</value>
+  </data>
+  <data name="TRY_OUT_TITLE" xml:space="preserve">
+    <value>Try it out</value>
+  </data>
+</root>
