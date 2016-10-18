@@ -1,7 +1,9 @@
-﻿<div class="card" id="intro" name="1. Get Started">
-    <div><h1>Microsoft Graph Quick Start</h1></div>
+﻿@model Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.IntroPartialViewModel
+
+<div class="card" id="intro" name="1. Get Started">
+    <div><h1>@Model.Title </h1></div>
     <p>
-        This quick start will let you try out calls, register your app, and download a sample app that connects to data using Microsoft Graph. The sample app sends an email on a user's behalf. It will show you how to authenticate and make calls to Microsoft Graph using a school or work or a Microsoft account.
+        @Model.Description
     </p> 
     <div id="fineprint" class="fineprintModal">
         <div class="fineprintInner">

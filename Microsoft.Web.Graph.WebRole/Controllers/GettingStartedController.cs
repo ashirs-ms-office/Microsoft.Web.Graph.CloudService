@@ -1,4 +1,5 @@
 ﻿using Microsoft.Web.Graph.WebRole.ViewModels;
+using Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted;
 using Microsoft.Web.Portal.Common.Culture;
 using Microsoft.Web.Portal.Common.Logging;
 using Microsoft.Web.Portal.Common.Telemetry;
@@ -25,7 +26,7 @@ namespace Microsoft.Web.Graph.WebRole.Controllers
         // GET: GettingStarted
         public ActionResult Index()
         {
-            ViewModelBase model = new ViewModelBase(HttpContext.ApplicationInstance.Context);
+            GettingStartedViewModel model = new GettingStartedViewModel(HttpContext.ApplicationInstance.Context);
             model.PageTitle = "Microsoft Graph - Getting Started";
             return View(model);
         }
