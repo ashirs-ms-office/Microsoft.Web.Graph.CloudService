@@ -227,6 +227,8 @@
     <Compile Include="Util\DocContentManager.cs" />
     <Compile Include="Util\InputValidation.cs" />
     <Compile Include="Util\XmlReader.cs" />
+    <Compile Include="ViewModels\GettingStarted\GettingStartedViewModel.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\IntroViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="WebRole.cs" />
   </ItemGroup>
@@ -246,7 +248,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <EmbeddedResource Include="Resources\GettingStarted\Index.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Index.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\GraphExplorer\Index.zh-cn.resx">
