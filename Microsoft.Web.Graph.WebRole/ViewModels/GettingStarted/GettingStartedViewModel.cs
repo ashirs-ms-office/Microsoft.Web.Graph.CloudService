@@ -11,8 +11,10 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted
         public GettingStartedViewModel(HttpContext context) : base(context)
         {
             IntroPartialViewModel = new IntroPartialViewModel();
+            TryItOutPartialViewModel = new TryItOutPartialViewModel();
         }
 
         public IntroPartialViewModel IntroPartialViewModel { get;set;}
+        public TryItOutPartialViewModel TryItOutPartialViewModel { get; set; }
     }
 }

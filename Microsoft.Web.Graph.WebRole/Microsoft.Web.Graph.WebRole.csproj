@@ -234,6 +234,7 @@
     <Compile Include="Util\XmlReader.cs" />
     <Compile Include="ViewModels\GettingStarted\GettingStartedViewModel.cs" />
     <Compile Include="ViewModels\GettingStarted\Partials\IntroViewModel.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\TryItOutPartialViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="WebRole.cs" />
   </ItemGroup>

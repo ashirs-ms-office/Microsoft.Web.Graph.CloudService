@@ -121,7 +121,7 @@
     <value>サインイン</value>
   </data>
   <data name="MS_GRAPH_QUICK_START_DESCRIPTION" xml:space="preserve">
-    <value>This quick start will let you try out calls, register your app, and download a sample app that connects to data using Microsoft Graph. The sample app sends an email on a user's behalf. It will show you how to authenticate and make calls to Microsoft Graph using a school or work or a Microsoft account.</value>
+    <value>サインインThis quick start will let you try out calls, register your app, and download a sample app that connects to data using Microsoft Graph. The sample app sends an email on a user's behalf. It will show you how to authenticate and make calls to Microsoft Graph using a school or work or a Microsoft account.</value>
   </data>
   <data name="ON_ERROR" xml:space="preserve">
     <value>&lt;h4&gt;Something weird has happened&lt;/h4&gt;
@@ -329,9 +329,9 @@
     <value>Register the sample app</value>
   </data>
   <data name="TRY_OUT_DESCRIPTION" xml:space="preserve">
-    <value>Pick an API, try different values, and choose the Try button to see the responses from a sample tenant.</value>
+    <value>Pick an API, try different values, and choose the Try button to see the responses from a sample tenant.サインイン</value>
   </data>
   <data name="TRY_OUT_TITLE" xml:space="preserve">
-    <value>Try it out</value>
+    <value>Try it outサインイン</value>
   </data>
 </root>

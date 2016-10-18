@@ -1,6 +1,7 @@
-﻿<div class="card" id="try-it-out" name="2. Try it out">
-    <div class=""><h1>Try it out</h1></div>
-    <p>Pick an API, try different values, and choose the <strong>Try</strong> button to see the responses from a sample tenant.</p>
+﻿@model Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.TryItOutPartialViewModel
+<div class="card" id="try-it-out" name="2. Try it out">
+    <div class=""><h1>@Model.Title</h1></div>
+    <p>@Model.Description</p>
     <hr />
     <!-- Service Container-->
     <div id="serviceOptions" class="services-container"></div>
