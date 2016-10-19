@@ -1,4 +1,7 @@
-﻿@model Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.TryItOutPartialViewModel
+﻿@model Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.TryOutPartialViewModel
+    <script>
+        window.tryoutSampleData = @Html.Raw(Json.Encode(Model.DataModels));
+    </script>
 <div class="card" id="try-it-out" name="2. Try it out">
     <div class=""><h1>@Model.Title</h1></div>
     <p>@Model.Description</p>
