@@ -331,7 +331,46 @@
   <data name="TRY_OUT_DESCRIPTION" xml:space="preserve">
     <value>Pick an API, try different values, and choose the Try button to see the responses from a sample tenant.</value>
   </data>
+  <data name="TRY_OUT_GET_CONTACTS_LABEL" xml:space="preserve">
+    <value>Get all contacts</value>
+  </data>
+  <data name="TRY_OUT_GET_EVENTS_LABEL" xml:space="preserve">
+    <value>Get events</value>
+  </data>
+  <data name="TRY_OUT_GET_FILES_LABEL" xml:space="preserve">
+    <value>Get files</value>
+  </data>
+  <data name="TRY_OUT_GET_GROUPS_LABEL" xml:space="preserve">
+    <value>Get groups</value>
+  </data>
+  <data name="TRY_OUT_GET_GROUPS_NOTES_TEXT" xml:space="preserve">
+    <value>Groups and query strings of group profile</value>
+  </data>
+  <data name="TRY_OUT_GET_MESSAGES_NOTES_TEXT" xml:space="preserve">
+    <value>The target folder ID or well-known name: Inbox, SentItems, Drafts, or DeletedItems.</value>
+  </data>
+  <data name="TRY_OUT_GET_MESSAGE_LABEL" xml:space="preserve">
+    <value>Get messages</value>
+  </data>
+  <data name="TRY_OUT_GET_USERS_LABEL" xml:space="preserve">
+    <value>Get users</value>
+  </data>
+  <data name="TRY_OUT_GET_USERS_NOTES_TEXT" xml:space="preserve">
+    <value>User(s) and query strings of user(s) profile.</value>
+  </data>
+  <data name="TRY_OUT_NAME_LABEL" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="TRY_OUT_NOTES_LABEL" xml:space="preserve">
+    <value>Notes</value>
+  </data>
   <data name="TRY_OUT_TITLE" xml:space="preserve">
     <value>Try it out</value>
+  </data>
+  <data name="TRY_OUT_TRY_LABEL" xml:space="preserve">
+    <value>Try</value>
+  </data>
+  <data name="TRY_OUT_TYPE_LABEL" xml:space="preserve">
+    <value>Type</value>
   </data>
 </root>

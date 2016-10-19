@@ -32,6 +32,15 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
 
     public class TryOutPartialViewModel
     {
+        private enum tryoutApiIndex
+        {
+            GetMessages = 0,
+            GetEvents = 1,
+            GetContacts = 2,
+            GetFiles = 3,
+            GetUsers = 4,
+            GetGroups = 5
+        }
         #region Json Data string
 
         public string jsonData = @"[
@@ -130,6 +139,15 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
         #region Try out Json data model
         private APIModel[] _apiModel;
 
+        private void FixTheJson()
+        {
+            _apiModel[(int)tryoutApiIndex.GetMessages].apiDescription = Resources.GettingStarted.Index.TRY_OUT_GET_MESSAGE_LABEL;
+            _apiModel[(int)tryoutApiIndex.GetEvents].apiDescription = Resources.GettingStarted.Index.TRY_OUT_GET_EVENTS_LABEL;
+            _apiModel[(int)tryoutApiIndex.GetContacts].apiDescription = Resources.GettingStarted.Index.TRY_OUT_GET_CONTACTS_LABEL;
+            _apiModel[(int)tryoutApiIndex.GetFiles].apiDescription = Resources.GettingStarted.Index.TRY_OUT_GET_FILES_LABEL;
+            _apiModel[(int)tryoutApiIndex.GetUsers].apiDescription = Resources.GettingStarted.Index.TRY_OUT_GET_USERS_LABEL;
+            _apiModel[(int)tryoutApiIndex.GetGroups].apiDescription = Resources.GettingStarted.Index.TRY_OUT_GET_GROUPS_LABEL;
+        }
         public APIModel[] DataModels
         {
             get
@@ -137,6 +155,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 if (_apiModel == null)
                 {
                     _apiModel = JsonConvert.DeserializeObject<APIModel[]>(jsonData);
+                    FixTheJson();
                 }
                 return _apiModel;
             }

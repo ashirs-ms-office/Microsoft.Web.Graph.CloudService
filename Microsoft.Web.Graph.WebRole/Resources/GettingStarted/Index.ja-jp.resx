@@ -329,9 +329,48 @@
     <value>Register the sample app</value>
   </data>
   <data name="TRY_OUT_DESCRIPTION" xml:space="preserve">
-    <value>Pick an API, try different values, and choose the Try button to see the responses from a sample tenant.サインイン</value>
+    <value>サインインPick an API, try different values, and choose the Try button to see the responses from a sample tenant.</value>
+  </data>
+  <data name="TRY_OUT_GET_CONTACTS_LABEL" xml:space="preserve">
+    <value>サインインGet all contacts</value>
+  </data>
+  <data name="TRY_OUT_GET_EVENTS_LABEL" xml:space="preserve">
+    <value>サインインGet events</value>
+  </data>
+  <data name="TRY_OUT_GET_FILES_LABEL" xml:space="preserve">
+    <value>サインインGet files</value>
+  </data>
+  <data name="TRY_OUT_GET_GROUPS_LABEL" xml:space="preserve">
+    <value>サインインGet groups</value>
+  </data>
+  <data name="TRY_OUT_GET_GROUPS_NOTES_TEXT" xml:space="preserve">
+    <value>サインインGroups and query strings of group profile</value>
+  </data>
+  <data name="TRY_OUT_GET_MESSAGES_NOTES_TEXT" xml:space="preserve">
+    <value>サインインThe target folder ID or well-known name: Inbox, SentItems, Drafts, or DeletedItems.</value>
+  </data>
+  <data name="TRY_OUT_GET_MESSAGE_LABEL" xml:space="preserve">
+    <value>サインインGet messages</value>
+  </data>
+  <data name="TRY_OUT_GET_USERS_LABEL" xml:space="preserve">
+    <value>サインインGet users</value>
+  </data>
+  <data name="TRY_OUT_GET_USERS_NOTES_TEXT" xml:space="preserve">
+    <value>サインインUser(s) and query strings of user(s) profile.</value>
+  </data>
+  <data name="TRY_OUT_NAME_LABEL" xml:space="preserve">
+    <value>サインインName</value>
+  </data>
+  <data name="TRY_OUT_NOTES_LABEL" xml:space="preserve">
+    <value>サインインNotes</value>
   </data>
   <data name="TRY_OUT_TITLE" xml:space="preserve">
     <value>Try it outサインイン</value>
+  </data>
+  <data name="TRY_OUT_TRY_LABEL" xml:space="preserve">
+    <value>サインインTry</value>
+  </data>
+  <data name="TRY_OUT_TYPE_LABEL" xml:space="preserve">
+    <value>サインインType</value>
   </data>
 </root>
