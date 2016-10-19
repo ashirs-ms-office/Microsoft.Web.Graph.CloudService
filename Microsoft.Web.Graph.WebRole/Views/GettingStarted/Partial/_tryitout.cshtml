@@ -1,6 +1,8 @@
 ﻿@model Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.TryOutPartialViewModel
     <script>
         window.tryoutSampleData = @Html.Raw(Json.Encode(Model.DataModels));
+        window.tryoutTableHeader = "@Html.Raw(string.Format("<thead><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td></thead>",
+                                 Model.Header.Name, Model.Header.Type, Model.Header.Value, Model.Header.Notes))"
     </script>
 <div class="card" id="try-it-out" name="2. Try it out">
     <div class=""><h1>@Model.Title</h1></div>
@@ -19,13 +21,13 @@
     <div id="tryError" class="ms-font-color-error ms-font-l"></div>
    
     <button type="button" class="try-button" value="Try" id="invokeurlBtn">
-        Try&nbsp;&nbsp
+        @Model.TryLabel&nbsp;&nbsp
         <span class="icon_seemore"></span>
     </button>
     <div id="response-container" hidden>
         <div>           
             <p>
-                <strong>Response Body</strong>
+                <strong>@Model.RespondBody</strong>
                 <i id="CopyCodeLink" style="cursor:pointer" class="fa fa-files-o hidden"></i>
             </p>
 

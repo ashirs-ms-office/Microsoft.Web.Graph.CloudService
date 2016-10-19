@@ -340,6 +340,9 @@
   <data name="TRY_OUT_GET_FILES_LABEL" xml:space="preserve">
     <value>サインインGet files</value>
   </data>
+  <data name="TRY_OUT_GET_FILES_NOTES_TEXT" xml:space="preserve">
+    <value>サインインPath of the files.</value>
+  </data>
   <data name="TRY_OUT_GET_GROUPS_LABEL" xml:space="preserve">
     <value>サインインGet groups</value>
   </data>
@@ -358,19 +361,25 @@
   <data name="TRY_OUT_GET_USERS_NOTES_TEXT" xml:space="preserve">
     <value>サインインUser(s) and query strings of user(s) profile.</value>
   </data>
-  <data name="TRY_OUT_NAME_LABEL" xml:space="preserve">
-    <value>サインインName</value>
+  <data name="TRY_OUT_RESONSE_BODY" xml:space="preserve">
+    <value>サイResponse Body</value>
   </data>
-  <data name="TRY_OUT_NOTES_LABEL" xml:space="preserve">
-    <value>サインインNotes</value>
+  <data name="TRY_OUT_TABLE_HEADER_NAME" xml:space="preserve">
+    <value>サイName</value>
+  </data>
+  <data name="TRY_OUT_TABLE_HEADER_NOTES" xml:space="preserve">
+    <value>サイNotes</value>
+  </data>
+  <data name="TRY_OUT_TABLE_HEADER_TYPE" xml:space="preserve">
+    <value>サイType</value>
+  </data>
+  <data name="TRY_OUT_TABLE_HEADER_VALUE" xml:space="preserve">
+    <value>サイValue</value>
   </data>
   <data name="TRY_OUT_TITLE" xml:space="preserve">
     <value>Try it outサインイン</value>
   </data>
   <data name="TRY_OUT_TRY_LABEL" xml:space="preserve">
     <value>サインインTry</value>
-  </data>
-  <data name="TRY_OUT_TYPE_LABEL" xml:space="preserve">
-    <value>サインインType</value>
   </data>
 </root>

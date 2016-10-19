@@ -107,8 +107,6 @@ function TryItOut(elemIDs, elemClasses, app) {
             $(tableSelector).empty();
             return;
         }
-        //build header
-        var headerHtml = "<thead><td>Name</td><td>Type</td><td>Value</td><td>Notes</td></thead>";
         //build rows
         var rowHtml = "";
         for (var i = 0; i < parameters.length; ++i) {
@@ -132,76 +130,12 @@ function TryItOut(elemIDs, elemClasses, app) {
             var cell4 = "<td>" + parameters[i]["Notes"] + "</td>";
             rowHtml += "<tr>" + cell1 + cell2 + cell3 + cell4 + "</tr>";
         }
-        var html = "<table id='paramTable' class='table'>" + headerHtml + rowHtml + "</table>";
+        var html = "<table id='paramTable' class='table'>" + window.tryoutTableHeader + rowHtml + "</table>";
         var tab = $(tableSelector);
         tab.empty();
         tab.append(html);
-
-        // add error handler
-        // sample URL displayed in the challengebox is get updated when mouse focus out
-        $("#paramTable .textbox").focusout(function () {
-            var paramValue = $("#paramTable .textbox").val();
-            if(paramValue =="" || typeof(paramValue)===undefined) {
-                $("#tryError").html("Please enter a parameter");
-                $("#invokeurlBtn").prop("disabled", true).css("cursor", "default");
-                return;
-            }
-            updateUrl();
-            var pattern = new RegExp(/^.*?(?=[\^#&\*:<>\{\|\}]).*$/);
-            if(pattern.test(paramValue)) {
-                $("#tryError").html("<bold>parameter contains at least one invalid chars</bold>");
-                $("#invokeurlBtn").prop("disabled", true).css("cursor", "default");
-            }
-        });
-
-        // sample URL displayed in the challengebox get updated when select value changes
-        $("#valueSelection").change(function () {
-            var paramValue = $("#paramTable .textbox").val();
-            if (paramValue == "" || typeof (paramValue) === undefined) {
-                $("#tryError").html("Please enter a parameter");
-                $("#invokeurlBtn").prop("disabled", true).css("cursor", "default");
-                return;
-            }
-            updateUrl();           
-            var pattern = new RegExp(/^.*?(?=[\^#&\*:<>\{\|\}]).*$/);
-            if (pattern.test(paramValue)) {
-                $("#tryError").html("<bold>parameter contains at least one invalid chars</bold>");
-                $("#invokeurlBtn").prop("disabled", true).css("cursor", "default");
-            }
-        });
-
-        $("#paramTable .textbox").focus(function () {
-            $("#tryError").html("");
-            $("#invokeurlBtn").prop("disabled", false).css("cursor", "pointer");
-            return;
-        });
     }
    
-    function getServiceEndPoint()
-    {
-        var msgHolder = $("#tryError");
-        //msgHolder.addClass('loading');;
-        msgHolder.html("Getting the service endpoint...");
-        ga('send', 'event', 'O365path-Rest', 'Try-it-out-GetServiceEndPoint-Begin');
-        $.ajax({
-            url: "/gettingstarted/proxy/EndPoints",
-            async:false,
-            type: 'GET',
-            success: function (data, textStatus, xhr) {
-                msgHolder.html("");
-                serviceEndpointUris_user = data;
-                ga('send', 'event', 'O365path-Rest', 'Try-it-out-GetServiceEndPoint-Success');
-            },
-            error: function (jqXHR, exception) {
-                msgHolder.html("<div class='ms-font-color-error ms-font-m'>Encountered error while requesting service endpoint, Please login and try again</div>");
-                ga('send', 'event', 'O365path-Rest', 'Try-it-out-GetServiceEndPoint-Error-' + jqXHR.responseText);
-                MscomCustomEvent('ms.InteractionType', '4', 'ms.controlname', 'O365apis', 'ms.ea_action', 'Try-it-out-GetServiceEndPoint-Error', 'ms.callresult', jqXHR.responseText);
-            },
-            complete: function (xhr) {
-            }
-        });
-    }
-
     function invokeUrlOnUserData()
     {
         $("#response-container").show("slow");
@@ -347,15 +281,4 @@ function TryItOut(elemIDs, elemClasses, app) {
     // initialize the parameters for the first time
    // updateParams();
     updateParams();
-    // get service endpoint if user is authenticated
-    //$.ajax({
-    //    url: "/GettingStarted/Account/IsAuthenticated",
-    //    async: true,
-    //    type: 'GET',
-    //    success: function (data, textStatus, xhr) {
-    //        if (data == "True") {
-    //            getServiceEndPoint();
-    //        }
-    //    }
-    //});
 }

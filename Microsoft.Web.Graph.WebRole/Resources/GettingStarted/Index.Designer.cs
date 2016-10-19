@@ -588,6 +588,15 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Path of the files..
+        /// </summary>
+        public static string TRY_OUT_GET_FILES_NOTES_TEXT {
+            get {
+                return ResourceManager.GetString("TRY_OUT_GET_FILES_NOTES_TEXT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Get groups.
         /// </summary>
         public static string TRY_OUT_GET_GROUPS_LABEL {
@@ -642,20 +651,47 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Response Body.
+        /// </summary>
+        public static string TRY_OUT_RESONSE_BODY {
+            get {
+                return ResourceManager.GetString("TRY_OUT_RESONSE_BODY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        public static string TRY_OUT_NAME_LABEL {
+        public static string TRY_OUT_TABLE_HEADER_NAME {
             get {
-                return ResourceManager.GetString("TRY_OUT_NAME_LABEL", resourceCulture);
+                return ResourceManager.GetString("TRY_OUT_TABLE_HEADER_NAME", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Notes.
         /// </summary>
-        public static string TRY_OUT_NOTES_LABEL {
+        public static string TRY_OUT_TABLE_HEADER_NOTES {
             get {
-                return ResourceManager.GetString("TRY_OUT_NOTES_LABEL", resourceCulture);
+                return ResourceManager.GetString("TRY_OUT_TABLE_HEADER_NOTES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type.
+        /// </summary>
+        public static string TRY_OUT_TABLE_HEADER_TYPE {
+            get {
+                return ResourceManager.GetString("TRY_OUT_TABLE_HEADER_TYPE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        public static string TRY_OUT_TABLE_HEADER_VALUE {
+            get {
+                return ResourceManager.GetString("TRY_OUT_TABLE_HEADER_VALUE", resourceCulture);
             }
         }
         
@@ -674,15 +710,6 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         public static string TRY_OUT_TRY_LABEL {
             get {
                 return ResourceManager.GetString("TRY_OUT_TRY_LABEL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Type.
-        /// </summary>
-        public static string TRY_OUT_TYPE_LABEL {
-            get {
-                return ResourceManager.GetString("TRY_OUT_TYPE_LABEL", resourceCulture);
             }
         }
     }

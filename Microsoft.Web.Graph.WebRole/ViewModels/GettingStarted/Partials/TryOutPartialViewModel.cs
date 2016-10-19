@@ -51,7 +51,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'authToken': 'Bearer {token:https://graph.microsoft.com/}',
             'img': '/media/Default/GettingStarted/devOffice_getting_started_mailblue_53x40.png',
             'icon': 'graph-mail',
-            'apiDescription': 'Get messages',
             'parameters': [
                {
                    'Name': 'folder_id',
@@ -68,7 +67,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'authToken': 'Bearer {token:https://graph.microsoft.com/}',
             'img': '/media/Default/GettingStarted/devOffice_getting_started_calendarblue_53x50.png',
             'icon': 'graph-calendar',
-            'apiDescription': 'Get events',
             'parameters': [
             ] // end parameters
             },
@@ -79,7 +77,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'authToken': 'Bearer {token:https://graph.microsoft.com/}',
             'img': '/media/Default/GettingStarted/devOffice_getting_started_contactsblue_53x50.png',
             'icon': 'graph-contact',
-            'apiDescription': 'Get all contacts',
             'parameters': [
             ] // end parameters
             },
@@ -90,13 +87,11 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'authToken': 'Bearer {token:https://graph.microsoft.com/}',
             'img': '/media/Default/GettingStarted/devOffice_getting_started_filesblue_53x50.png',
             'icon': 'graph-file',
-            'apiDescription': 'Get files',
             'parameters': [
                 {
                     'Name': 'file path',
                     'Type': 'string',
                     'Value': ['drive/root/children','me/drive'],
-                    'Notes': 'Path of the files.'
                 }
             ]
             },
@@ -107,13 +102,11 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'authToken': 'Bearer {token:https://graph.microsoft.com/}',
             'img': '/media/Default/GettingStarted/devOffice_getting_started_userblue_53x50.png',
             'icon': 'graph-user',
-            'apiDescription': 'Get users',
             'parameters': [
                  {
                      'Name': 'user',
                      'Type': 'string',
                      'Value': ['me','me?$select=skills','me/manager','myOrganization/users'],
-                     'Notes': 'User(s) and query strings of user(s) profile.'
                  }
             ]
             },
@@ -123,13 +116,11 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'authToken': 'Bearer {token:https://graph.microsoft.com/}',
             'img': '/media/Default/GettingStarted/devOffice_getting_started_groupsblue_53x50.png',
             'icon': 'graph-group',
-            'apiDescription': 'Get groups',
             'parameters': [
                  {
                      'Name': 'group',
                      'Type': 'string',
                      'Value': ['me/memberOf' ,'groups/41525360-8eca-49ce-bcee-b205cd0aa747/members','groups/41525360-8eca-49ce-bcee-b205cd0aa747/drive/root/children','groups/41525360-8eca-49ce-bcee-b205cd0aa747/conversations'],
-                     'Notes': 'Groups and query strings of group profile.'
                  }
             ] // end parameters
         }
@@ -139,14 +130,21 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
         #region Try out Json data model
         private APIModel[] _apiModel;
 
-        private void FixTheJson()
+        private void LocalizeTheApiModel()
         {
+            //get the labels
             _apiModel[(int)tryoutApiIndex.GetMessages].apiDescription = Resources.GettingStarted.Index.TRY_OUT_GET_MESSAGE_LABEL;
             _apiModel[(int)tryoutApiIndex.GetEvents].apiDescription = Resources.GettingStarted.Index.TRY_OUT_GET_EVENTS_LABEL;
             _apiModel[(int)tryoutApiIndex.GetContacts].apiDescription = Resources.GettingStarted.Index.TRY_OUT_GET_CONTACTS_LABEL;
             _apiModel[(int)tryoutApiIndex.GetFiles].apiDescription = Resources.GettingStarted.Index.TRY_OUT_GET_FILES_LABEL;
             _apiModel[(int)tryoutApiIndex.GetUsers].apiDescription = Resources.GettingStarted.Index.TRY_OUT_GET_USERS_LABEL;
             _apiModel[(int)tryoutApiIndex.GetGroups].apiDescription = Resources.GettingStarted.Index.TRY_OUT_GET_GROUPS_LABEL;
+
+            //fix the notes
+            _apiModel[(int)tryoutApiIndex.GetMessages].parameters[0].Notes = Resources.GettingStarted.Index.TRY_OUT_GET_MESSAGES_NOTES_TEXT;
+            _apiModel[(int)tryoutApiIndex.GetFiles].parameters[0].Notes = Resources.GettingStarted.Index.TRY_OUT_GET_FILES_NOTES_TEXT;
+            _apiModel[(int)tryoutApiIndex.GetUsers].parameters[0].Notes = Resources.GettingStarted.Index.TRY_OUT_GET_USERS_NOTES_TEXT;
+            _apiModel[(int)tryoutApiIndex.GetGroups].parameters[0].Notes = Resources.GettingStarted.Index.TRY_OUT_GET_GROUPS_NOTES_TEXT;
         }
         public APIModel[] DataModels
         {
@@ -155,14 +153,23 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 if (_apiModel == null)
                 {
                     _apiModel = JsonConvert.DeserializeObject<APIModel[]>(jsonData);
-                    FixTheJson();
+                    LocalizeTheApiModel();
                 }
                 return _apiModel;
             }
         }
         #endregion
-
+        public class TableHeader
+        {
+            public string Name { get; } = Resources.GettingStarted.Index.TRY_OUT_TABLE_HEADER_NAME;
+            public string Type { get; } = Resources.GettingStarted.Index.TRY_OUT_TABLE_HEADER_TYPE;
+            public string Value { get; } = Resources.GettingStarted.Index.TRY_OUT_TABLE_HEADER_VALUE;
+            public string Notes { get; } = Resources.GettingStarted.Index.TRY_OUT_TABLE_HEADER_NOTES;
+        }
+        public TableHeader Header { get; } = new TableHeader();
         public string Title { get; set; } = Resources.GettingStarted.Index.TRY_OUT_TITLE;
         public string Description { get; set; } = Resources.GettingStarted.Index.TRY_OUT_DESCRIPTION;
+        public string TryLabel { get; } = Resources.GettingStarted.Index.TRY_OUT_TRY_LABEL;
+        public string RespondBody { get; } = Resources.GettingStarted.Index.TRY_OUT_RESONSE_BODY;
     }
 }
