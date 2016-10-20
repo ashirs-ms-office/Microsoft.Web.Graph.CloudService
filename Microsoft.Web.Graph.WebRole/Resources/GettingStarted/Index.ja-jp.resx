@@ -139,9 +139,6 @@
   <data name="PLATFORM_NAME_ANDROID" xml:space="preserve">
     <value>サイAndroid</value>
   </data>
-  <data name="PLATFORM_SETUP_DESCRIPTION_ANDROID" xml:space="preserve">
-    <value>&lt;p&gt;If you haven't already, install &lt;a href="https://developer.android.com/sdk/index.html" target="_blank"&gt;Android Studio&lt;/a&gt;.&lt;/p&gt;</value>
-  </data>
   <data name="PLATFORM_SETUP_DESCRIPTION_ANGULAR" xml:space="preserve">
     <value>&lt;p&gt;If you haven't already, install &lt;a href="https://nodejs.org/" target="_blank"&gt;Node.js&lt;/a&gt; and &lt;a href="https://bower.io/" target="_blank"&gt;Bower&lt;/a&gt;.&lt;/p&gt;</value>
   </data>
@@ -239,6 +236,9 @@
         &lt;/li&gt;
     &lt;/ul&gt;
 &lt;/p&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_INSTALL_INSTRUCTION" xml:space="preserve">
+    <value>サイIf you haven't already, install {0}.</value>
   </data>
   <data name="PLATFORM_SETUP_TITLE_ANDROID" xml:space="preserve">
     <value>サイGet set up for {0} development</value>

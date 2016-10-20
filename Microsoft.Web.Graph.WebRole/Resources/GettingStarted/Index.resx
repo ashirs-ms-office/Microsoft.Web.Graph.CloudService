@@ -139,15 +139,6 @@
   <data name="PLATFORM_NAME_ANDROID" xml:space="preserve">
     <value>Android</value>
   </data>
-  <data name="PLATFORM_SETUP_DESCRIPTION_ANDROID" xml:space="preserve">
-    <value>&lt;p&gt;If you haven't already, install &lt;a href="https://developer.android.com/sdk/index.html" target="_blank"&gt;Android Studio&lt;/a&gt;.&lt;/p&gt;</value>
-  </data>
-  <data name="PLATFORM_SETUP_DESCRIPTION_ANGULAR" xml:space="preserve">
-    <value>&lt;p&gt;If you haven't already, install &lt;a href="https://nodejs.org/" target="_blank"&gt;Node.js&lt;/a&gt; and &lt;a href="https://bower.io/" target="_blank"&gt;Bower&lt;/a&gt;.&lt;/p&gt;</value>
-  </data>
-  <data name="PLATFORM_SETUP_DESCRIPTION_DOTNET" xml:space="preserve">
-    <value>&lt;p&gt;If you haven't already, install &lt;a href="https://www.visualstudio.com/vs-2015-product-editions" target="_blank"&gt;Visual Studio 2015 Community or Enterprise&lt;/a&gt;.&lt;/p&gt;</value>
-  </data>
   <data name="PLATFORM_SETUP_DESCRIPTION_IOS" xml:space="preserve">
     <value>&lt;ul&gt;
     &lt;li&gt;1. If you haven't already, download and install Xcode on your Mac.&lt;/li&gt;
@@ -157,6 +148,15 @@
         &lt;b&gt;pod setup&lt;/b&gt;
     &lt;/li&gt;
 &lt;/ul&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_IOS_ITEM1" xml:space="preserve">
+    <value>1. Download and install Xcode 7.3.1 on your Mac. You can find it &lt;a href="https://developer.apple.com/download/more/" target="_blank"&gt;here&lt;/a&gt;.&lt;br /&gt;
+        &lt;p class="yellowNote"&gt;&lt;b&gt;Note:&lt;/b&gt; The sample was tested on Xcode 7.3.1.  This sample does not yet support XCode 8 and iOS10, which uses the Swift 3.0 framework.&lt;/p&gt;</value>
+  </data>
+  <data name="PLATFORM_SETUP_DESCRIPTION_IOS_ITEM2" xml:space="preserve">
+    <value>2. Run the following commands to install and set up the &lt;a href="http://cocoapods.org/" target="_blank"&gt;CocoaPods&lt;/a&gt; dependency manager.&lt;br /&gt;
+        &lt;b&gt;sudo gem install cocoapods&lt;/b&gt;&lt;br /&gt;
+        &lt;b&gt;pod setup&lt;/b&gt;</value>
   </data>
   <data name="PLATFORM_SETUP_DESCRIPTION_IOS_OBJECTIVE_C" xml:space="preserve">
     <value>&lt;ul&gt;
@@ -240,7 +240,10 @@
     &lt;/ul&gt;
 &lt;/p&gt;</value>
   </data>
-  <data name="PLATFORM_SETUP_TITLE_ANDROID" xml:space="preserve">
+  <data name="PLATFORM_SETUP_INSTALL_INSTRUCTION" xml:space="preserve">
+    <value>If you haven't already, install {0}.</value>
+  </data>
+  <data name="PLATFORM_SETUP_TITLE_COMMON" xml:space="preserve">
     <value>Get set up for {0} development</value>
   </data>
   <data name="POST_DOWNLOAD_INSTRUCTION" xml:space="preserve">

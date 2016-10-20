@@ -90,7 +90,14 @@
 }
 function setDocumentationDivForPlatform(platformId, fileType, divName)
 {
-    document.getElementById(divName).innerHTML = window.platformData[0].PreDownloadInstruction.Title;
+    var index = 0;
+    for (; index < window.platformData.length; ++index) {
+        if (platformId == window.platformData[index].Id)
+            break;
+    }
+    var html = '<h1>' + window.platformData[index].PreDownloadInstruction.Title + '</h1>';
+    html += '<p>' + window.platformData[index].PreDownloadInstruction.Description + '</p>';
+    document.getElementById(divName).innerHTML = html;
 }
 
 function redirectEditOnGitHub(platformId)

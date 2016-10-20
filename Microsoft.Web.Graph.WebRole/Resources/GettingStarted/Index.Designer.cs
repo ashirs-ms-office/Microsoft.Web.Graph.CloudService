@@ -125,33 +125,6 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;p&gt;If you haven&apos;t already, install &lt;a href=&quot;https://developer.android.com/sdk/index.html&quot; target=&quot;_blank&quot;&gt;Android Studio&lt;/a&gt;.&lt;/p&gt;.
-        /// </summary>
-        public static string PLATFORM_SETUP_DESCRIPTION_ANDROID {
-            get {
-                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_ANDROID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;p&gt;If you haven&apos;t already, install &lt;a href=&quot;https://nodejs.org/&quot; target=&quot;_blank&quot;&gt;Node.js&lt;/a&gt; and &lt;a href=&quot;https://bower.io/&quot; target=&quot;_blank&quot;&gt;Bower&lt;/a&gt;.&lt;/p&gt;.
-        /// </summary>
-        public static string PLATFORM_SETUP_DESCRIPTION_ANGULAR {
-            get {
-                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_ANGULAR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;p&gt;If you haven&apos;t already, install &lt;a href=&quot;https://www.visualstudio.com/vs-2015-product-editions&quot; target=&quot;_blank&quot;&gt;Visual Studio 2015 Community or Enterprise&lt;/a&gt;.&lt;/p&gt;.
-        /// </summary>
-        public static string PLATFORM_SETUP_DESCRIPTION_DOTNET {
-            get {
-                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_DOTNET", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to &lt;ul&gt;
         ///    &lt;li&gt;1. If you haven&apos;t already, download and install Xcode on your Mac.&lt;/li&gt;
         ///    &lt;li&gt;
@@ -164,6 +137,27 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         public static string PLATFORM_SETUP_DESCRIPTION_IOS {
             get {
                 return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_IOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1. Download and install Xcode 7.3.1 on your Mac. You can find it &lt;a href=&quot;https://developer.apple.com/download/more/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;br /&gt;
+        ///        &lt;p class=&quot;yellowNote&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The sample was tested on Xcode 7.3.1.  This sample does not yet support XCode 8 and iOS10, which uses the Swift 3.0 framework.&lt;/p&gt;.
+        /// </summary>
+        public static string PLATFORM_SETUP_DESCRIPTION_IOS_ITEM1 {
+            get {
+                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_IOS_ITEM1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2. Run the following commands to install and set up the &lt;a href=&quot;http://cocoapods.org/&quot; target=&quot;_blank&quot;&gt;CocoaPods&lt;/a&gt; dependency manager.&lt;br /&gt;
+        ///        &lt;b&gt;sudo gem install cocoapods&lt;/b&gt;&lt;br /&gt;
+        ///        &lt;b&gt;pod setup&lt;/b&gt;.
+        /// </summary>
+        public static string PLATFORM_SETUP_DESCRIPTION_IOS_ITEM2 {
+            get {
+                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_IOS_ITEM2", resourceCulture);
             }
         }
         
@@ -291,11 +285,20 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to If you haven&apos;t already, install {0}..
+        /// </summary>
+        public static string PLATFORM_SETUP_INSTALL_INSTRUCTION {
+            get {
+                return ResourceManager.GetString("PLATFORM_SETUP_INSTALL_INSTRUCTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Get set up for {0} development.
         /// </summary>
-        public static string PLATFORM_SETUP_TITLE_ANDROID {
+        public static string PLATFORM_SETUP_TITLE_COMMON {
             get {
-                return ResourceManager.GetString("PLATFORM_SETUP_TITLE_ANDROID", resourceCulture);
+                return ResourceManager.GetString("PLATFORM_SETUP_TITLE_COMMON", resourceCulture);
             }
         }
         
