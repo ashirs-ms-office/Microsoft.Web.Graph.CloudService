@@ -90,50 +90,7 @@
 }
 function setDocumentationDivForPlatform(platformId, fileType, divName)
 {
-    var documentationFullFilePath = "\/Documentation\/onerror.html";
-    var postDownloadInstructionsContent = "";
-
-    $.each(contentFilesJson, function (key, contentFiles) {
-        $(contentFiles).each(function (index, Id) {
-            if (contentFiles[index].Id === platformId) {
-                switch (fileType) {
-                    case "setupFile":
-                        {
-                            documentationFullFilePath = contentFiles[index].SetupFileFullPath;
-                            break;
-                        }
-                    case "gettingStartedFile":
-                        {
-                            documentationFullFilePath = contentFiles[index].GettingStartedFileFullPath;
-                            break;
-                        }
-                    case "postDownloadInstructions":
-                        {
-                            postDownloadInstructionsContent = contentFiles[index].PostDownloadInstructions;
-                            break;
-                        }
-                    default:
-                        documentationFullFilePath = "\/Documentation\/onerror.html";
-                }
-            }
-        });
-    });
-
-    if (fileType === 'postDownloadInstructions')
-    {
-        $('#post-download-instructions').html(postDownloadInstructionsContent);
-        $('#post-download-instructions').show();
-        return;
-    }
-
-    $.ajax({
-        url: documentationFullFilePath,
-        type: "GET",
-        dataType: 'html',
-        success: function (result, status, xhr) {
-            document.getElementById(divName).innerHTML = result;
-        }
-    })
+    document.getElementById(divName).innerHTML = window.platformData[0].PreDownloadInstruction.Title;
 }
 
 function redirectEditOnGitHub(platformId)

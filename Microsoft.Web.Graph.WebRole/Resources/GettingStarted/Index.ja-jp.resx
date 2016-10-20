@@ -128,13 +128,16 @@
 &lt;p&gt;Please try again&lt;/p&gt;</value>
   </data>
   <data name="PICK_PLATFORM_DESCRIPTION" xml:space="preserve">
-    <value>Build a simple app that connects to Office 365 and calls the Microsoft Graph API. After you pick your platform, you'll walk through getting the right tools, registering your app, and running the code.</value>
+    <value>サインインBuild a simple app that connects to Office 365 and calls the Microsoft Graph API. After you pick your platform, you'll walk through getting the right tools, registering your app, and running the code.</value>
   </data>
   <data name="PICK_PLATFORM_NOTE" xml:space="preserve">
     <value>Note: You can not change the platform once an app has been registered. To change the platform, please click here to start over.</value>
   </data>
   <data name="PICK_PLATFORM_TITLE" xml:space="preserve">
-    <value>Pick the platform you'll be building for</value>
+    <value>サインインPick the platform you'll be building for</value>
+  </data>
+  <data name="PLATFORM_NAME_ANDROID" xml:space="preserve">
+    <value>サイAndroid</value>
   </data>
   <data name="PLATFORM_SETUP_DESCRIPTION_ANDROID" xml:space="preserve">
     <value>&lt;p&gt;If you haven't already, install &lt;a href="https://developer.android.com/sdk/index.html" target="_blank"&gt;Android Studio&lt;/a&gt;.&lt;/p&gt;</value>
@@ -238,37 +241,7 @@
 &lt;/p&gt;</value>
   </data>
   <data name="PLATFORM_SETUP_TITLE_ANDROID" xml:space="preserve">
-    <value>Get set up for Android development</value>
-  </data>
-  <data name="PLATFORM_SETUP_TITLE_ANGULAR" xml:space="preserve">
-    <value>Get set up for Angular development</value>
-  </data>
-  <data name="PLATFORM_SETUP_TITLE_DOTNET" xml:space="preserve">
-    <value>Get set up for ASP.NET MVC development</value>
-  </data>
-  <data name="PLATFORM_SETUP_TITLE_IOS" xml:space="preserve">
-    <value>Get set up for iOS development</value>
-  </data>
-  <data name="PLATFORM_SETUP_TITLE_JAVASCRIPT" xml:space="preserve">
-    <value># Before you begin</value>
-  </data>
-  <data name="PLATFORM_SETUP_TITLE_NODEJS" xml:space="preserve">
-    <value>Get set up for Node.js development</value>
-  </data>
-  <data name="PLATFORM_SETUP_TITLE_PHP" xml:space="preserve">
-    <value>&lt;h1&gt;Get set up for PHP development&lt;/h1&gt;</value>
-  </data>
-  <data name="PLATFORM_SETUP_TITLE_PYTHON" xml:space="preserve">
-    <value>&lt;h1 id="before-you-begin"&gt;Get set up for Python development&lt;/h1&gt;</value>
-  </data>
-  <data name="PLATFORM_SETUP_TITLE_RUBY" xml:space="preserve">
-    <value>&lt;h1 id="before-you-begin"&gt;Get set up for Ruby development&lt;/h1&gt;</value>
-  </data>
-  <data name="PLATFORM_SETUP_TITLE_UWP" xml:space="preserve">
-    <value>&lt;h1 id="get-setup"&gt;Get set up for Universal Windows Platform (UWP) development&lt;/h1&gt;</value>
-  </data>
-  <data name="PLATFORM_SETUP_TITLE_XAMARIN" xml:space="preserve">
-    <value>&lt;h1 id="get-setup"&gt;Get set up for Xamarin development&lt;/h1&gt;</value>
+    <value>サイGet set up for {0} development</value>
   </data>
   <data name="POST_DOWNLOAD_INSTRUCTION" xml:space="preserve">
     <value>Almost there! To get it running: Unzip downloaded package, open solution, and run.&lt;p&gt;To see how this sample was created, please see our getting started &lt;a href='http://graph.microsoft.io/en-us/docs/platform/xamarin' target='_blank'&gt;walkthrough&lt;/a&gt;.&lt;/p&gt;</value>

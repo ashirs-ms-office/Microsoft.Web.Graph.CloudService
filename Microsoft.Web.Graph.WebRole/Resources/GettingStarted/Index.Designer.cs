@@ -116,6 +116,15 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Android.
+        /// </summary>
+        public static string PLATFORM_NAME_ANDROID {
+            get {
+                return ResourceManager.GetString("PLATFORM_NAME_ANDROID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;If you haven&apos;t already, install &lt;a href=&quot;https://developer.android.com/sdk/index.html&quot; target=&quot;_blank&quot;&gt;Android Studio&lt;/a&gt;.&lt;/p&gt;.
         /// </summary>
         public static string PLATFORM_SETUP_DESCRIPTION_ANDROID {
@@ -282,101 +291,11 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Get set up for Android development.
+        ///   Looks up a localized string similar to Get set up for {0} development.
         /// </summary>
         public static string PLATFORM_SETUP_TITLE_ANDROID {
             get {
                 return ResourceManager.GetString("PLATFORM_SETUP_TITLE_ANDROID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Get set up for Angular development.
-        /// </summary>
-        public static string PLATFORM_SETUP_TITLE_ANGULAR {
-            get {
-                return ResourceManager.GetString("PLATFORM_SETUP_TITLE_ANGULAR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Get set up for ASP.NET MVC development.
-        /// </summary>
-        public static string PLATFORM_SETUP_TITLE_DOTNET {
-            get {
-                return ResourceManager.GetString("PLATFORM_SETUP_TITLE_DOTNET", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Get set up for iOS development.
-        /// </summary>
-        public static string PLATFORM_SETUP_TITLE_IOS {
-            get {
-                return ResourceManager.GetString("PLATFORM_SETUP_TITLE_IOS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to # Before you begin.
-        /// </summary>
-        public static string PLATFORM_SETUP_TITLE_JAVASCRIPT {
-            get {
-                return ResourceManager.GetString("PLATFORM_SETUP_TITLE_JAVASCRIPT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Get set up for Node.js development.
-        /// </summary>
-        public static string PLATFORM_SETUP_TITLE_NODEJS {
-            get {
-                return ResourceManager.GetString("PLATFORM_SETUP_TITLE_NODEJS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;h1&gt;Get set up for PHP development&lt;/h1&gt;.
-        /// </summary>
-        public static string PLATFORM_SETUP_TITLE_PHP {
-            get {
-                return ResourceManager.GetString("PLATFORM_SETUP_TITLE_PHP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;h1 id=&quot;before-you-begin&quot;&gt;Get set up for Python development&lt;/h1&gt;.
-        /// </summary>
-        public static string PLATFORM_SETUP_TITLE_PYTHON {
-            get {
-                return ResourceManager.GetString("PLATFORM_SETUP_TITLE_PYTHON", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;h1 id=&quot;before-you-begin&quot;&gt;Get set up for Ruby development&lt;/h1&gt;.
-        /// </summary>
-        public static string PLATFORM_SETUP_TITLE_RUBY {
-            get {
-                return ResourceManager.GetString("PLATFORM_SETUP_TITLE_RUBY", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;h1 id=&quot;get-setup&quot;&gt;Get set up for Universal Windows Platform (UWP) development&lt;/h1&gt;.
-        /// </summary>
-        public static string PLATFORM_SETUP_TITLE_UWP {
-            get {
-                return ResourceManager.GetString("PLATFORM_SETUP_TITLE_UWP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to &lt;h1 id=&quot;get-setup&quot;&gt;Get set up for Xamarin development&lt;/h1&gt;.
-        /// </summary>
-        public static string PLATFORM_SETUP_TITLE_XAMARIN {
-            get {
-                return ResourceManager.GetString("PLATFORM_SETUP_TITLE_XAMARIN", resourceCulture);
             }
         }
         

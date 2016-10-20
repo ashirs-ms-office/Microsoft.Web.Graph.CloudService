@@ -1,11 +1,15 @@
-﻿<div class="card" id="setup" name="3. Pick platform" isblocking="true">
-    <h1>Pick the platform you'll be building for</h1>
-    <p>Build a simple app that connects to Office 365 and calls the Microsoft Graph API. After you pick your platform, you'll walk through getting the right tools, registering your app, and running the code.</p>
+﻿@model Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.PickPlatformPartialViewModel
+<script>
+        window.platformData = @Html.Raw(Json.Encode(Model.Platforms));
+</script>
+<div class="card" id="setup" name="3. Pick platform" isblocking="true">
+    <h1>@Model.Title</h1>
+    <p>@Model.Description</p>
     <div id="pickPlatform">
         <div class="tabs">
             <button id="option-android" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Microsoft.Web.Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_android_grey_34x41.png") alt="Android" /><br />
-                <span>Android</span>
+                <img src="@Model.Platforms[0].Icon" alt="@Model.Platforms[0].Alt" /><br />
+                <span>@Model.Platforms[0].Name</span>
             </button>
             <button id="option-angular" class="col-xs-12 col-sm-4 platformOptionBlock">
                 <img src=@Microsoft.Web.Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_angular_grey_40x41.png") alt="Angular" /><br />
@@ -57,3 +61,9 @@
         <p><strong>Note: </strong> You can not change the platform once an app has been registered. To change the platform, please <a onclick="window.location.href = window.location.href.split('?')[0];">click here</a> to start over.</p>
     </div>
 </div>
+
+<div class="card-question" id="SetupPlatform" style="display:none">
+    <div id="ShowDocumentationDiv">
+    </div>
+</div>
+

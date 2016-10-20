@@ -12,9 +12,11 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted
         {
             IntroPartialViewModel = new IntroPartialViewModel();
             TryOutPartialViewModel = new TryOutPartialViewModel();
+            PickPlatformPartialViewModel = new PickPlatformPartialViewModel();
         }
 
         public IntroPartialViewModel IntroPartialViewModel { get;set;}
         public TryOutPartialViewModel TryOutPartialViewModel { get; set; }
+        public PickPlatformPartialViewModel PickPlatformPartialViewModel { get; set; }
     }
 }

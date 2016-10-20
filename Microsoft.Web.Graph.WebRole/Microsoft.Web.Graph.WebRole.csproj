@@ -234,6 +234,7 @@
     <Compile Include="Util\XmlReader.cs" />
     <Compile Include="ViewModels\GettingStarted\GettingStartedViewModel.cs" />
     <Compile Include="ViewModels\GettingStarted\Partials\IntroViewModel.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\PickPlatformPartialViewModel.cs" />
     <Compile Include="ViewModels\GettingStarted\Partials\TryOutPartialViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="WebRole.cs" />
@@ -343,10 +344,10 @@
     <Content Include="Views\GettingStarted\Partial\_Intro.cshtml" />
     <Content Include="Views\GettingStarted\Partial\_RegisterApp.cshtml" />
     <Content Include="Views\GettingStarted\Partial\_RegistrationSuccessful.cshtml" />
-    <Content Include="Views\GettingStarted\Partial\_Setup.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_PickPlatform.cshtml" />
     <Content Include="Views\GettingStarted\Partial\_SetupPlatform.cshtml" />
     <Content Include="Views\GettingStarted\Partial\_SetupProject.cshtml" />
-    <Content Include="Views\GettingStarted\Partial\_tryitout.cshtml" />
+    <Content Include="Views\GettingStarted\Partial\_TryOut.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
