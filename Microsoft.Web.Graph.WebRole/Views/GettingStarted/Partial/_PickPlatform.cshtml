@@ -24,34 +24,28 @@
                 <span>@Model.Platforms[3].Name</span>
             </button>
             <button id="option-ios-objective-c" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Microsoft.Web.Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_ios_grey_40x41.png") alt="iOS" /><br />
-                <span>iOS Objective-C</span>
+                <img src=@Model.Platforms[4].Icon alt="@Model.Platforms[4].Alt" /><br />
+                <span>@Model.Platforms[4].Name</span>
             </button>
             <button id="option-node" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Microsoft.Web.Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_nodejs_grey_41x41.png") alt="Node" /><br />
-                <span>Node.js</span>
+                <img src=@Model.Platforms[5].Icon alt="@Model.Platforms[5].Alt" /><br />
+                <span>@Model.Platforms[5].Name</span>
             </button>
             <button id="option-php" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Microsoft.Web.Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_php_grey_41x41.png") alt="PHP" /><br />
-                <span>PHP</span>
+                <img src=@Model.Platforms[6].Icon alt="@Model.Platforms[6].Alt" /><br />
+                <span>@Model.Platforms[6].Name</span>
             </button>
-            @*<button id="option-python" class="col-xs-12 col-sm-4 platformOptionBlock">
-        <img src=@Microsoft.Web.Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_python_grey_41x41.png") alt="Python" /><br />
-        <span>Python</span>
-    </button>*@ 
             <button id="option-ruby" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Microsoft.Web.Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_ruby_grey_41x41.png") alt="Ruby" /><br />
-                <span>Ruby</span>
+                <img src=@Model.Platforms[7].Icon alt="@Model.Platforms[7].Alt" /><br />
+                <span>@Model.Platforms[7].Name</span>
             </button>
-            @*<span class="col-xs-12 col-lg-2"></span> TODO: replace when python is back*@
-            @*<span class="col-xs-12 col-lg-3"></span>*@
             <button id="option-windowsuniversal" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Microsoft.Web.Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_windows_grey_40x41.png") alt="Windows Universal" /><br />
-                <span>Windows Universal</span>
+                <img src=@Model.Platforms[8].Icon alt="@Model.Platforms[8].Alt" /><br />
+                <span>@Model.Platforms[8].Name</span>
             </button>
             <button id="option-xamarin" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img style="width:41px;height:41px;" src=@Microsoft.Web.Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_xamarin_grey_.png") alt="Xamarin" /><br />
-                <span>Xamarin</span>
+                <img src=@Model.Platforms[9].Icon alt="@Model.Platforms[9].Alt" /><br />
+                <span>@Model.Platforms[9].Name</span>
             </button>
         </div>
         <div style="clear:both;"></div>

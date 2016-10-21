@@ -141,12 +141,11 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1. Download and install Xcode 7.3.1 on your Mac. You can find it &lt;a href=&quot;https://developer.apple.com/download/more/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;br /&gt;
-        ///        &lt;p class=&quot;yellowNote&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The sample was tested on Xcode 7.3.1.  This sample does not yet support XCode 8 and iOS10, which uses the Swift 3.0 framework.&lt;/p&gt;.
+        ///   Looks up a localized string similar to Download and install Xcode 7.3.1 on your Mac. You can find it &lt;a href=&quot;https://developer.apple.com/download/more/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;br /&gt;.
         /// </summary>
-        public static string PLATFORM_SETUP_DESCRIPTION_IOS_ITEM1 {
+        public static string PLATFORM_SETUP_DESCRIPTION_IOS_INSTALL {
             get {
-                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_IOS_ITEM1", resourceCulture);
+                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_IOS_INSTALL", resourceCulture);
             }
         }
         
@@ -158,6 +157,15 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         public static string PLATFORM_SETUP_DESCRIPTION_IOS_ITEM2 {
             get {
                 return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_IOS_ITEM2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p class=&quot;yellowNote&quot;&gt;&lt;b&gt;Note:&lt;/b&gt; The sample was tested on Xcode 7.3.1.  This sample does not yet support XCode 8 and iOS10, which uses the Swift 3.0 framework.&lt;/p&gt;.
+        /// </summary>
+        public static string PLATFORM_SETUP_DESCRIPTION_IOS_NOTE {
+            get {
+                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_IOS_NOTE", resourceCulture);
             }
         }
         
@@ -238,7 +246,7 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;p&gt;If you haven’t already, download and install Ruby on Rails. Be sure you can run a localhost web server before continuing.&lt;/p&gt;.
+        ///   Looks up a localized string similar to If you haven’t already, download and install {0}. Be sure you can run a localhost web server before continuing..
         /// </summary>
         public static string PLATFORM_SETUP_DESCRIPTION_RUBY {
             get {
@@ -247,21 +255,38 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;p&gt;
-        ///    To get set up:
-        ///    &lt;ul&gt;
-        ///        &lt;li&gt;
-        ///            1. Install &lt;a href=&quot;https://www.visualstudio.com/vs-2015-product-editions&quot; target=&quot;_blank&quot;&gt;Visual Studio 2015 Community or Enterprise&lt;/a&gt;.          
-        ///        &lt;/li&gt;
-        ///        &lt;li&gt;
-        ///            2. Verify Windows 10 &lt;a href=&quot;https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx&quot; target=&quot;_blank&quot;&gt;development mode&lt;/a&gt; is enabled. 
-        ///        &lt;/li&gt;
-        ///        &lt;li&gt;
-        ///            3. Make sure that you&apos;ve installed the tools for Windows 10 developmen [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to To get set up:.
         /// </summary>
-        public static string PLATFORM_SETUP_DESCRIPTION_UWP {
+        public static string PLATFORM_SETUP_DESCRIPTION_UWP_GET_SET_UP {
             get {
-                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_UWP", resourceCulture);
+                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_UWP_GET_SET_UP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Install {0} or {1}.
+        /// </summary>
+        public static string PLATFORM_SETUP_DESCRIPTION_UWP_INSTALL {
+            get {
+                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_UWP_INSTALL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Make sure that you&apos;ve installed the tools for {0} development..
+        /// </summary>
+        public static string PLATFORM_SETUP_DESCRIPTION_UWP_MAKE_SURE {
+            get {
+                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_UWP_MAKE_SURE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verify Windows 10 {0} development mode{1} is enabled..
+        /// </summary>
+        public static string PLATFORM_SETUP_DESCRIPTION_UWP_VERIFY {
+            get {
+                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_UWP_VERIFY", resourceCulture);
             }
         }
         
@@ -285,11 +310,29 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Install {0}..
+        /// </summary>
+        public static string PLATFORM_SETUP_DESCRIPTION_XAMARIN_INSTALL {
+            get {
+                return ResourceManager.GetString("PLATFORM_SETUP_DESCRIPTION_XAMARIN_INSTALL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to If you haven&apos;t already, install {0}..
         /// </summary>
         public static string PLATFORM_SETUP_INSTALL_INSTRUCTION {
             get {
                 return ResourceManager.GetString("PLATFORM_SETUP_INSTALL_INSTRUCTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download and install {0} and {1}..
+        /// </summary>
+        public static string PLATFORM_SETUP_INSTALL_INSTRUCTION_2ITEMS {
+            get {
+                return ResourceManager.GetString("PLATFORM_SETUP_INSTALL_INSTRUCTION_2ITEMS", resourceCulture);
             }
         }
         
