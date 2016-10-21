@@ -7,46 +7,15 @@
     <p>@Model.Description</p>
     <div id="pickPlatform">
         <div class="tabs">
-            <button id="option-android" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src="@Model.Platforms[0].Icon" alt="@Model.Platforms[0].Alt" /><br />
-                <span>@Model.Platforms[0].Name</span>
-            </button>
-            <button id="option-angular" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Model.Platforms[1].Icon alt="@Model.Platforms[1].Alt" /><br />
-                <span>@Model.Platforms[1].Name</span>
-            </button>
-            <button id="option-dotnet" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Model.Platforms[2].Icon alt="@Model.Platforms[2].Alt" /><br />
-                <span>@Model.Platforms[2].Name</span>
-            </button>
-            <button id="option-ios-swift" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Model.Platforms[3].Icon alt="@Model.Platforms[3].Alt" /><br />
-                <span>@Model.Platforms[3].Name</span>
-            </button>
-            <button id="option-ios-objective-c" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Model.Platforms[4].Icon alt="@Model.Platforms[4].Alt" /><br />
-                <span>@Model.Platforms[4].Name</span>
-            </button>
-            <button id="option-node" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Model.Platforms[5].Icon alt="@Model.Platforms[5].Alt" /><br />
-                <span>@Model.Platforms[5].Name</span>
-            </button>
-            <button id="option-php" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Model.Platforms[6].Icon alt="@Model.Platforms[6].Alt" /><br />
-                <span>@Model.Platforms[6].Name</span>
-            </button>
-            <button id="option-ruby" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Model.Platforms[7].Icon alt="@Model.Platforms[7].Alt" /><br />
-                <span>@Model.Platforms[7].Name</span>
-            </button>
-            <button id="option-windowsuniversal" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Model.Platforms[8].Icon alt="@Model.Platforms[8].Alt" /><br />
-                <span>@Model.Platforms[8].Name</span>
-            </button>
-            <button id="option-xamarin" class="col-xs-12 col-sm-4 platformOptionBlock">
-                <img src=@Model.Platforms[9].Icon alt="@Model.Platforms[9].Alt" /><br />
-                <span>@Model.Platforms[9].Name</span>
-            </button>
+            @{
+                foreach (var platform in Model.Platforms)
+                {
+                    <button id="@platform.Id" class="col-xs-12 col-sm-4 platformOptionBlock">
+                        <img src="@platform.Icon" alt="@platform.Alt" /><br />
+                        <span>@platform.Name</span>
+                    </button>
+                }
+            }
         </div>
         <div style="clear:both;"></div>
     </div>
