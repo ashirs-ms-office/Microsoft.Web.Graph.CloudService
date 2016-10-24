@@ -244,7 +244,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
         },
         {
             'Platform': 'option-ios-objective-c',
-            'uid': 'O365-iOS-Objective-C-sdk-Connect-outlook',
+            'uid': 'O365-iOS-Objective-C-Connect-outlook',
             'App': 'outlook',
             'FileName': 'ios-objectivec-connect-rest-sample-master\/O365-iOS-Microsoft-Graph-Connect\/ConnectViewController.m',
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
@@ -280,6 +280,11 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                     break;
                 }
             }
+            if (result == null)
+            {
+                throw new ArgumentException(string.Format("Platform {0} not found in repo factory", repoId));
+            }
+
             return result;
         }
         private Repo[] Repos { get; set; }
@@ -336,6 +341,15 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                    RedirectUri="http://localhost:8000",
                    Public = true,
                    V1Link = "https://github.com/microsoftgraph/ios-swift-connect-rest-sample",
+                   Repo = GetRepo("O365-iOS-Swift-Connect-outlook"),
+                   AllowImplicitFlow = false,
+                   Id="O365-iOS-Swift-Connect-outlook"
+                },
+                new CodeSample { /* iOS Swift  SDK*/
+                   Name="My iOS Swift App",
+                   RedirectUri="http://localhost:8000",
+                   Public = true,
+                   V1Link = "https://github.com/microsoftgraph/ios-swift-connect-rest-sample",
                    Repo = GetRepo("O365-iOS-Swift-sdk-Connect-outlook"),
                    AllowImplicitFlow = false,
                    Id="O365-iOS-Swift-sdk-Connect-outlook"
@@ -345,9 +359,18 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                    RedirectUri="http://localhost:8000",
                    Public = true,
                    V1Link = "https://github.com/microsoftgraph/ios-objectivec-connect-rest-sample",
-                   Repo = GetRepo("O365-iOS-Swift-Connect-outlook"),
+                   Repo = GetRepo("O365-iOS-Objective-C-Connect-outlook"),
                    AllowImplicitFlow = false,
-                   Id="O365-iOS-Swift-Connect-outlook"
+                   Id="O365-iOS-Objective-C-Connect-outlook"
+                },
+                new CodeSample { /* iOS Objective C SDK*/
+                   Name="My iOS Objective C App",
+                   RedirectUri="http://localhost:8000",
+                   Public = true,
+                   V1Link = "https://github.com/microsoftgraph/ios-objectivec-connect-rest-sample",
+                   Repo = GetRepo("O365-iOS-Objective-C-sdk-Connect-outlook"),
+                   AllowImplicitFlow = false,
+                   Id="O365-iOS-Objective-C-sdk-Connect-outlook"
                 },
                 new CodeSample { /* Node */
                    Name="My Node.js App",
@@ -385,6 +408,15 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                    AllowImplicitFlow = false,
                    Id="option-windowsuniversal-outlook"
                 },
+                new CodeSample { /* UWP SDK*/
+                   Name="My UWP App",
+                   RedirectUri="http://localhost:8000",
+                   Public = true,
+                   V1Link = "https://github.com/microsoftgraph/uwp-csharp-connect-rest-sample/tree/last_v1_auth",
+                   Repo = GetRepo("option-windowsuniversal-sdk-outlook"),
+                   AllowImplicitFlow = false,
+                   Id="option-windowsuniversal-sdk-outlook"
+                },
                 new CodeSample { /* Xamarin */
                    Name="My Xamarin App",
                    RedirectUri="http://localhost:8000",
@@ -395,6 +427,23 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                    Id="Xamarin-Connect-outlook"
                 }
             };
+        }
+
+        public CodeSample GetCodeSample(string codeSampleId)
+        {
+            CodeSample codeSample = null;
+            foreach(var cs in CodeSamples)
+            {
+                if(cs.Id == codeSampleId)
+                {
+                    codeSample = cs;
+                }
+            }
+            if(codeSample == null)
+            {
+                throw new ArgumentException(string.Format("Platform {0} not found in code sample factory", codeSampleId));
+            }
+            return codeSample;
         }
     }
 }

@@ -28,7 +28,8 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                     "<a href='https://nodejs.org/' target='_blank'>Node.js</a> and <a href='https://bower.io/' target='_blank'>Bower</a>"),
                     Notes = Resources.GettingStarted.Index.PICK_PLATFORM_NOTE,
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "Angular")
-                }
+                },
+                CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("option-angular-outlook") }
             };
         }
     }

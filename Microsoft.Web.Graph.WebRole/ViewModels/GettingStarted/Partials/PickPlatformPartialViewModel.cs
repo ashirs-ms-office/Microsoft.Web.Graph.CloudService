@@ -21,6 +21,8 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
         public Instruction PostDownloadInstruction { get; set; }
 
         public string GitHubMDFileName { get; set; }
+
+        public CodeSample [] CodeSample { get; set; }
     }
     
    

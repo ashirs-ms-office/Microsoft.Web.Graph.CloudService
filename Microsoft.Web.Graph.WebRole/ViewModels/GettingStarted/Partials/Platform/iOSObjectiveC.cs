@@ -30,7 +30,12 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                     ),
                     Notes = Resources.GettingStarted.Index.PICK_PLATFORM_NOTE,
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "iOS")
+                },
+                CodeSample = new CodeSample[] {
+                    CodeSampleFactory.Instance.GetCodeSample("O365-iOS-Objective-C-sdk-Connect-outlook"),
+                    CodeSampleFactory.Instance.GetCodeSample("O365-iOS-Objective-C-Connect-outlook")
                 }
+
             };
         }
     }

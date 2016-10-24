@@ -29,7 +29,9 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                     "<a href='https://www.visualstudio.com/vs-2015-product-editions' target='_blank'>isual Studio 2015 Community or Enterprise</a>"),
                     Notes = Resources.GettingStarted.Index.PICK_PLATFORM_NOTE,
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, name)
-                }
+                },
+                CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("option-dotnet-mail-api") }
+
             };
         }
     }

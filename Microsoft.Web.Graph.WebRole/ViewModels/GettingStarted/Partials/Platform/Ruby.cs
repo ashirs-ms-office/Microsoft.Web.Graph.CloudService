@@ -22,7 +22,8 @@
                     Description = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_DESCRIPTION_RUBY, "Ruby on Rails"),
                     Notes = "",
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "Ruby")
-                }
+                },
+                CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("option-ruby-outlook") }
             };
         }
     }

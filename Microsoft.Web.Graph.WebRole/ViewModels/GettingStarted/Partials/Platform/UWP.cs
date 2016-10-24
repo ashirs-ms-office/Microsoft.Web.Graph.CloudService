@@ -31,7 +31,12 @@
                     Description = string.Format("To get set up:<ul><li>{0}</li><li>{1}</li><li>{2}</li></ul>", installString, verifyString, makeSureString),
                     Notes = "",
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "Universal Windows Platform (UWP)")
+                },
+                CodeSample = new CodeSample[] {
+                    CodeSampleFactory.Instance.GetCodeSample("option-windowsuniversal-outlook"),
+                    CodeSampleFactory.Instance.GetCodeSample("option-windowsuniversal-sdk-outlook")
                 }
+
             };
         }
     }

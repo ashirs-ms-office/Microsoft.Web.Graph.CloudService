@@ -28,7 +28,8 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                         "<a href='https://developer.android.com/sdk/index.html' target='_blank'>Android Studio</a>"),
                     Notes = Resources.GettingStarted.Index.PICK_PLATFORM_NOTE,
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "Android")
-                }
+                },
+                CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("O365-Android-Connect-outlook") }
             };
         }
     }

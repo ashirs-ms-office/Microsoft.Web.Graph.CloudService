@@ -27,7 +27,9 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                     Description = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_INSTALL_INSTRUCTION, "PHP version >5.6.0"),
                     Notes = "",
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "PHP")
-                }
+                },
+                CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("option-php-outlook") }
+
             };
         }
     }

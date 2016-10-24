@@ -36,7 +36,8 @@
                         installVSString, installXamarinString, verifyWin10String, makeSureString),
                     Notes = "",
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "Xamarin")
-                }
+                },
+                CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("Xamarin-Connect-outlook") }
             };
         }
     }
