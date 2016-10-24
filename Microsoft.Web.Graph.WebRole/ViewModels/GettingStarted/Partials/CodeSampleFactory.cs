@@ -26,8 +26,9 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
 
     public class CodeSample
     {
+        public string Id { get; set; }
         public string RedirectUri { get; set; }
-        public string Public { get; set; }
+        public bool Public { get; set; }
         public string Name { get; set; }
         public string V1Link { get; set; }
         public bool AllowImplicitFlow { get; set; }
@@ -40,9 +41,11 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
 
         private static CodeSampleFactory _instance = null;
 
-        #region Repo Information
+        private void CreateRepos()
+        {
+            #region Repo Information
 
-        private string jsonData = @"[{
+            string jsonData = @"[{
             'Platform': 'option-ios',
             'uid': 'O365-iOS-Connect-outlook',
             'App': 'outlook',
@@ -264,13 +267,28 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
         }
         ]";
         #endregion
+            Repos = JsonConvert.DeserializeObject<Repo[]>(jsonData);
+        }
 
-
+        private Repo GetRepo(string repoId)
+        {
+            Repo result = null;
+            foreach (var repo in Repos)
+            {
+                if(repo.uid == repoId) {
+                    result = repo;
+                    break;
+                }
+            }
+            return result;
+        }
         private Repo[] Repos { get; set; }
+        public CodeSample[] CodeSamples { get; private set; }
 
         private CodeSampleFactory()
         {
-            Repos = JsonConvert.DeserializeObject<Repo[]>(jsonData);
+            CreateRepos();
+            CreateCodeSamples();
         }
         public static CodeSampleFactory Instance
         {
@@ -280,6 +298,103 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                     _instance = new CodeSampleFactory();
                 return _instance;
             }
+        }
+
+        private void CreateCodeSamples()
+        {
+            CodeSamples = new CodeSample[]
+            {
+                new CodeSample { /* Android */
+                   Name="My Android App",
+                   RedirectUri="http://localhost:8000",
+                   Public = true,
+                   V1Link = "https://github.com/microsoftgraph/uwp-csharp-connect-rest-sample/tree/last_v1_auth",
+                   Repo = GetRepo("O365-Android-Connect-outlook"),
+                   AllowImplicitFlow = false,
+                   Id="O365-Android-Connect-outlook"
+                },
+                new CodeSample { /* Angular */
+                   Name="My Angular App",
+                   RedirectUri="http://localhost:8080/login",
+                   Public = true,
+                   V1Link = null,
+                   Repo = GetRepo("option-angular-outlook"),
+                   AllowImplicitFlow = true,
+                   Id="option-angular-outlook"
+                },
+                new CodeSample { /* ASP.NET MVC */
+                   Name="My ASP.NET App",
+                   RedirectUri="http://localhost:55065",
+                   Public = false,
+                   V1Link = null,
+                   Repo = GetRepo("option-dotnet-mail-api"),
+                   AllowImplicitFlow = true,
+                   Id="option-dotnet-mail-api"
+                },
+                new CodeSample { /* iOS Swift  */
+                   Name="My iOS Swift App",
+                   RedirectUri="http://localhost:8000",
+                   Public = true,
+                   V1Link = "https://github.com/microsoftgraph/ios-swift-connect-rest-sample",
+                   Repo = GetRepo("O365-iOS-Swift-sdk-Connect-outlook"),
+                   AllowImplicitFlow = false,
+                   Id="O365-iOS-Swift-sdk-Connect-outlook"
+                },
+                new CodeSample { /* iOS Objective C */
+                   Name="My iOS Objective C App",
+                   RedirectUri="http://localhost:8000",
+                   Public = true,
+                   V1Link = "https://github.com/microsoftgraph/ios-objectivec-connect-rest-sample",
+                   Repo = GetRepo("O365-iOS-Swift-Connect-outlook"),
+                   AllowImplicitFlow = false,
+                   Id="O365-iOS-Swift-Connect-outlook"
+                },
+                new CodeSample { /* Node */
+                   Name="My Node.js App",
+                   RedirectUri="http://localhost:3000/login",
+                   Public = true,
+                   V1Link = "https://github.com/microsoftgraph/ios-objectivec-connect-rest-sample",
+                   Repo = GetRepo("option-node-outlook"),
+                   AllowImplicitFlow = false,
+                   Id="option-node-outlook"
+                },
+                new CodeSample { /* PHP */
+                   Name="My PHP App",
+                   RedirectUri="http://localhost:8000/oauth.php",
+                   Public = false,
+                   V1Link = null,
+                   Repo = GetRepo("option-php-outlook"),
+                   AllowImplicitFlow = false,
+                   Id="option-php-outlook"
+                },
+                new CodeSample { /* Ruby */
+                   Name="My Ruby App",
+                   RedirectUri="http://localhost:3000/auth/microsoft_v2_auth/callback",
+                   Public = false,
+                   V1Link = null,
+                   Repo = GetRepo("option-node-outlook"),
+                   AllowImplicitFlow = false,
+                   Id="option-ruby-outlook"
+                },
+                new CodeSample { /* UWP */
+                   Name="My UWP App",
+                   RedirectUri="http://localhost:8000",
+                   Public = true,
+                   V1Link = "https://github.com/microsoftgraph/uwp-csharp-connect-rest-sample/tree/last_v1_auth",
+                   Repo = GetRepo("option-windowsuniversal-outlook"),
+                   AllowImplicitFlow = false,
+                   Id="option-windowsuniversal-outlook"
+                },
+                new CodeSample { /* Xamarin */
+                   Name="My Xamarin App",
+                   RedirectUri="http://localhost:8000",
+                   Public = true,
+                   V1Link = "https://azure.microsoft.com/en-us/documentation/articles/active-directory-devquickstarts-xamarin",
+                   Repo = GetRepo("option-windowsuniversal-outlook"),
+                   AllowImplicitFlow = false,
+                   Id="Xamarin-Connect-outlook"
+                }
+            };
         }
     }
 }

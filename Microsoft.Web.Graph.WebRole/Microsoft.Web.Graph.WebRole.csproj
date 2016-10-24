@@ -233,8 +233,20 @@
     <Compile Include="Util\InputValidation.cs" />
     <Compile Include="Util\XmlReader.cs" />
     <Compile Include="ViewModels\GettingStarted\GettingStartedViewModel.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\CodeSampleFactory.cs" />
     <Compile Include="ViewModels\GettingStarted\Partials\IntroViewModel.cs" />
     <Compile Include="ViewModels\GettingStarted\Partials\PickPlatformPartialViewModel.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\Platform\Android.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\Platform\Angular.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\Platform\ASPDotNet.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\Platform\Xamarin.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\Platform\UWP.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\Platform\Ruby.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\Platform\Php.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\Platform\iOSObjectiveC.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\Platform\iOSSwift.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\Platform\IPlatform.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\Platform\Node.cs" />
     <Compile Include="ViewModels\GettingStarted\Partials\TryOutPartialViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="WebRole.cs" />
@@ -261,6 +273,7 @@
     <EmbeddedResource Include="Resources\GettingStarted\Index.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Index.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\GraphExplorer\Index.zh-cn.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
