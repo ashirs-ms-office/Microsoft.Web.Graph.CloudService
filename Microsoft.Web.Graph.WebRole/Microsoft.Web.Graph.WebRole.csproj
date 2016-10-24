@@ -238,6 +238,7 @@
     <Compile Include="ViewModels\GettingStarted\Partials\PickPlatformPartialViewModel.cs" />
     <Compile Include="ViewModels\GettingStarted\Partials\Platform\Android.cs" />
     <Compile Include="ViewModels\GettingStarted\Partials\Platform\Angular.cs" />
+    <Compile Include="ViewModels\GettingStarted\Partials\Platform\AppRegistrationInstructionViewModel.cs" />
     <Compile Include="ViewModels\GettingStarted\Partials\Platform\ASPDotNet.cs" />
     <Compile Include="ViewModels\GettingStarted\Partials\Platform\Xamarin.cs" />
     <Compile Include="ViewModels\GettingStarted\Partials\Platform\UWP.cs" />

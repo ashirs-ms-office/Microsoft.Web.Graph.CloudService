@@ -99,7 +99,7 @@ function setDocumentationDivForPlatform(platformId, fileType, divName)
     html += '<p>' + window.platformData[index].PreDownloadInstruction.Description + '</p>';
     document.getElementById(divName).innerHTML = html;
     document.getElementById("app-reg-title").innerHTML = window.platformData[index].AppRegistrationInstruction.Title;
-    document.getElementById("app-reg-desc").innerHTML = window.platformData[index].AppRegistrationInstruction.Instruction;
+    document.getElementById("app-reg-desc").innerHTML = window.platformData[index].AppRegistrationInstruction.Description;
     if (window.platformData[index].AppRegistrationInstruction.Notes == "") {
         document.getElementById("app-reg-notes").style.display = 'none';
     }

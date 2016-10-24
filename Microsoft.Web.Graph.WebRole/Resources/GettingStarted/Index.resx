@@ -289,6 +289,9 @@
   <data name="POST_DOWNLOAD_INSTRUCTION_RUBY" xml:space="preserve">
     <value>Almost there! To get it running:&lt;br/&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;1. Unzip downloaded package and go to the folder. &lt;/li&gt;&lt;li&gt;2. If you don't already  have bundler and rack, you can install them with the following command: &lt;br/&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;gem install bundler rack&lt;/b&gt;. &lt;/li&gt;&lt;li&gt;3. Install the Rails application and dependencies with the following command: &lt;br/&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;bundle install&lt;/b&gt;&lt;/li&gt;&lt;li&gt;4. To start the Rails application, type the following command: &lt;br /&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;rackup -p 3000&lt;/b&gt;&lt;/li&gt;&lt;li&gt;5. Go to &lt;a href='http://localhost:3000' target='_blank'&gt;http://localhost:3000&lt;/a&gt; in your web browser. &lt;/li&gt;&lt;/ul&gt;&lt;p&gt;To see how this sample was created, please see our getting started &lt;a href='http://graph.microsoft.io/en-us/docs/platform/ruby' target='_blank'&gt;walkthrough&lt;/a&gt;.&lt;/p&gt;</value>
   </data>
+  <data name="REGISTER_APP_BUILDING_ENTERPRISE" xml:space="preserve">
+    <value>*Building an app for enterprise users only?</value>
+  </data>
   <data name="REGISTER_APP_DESCRIPTION" xml:space="preserve">
     <value>To register your app, we will take you to the &lt;i&gt;Microsoft Application Registration portal&lt;/i&gt; where you will be able to get an App ID and redirect URL. You will need either a &lt;a href="http://dev.office.com/devprogram"&gt;school or work&lt;/a&gt; or &lt;a href="https://signup.live.com/signup?wa=wsignin1.0&amp;ct=1473983465&amp;rver=6.6.6556.0&amp;wp=MBI_SSL&amp;wreply=https%3a%2f%2foutlook.live.com%2fowa%2f&amp;id=292841&amp;CBCXT=out&amp;cobrandid=90015&amp;bk=1473983466&amp;uiflavor=web&amp;uaid=3b7bae8746264c1bacf1db2b315745cc&amp;mkt=EN-US&amp;lc=1033&amp;lic=1"&gt;Microsoft account&lt;/a&gt;.</value>
   </data>
@@ -299,7 +302,7 @@
     <value />
   </data>
   <data name="REGISTER_APP_NOTE_MOBILE" xml:space="preserve">
-    <value>&lt;b&gt;*Building an app for enterprise users only?&lt;/b&gt; Use Azure Active Directory V1. Here is &lt;a id="fineprintlink" style="cursor: pointer"&gt;why&lt;/a&gt;. &lt;a id="v1Link" href="#"&gt;Get Started with this code sample&lt;/a&gt;.</value>
+    <value>Use Azure Active Directory V1. Here is &lt;a id="fineprintlink" style="cursor: pointer"&gt;why&lt;/a&gt;. &lt;a id="v1Link" href="#"&gt;Get Started with this code sample&lt;/a&gt;.</value>
   </data>
   <data name="REGISTER_APP_SAMPLE_ENTERPRISE_USER" xml:space="preserve">
     <value>{0} *Building an app for enterprise users only? {1} Use Azure Active Directory V1. Here is {2} why {3}.{4}Get Started with this code sample{5}.</value>

@@ -454,6 +454,15 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to *Building an app for enterprise users only?.
+        /// </summary>
+        public static string REGISTER_APP_BUILDING_ENTERPRISE {
+            get {
+                return ResourceManager.GetString("REGISTER_APP_BUILDING_ENTERPRISE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to To register your app, we will take you to the &lt;i&gt;Microsoft Application Registration portal&lt;/i&gt; where you will be able to get an App ID and redirect URL. You will need either a &lt;a href=&quot;http://dev.office.com/devprogram&quot;&gt;school or work&lt;/a&gt; or &lt;a href=&quot;https://signup.live.com/signup?wa=wsignin1.0&amp;ct=1473983465&amp;rver=6.6.6556.0&amp;wp=MBI_SSL&amp;wreply=https%3a%2f%2foutlook.live.com%2fowa%2f&amp;id=292841&amp;CBCXT=out&amp;cobrandid=90015&amp;bk=1473983466&amp;uiflavor=web&amp;uaid=3b7bae8746264c1bacf1db2b315745cc&amp;mkt=EN-US&amp;lc=1033&amp;lic=1&quot;&gt;Mic [rest of string was truncated]&quot;;.
         /// </summary>
         public static string REGISTER_APP_DESCRIPTION {
@@ -481,7 +490,7 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;b&gt;*Building an app for enterprise users only?&lt;/b&gt; Use Azure Active Directory V1. Here is &lt;a id=&quot;fineprintlink&quot; style=&quot;cursor: pointer&quot;&gt;why&lt;/a&gt;. &lt;a id=&quot;v1Link&quot; href=&quot;#&quot;&gt;Get Started with this code sample&lt;/a&gt;..
+        ///   Looks up a localized string similar to Use Azure Active Directory V1. Here is &lt;a id=&quot;fineprintlink&quot; style=&quot;cursor: pointer&quot;&gt;why&lt;/a&gt;. &lt;a id=&quot;v1Link&quot; href=&quot;#&quot;&gt;Get Started with this code sample&lt;/a&gt;..
         /// </summary>
         public static string REGISTER_APP_NOTE_MOBILE {
             get {

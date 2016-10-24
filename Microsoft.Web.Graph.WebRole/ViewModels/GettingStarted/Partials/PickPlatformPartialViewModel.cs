@@ -19,7 +19,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
         public string Alt { get; set; }
         public Instruction PreDownloadInstruction { get; set; }
         public Instruction PostDownloadInstruction { get; set; }
-
+        public Instruction AppRegistrationInstruction { get; set; }
         public string GitHubMDFileName { get; set; }
 
         public CodeSample [] CodeSample { get; set; }
