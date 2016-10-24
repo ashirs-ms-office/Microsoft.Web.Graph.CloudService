@@ -318,6 +318,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
         }
         public string Title { get; } = Resources.GettingStarted.Index.PICK_PLATFORM_TITLE;
         public string Description { get;}= Resources.GettingStarted.Index.PICK_PLATFORM_DESCRIPTION;
+        public string LetsGo { get; } = Resources.GettingStarted.Index.LETS_GO;
 
         public List<PlatformModel> Platforms { get; private set; }
     }

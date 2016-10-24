@@ -98,6 +98,15 @@ function setDocumentationDivForPlatform(platformId, fileType, divName)
     var html = '<h1>' + window.platformData[index].PreDownloadInstruction.Title + '</h1>';
     html += '<p>' + window.platformData[index].PreDownloadInstruction.Description + '</p>';
     document.getElementById(divName).innerHTML = html;
+    document.getElementById("app-reg-title").innerHTML = window.platformData[index].AppRegistrationInstruction.Title;
+    document.getElementById("app-reg-desc").innerHTML = window.platformData[index].AppRegistrationInstruction.Instruction;
+    if (window.platformData[index].AppRegistrationInstruction.Notes == "") {
+        document.getElementById("app-reg-notes").style.display = 'none';
+    }
+    else {
+        document.getElementById("app-reg-notes").style.display = 'block';
+        document.getElementById("app-reg-notes").innerHTML = window.platformData[index].AppRegistrationInstruction.Notes;
+    }
 }
 
 function redirectEditOnGitHub(platformId)

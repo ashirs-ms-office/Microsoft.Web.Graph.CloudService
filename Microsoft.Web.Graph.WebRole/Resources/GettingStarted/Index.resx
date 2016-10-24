@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="LETS_GO" xml:space="preserve">
+    <value>Let's go</value>
+  </data>
   <data name="MS_GRAPH_QUICK_START" xml:space="preserve">
     <value>Microsoft Graph Quick Start</value>
   </data>
@@ -289,14 +292,23 @@
   <data name="REGISTER_APP_DESCRIPTION" xml:space="preserve">
     <value>To register your app, we will take you to the &lt;i&gt;Microsoft Application Registration portal&lt;/i&gt; where you will be able to get an App ID and redirect URL. You will need either a &lt;a href="http://dev.office.com/devprogram"&gt;school or work&lt;/a&gt; or &lt;a href="https://signup.live.com/signup?wa=wsignin1.0&amp;ct=1473983465&amp;rver=6.6.6556.0&amp;wp=MBI_SSL&amp;wreply=https%3a%2f%2foutlook.live.com%2fowa%2f&amp;id=292841&amp;CBCXT=out&amp;cobrandid=90015&amp;bk=1473983466&amp;uiflavor=web&amp;uaid=3b7bae8746264c1bacf1db2b315745cc&amp;mkt=EN-US&amp;lc=1033&amp;lic=1"&gt;Microsoft account&lt;/a&gt;.</value>
   </data>
-  <data name="REGISTER_APP_DESCRIPTION_MOBILE" xml:space="preserve">
-    <value>To register your app, we will take you to the &lt;i&gt;Microsoft Application Registration portal&lt;/i&gt; where you will be able to get an App ID and redirect URL. You will need either a &lt;a href="http://dev.office.com/devprogram"&gt;school or work&lt;/a&gt; or &lt;a href="https://signup.live.com/signup?wa=wsignin1.0&amp;ct=1473983465&amp;rver=6.6.6556.0&amp;wp=MBI_SSL&amp;wreply=https%3a%2f%2foutlook.live.com%2fowa%2f&amp;id=292841&amp;CBCXT=out&amp;cobrandid=90015&amp;bk=1473983466&amp;uiflavor=web&amp;uaid=3b7bae8746264c1bacf1db2b315745cc&amp;mkt=EN-US&amp;lc=1033&amp;lic=1"&gt;Microsoft account&lt;/a&gt;. &lt;div id="mobileFirstMessage"&gt;This sample app will work for most users*.&lt;/div&gt;</value>
+  <data name="REGISTER_APP_GET_ACCOUNT" xml:space="preserve">
+    <value>To register your app, we will take you to the &lt;i&gt;Microsoft Application Registration portal&lt;/i&gt; where you will be able to get an App ID and redirect URL. You will need either a {0} school or work {1} or {2}.</value>
   </data>
   <data name="REGISTER_APP_NOTE" xml:space="preserve">
     <value />
   </data>
   <data name="REGISTER_APP_NOTE_MOBILE" xml:space="preserve">
     <value>&lt;b&gt;*Building an app for enterprise users only?&lt;/b&gt; Use Azure Active Directory V1. Here is &lt;a id="fineprintlink" style="cursor: pointer"&gt;why&lt;/a&gt;. &lt;a id="v1Link" href="#"&gt;Get Started with this code sample&lt;/a&gt;.</value>
+  </data>
+  <data name="REGISTER_APP_SAMPLE_ENTERPRISE_USER" xml:space="preserve">
+    <value>{0} *Building an app for enterprise users only? {1} Use Azure Active Directory V1. Here is {2} why {3}.{4}Get Started with this code sample{5}.</value>
+  </data>
+  <data name="REGISTER_APP_SAMPLE_SECRET_KEY_REQUIRED" xml:space="preserve">
+    <value>Heads up: At the Application Registration portal, you will also generate an App Secret. Please retain that App Secret, as you will need it to run the sample app. If you forget it, you will need to restart this flow.</value>
+  </data>
+  <data name="REGISTER_APP_SAMPLE_WILL_WORK" xml:space="preserve">
+    <value>This sample app will work for most users*.</value>
   </data>
   <data name="REGISTER_APP_SECRET_PROMPT" xml:space="preserve">
     <value>Please re-enter the App Secret that you generated and saved:</value>

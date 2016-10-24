@@ -61,6 +61,15 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Let&apos;s go.
+        /// </summary>
+        public static string LETS_GO {
+            get {
+                return ResourceManager.GetString("LETS_GO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Microsoft Graph Quick Start.
         /// </summary>
         public static string MS_GRAPH_QUICK_START {
@@ -454,11 +463,11 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to To register your app, we will take you to the &lt;i&gt;Microsoft Application Registration portal&lt;/i&gt; where you will be able to get an App ID and redirect URL. You will need either a &lt;a href=&quot;http://dev.office.com/devprogram&quot;&gt;school or work&lt;/a&gt; or &lt;a href=&quot;https://signup.live.com/signup?wa=wsignin1.0&amp;ct=1473983465&amp;rver=6.6.6556.0&amp;wp=MBI_SSL&amp;wreply=https%3a%2f%2foutlook.live.com%2fowa%2f&amp;id=292841&amp;CBCXT=out&amp;cobrandid=90015&amp;bk=1473983466&amp;uiflavor=web&amp;uaid=3b7bae8746264c1bacf1db2b315745cc&amp;mkt=EN-US&amp;lc=1033&amp;lic=1&quot;&gt;Mic [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to To register your app, we will take you to the &lt;i&gt;Microsoft Application Registration portal&lt;/i&gt; where you will be able to get an App ID and redirect URL. You will need either a {0} school or work {1} or {2}..
         /// </summary>
-        public static string REGISTER_APP_DESCRIPTION_MOBILE {
+        public static string REGISTER_APP_GET_ACCOUNT {
             get {
-                return ResourceManager.GetString("REGISTER_APP_DESCRIPTION_MOBILE", resourceCulture);
+                return ResourceManager.GetString("REGISTER_APP_GET_ACCOUNT", resourceCulture);
             }
         }
         
@@ -477,6 +486,33 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         public static string REGISTER_APP_NOTE_MOBILE {
             get {
                 return ResourceManager.GetString("REGISTER_APP_NOTE_MOBILE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} *Building an app for enterprise users only? {1} Use Azure Active Directory V1. Here is {2} why {3}.{4}Get Started with this code sample{5}..
+        /// </summary>
+        public static string REGISTER_APP_SAMPLE_ENTERPRISE_USER {
+            get {
+                return ResourceManager.GetString("REGISTER_APP_SAMPLE_ENTERPRISE_USER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Heads up: At the Application Registration portal, you will also generate an App Secret. Please retain that App Secret, as you will need it to run the sample app. If you forget it, you will need to restart this flow..
+        /// </summary>
+        public static string REGISTER_APP_SAMPLE_SECRET_KEY_REQUIRED {
+            get {
+                return ResourceManager.GetString("REGISTER_APP_SAMPLE_SECRET_KEY_REQUIRED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This sample app will work for most users*..
+        /// </summary>
+        public static string REGISTER_APP_SAMPLE_WILL_WORK {
+            get {
+                return ResourceManager.GetString("REGISTER_APP_SAMPLE_WILL_WORK", resourceCulture);
             }
         }
         
