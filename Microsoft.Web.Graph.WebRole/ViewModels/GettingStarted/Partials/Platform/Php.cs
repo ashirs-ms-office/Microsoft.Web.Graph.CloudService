@@ -28,6 +28,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                     Notes = "",
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "PHP")
                 },
+                AppRegistrationInstruction = AppRegistrationInstructionViewModel.GetInstructionForBackendPlatform(),
                 CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("option-php-outlook") }
 
             };

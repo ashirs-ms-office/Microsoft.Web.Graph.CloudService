@@ -23,6 +23,7 @@
                     Notes = "",
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "Ruby")
                 },
+                AppRegistrationInstruction = AppRegistrationInstructionViewModel.GetInstructionForBackendPlatform(),
                 CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("option-ruby-outlook") }
             };
         }
