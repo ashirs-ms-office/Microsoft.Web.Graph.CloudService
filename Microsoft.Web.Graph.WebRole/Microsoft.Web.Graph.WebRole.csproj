@@ -297,6 +297,7 @@
     <Content Include="Scripts\getting-started-scripts\jszip-utils.js" />
     <Content Include="Scripts\getting-started-scripts\jszip.js" />
     <Content Include="Scripts\getting-started-scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\getting-started-scripts\navBar.js" />
     <Content Include="Scripts\getting-started-scripts\registerApp.js" />
     <Content Include="Scripts\getting-started-scripts\respond.js" />
     <Content Include="Scripts\getting-started-scripts\tryitout.js" />
