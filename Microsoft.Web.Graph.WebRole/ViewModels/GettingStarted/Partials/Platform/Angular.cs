@@ -29,6 +29,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                     Notes = Resources.GettingStarted.Index.PICK_PLATFORM_NOTE,
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "Angular")
                 },
+                AppRegistrationInstruction = AppRegistrationInstructionViewModel.GetInstructionForFrontEndPlatform(),
                 CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("option-angular-outlook") }
             };
         }
