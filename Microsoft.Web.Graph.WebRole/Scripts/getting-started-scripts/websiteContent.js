@@ -88,24 +88,29 @@
         }
     ]
 }
-function setDocumentationDivForPlatform(platformId, fileType, divName)
-{
+
+function getPlatformInfo(platformId) {
     var index = 0;
-    for (; index < window.platformData.length; ++index) {
+    for(; index < window.platformData.length; ++index) {
         if (platformId == window.platformData[index].Id)
             break;
     }
-    var html = '<h1>' + window.platformData[index].PreDownloadInstruction.Title + '</h1>';
-    html += '<p>' + window.platformData[index].PreDownloadInstruction.Description + '</p>';
+    return window.platformData[index];
+}
+function setDocumentationDivForPlatform(platformId, fileType, divName)
+{
+    var platformInfo = getPlatformInfo(platformId);
+    var html = '<h1>' + platformInfo.PreDownloadInstruction.Title + '</h1>';
+    html += '<p>' + platformInfo.PreDownloadInstruction.Description + '</p>';
     document.getElementById(divName).innerHTML = html;
-    document.getElementById("app-reg-title").innerHTML = window.platformData[index].AppRegistrationInstruction.Title;
-    document.getElementById("app-reg-desc").innerHTML = window.platformData[index].AppRegistrationInstruction.Description;
-    if (window.platformData[index].AppRegistrationInstruction.Notes == "") {
+    document.getElementById("app-reg-title").innerHTML = platformInfo.AppRegistrationInstruction.Title;
+    document.getElementById("app-reg-desc").innerHTML = platformInfo.AppRegistrationInstruction.Description;
+    if (platformInfo.AppRegistrationInstruction.Notes == "") {
         document.getElementById("app-reg-notes").style.display = 'none';
     }
     else {
         document.getElementById("app-reg-notes").style.display = 'block';
-        document.getElementById("app-reg-notes").innerHTML = window.platformData[index].AppRegistrationInstruction.Notes;
+        document.getElementById("app-reg-notes").innerHTML = platformInfo.AppRegistrationInstruction.Notes;
     }
 }
 

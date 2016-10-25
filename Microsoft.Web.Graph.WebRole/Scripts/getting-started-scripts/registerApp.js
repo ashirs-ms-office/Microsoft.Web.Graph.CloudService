@@ -138,17 +138,15 @@ $(document).ready(function () {
 
     $("#go-reg-app").click(function () {
         //ru = the URL which the app registration page will redirect back to
-        var platformInfo = getNameTypeAndRedirectByPlatformId(platformId);
+        var platformInfo = getPlatformInfo(platformId);
+        var codeSample = platformInfo.CodeSample[0];
         //NOTE: removing any existing querystrings from current URL. In case of bad appId, user should not be stopped from clicking "Let's Go" again without those bad querystrings being sent
-        var ru = window.location.href.split('?')[0] + "?appID=_appId_&appName=_appName_&redirectUrl=" + platformInfo.redirectUri + "&platform=" + platformId;
+        var ru = window.location.href.split('?')[0] + "?appID=_appId_&appName=_appName_&redirectUrl=" + codeSample.RedirectUri + "&platform=" + platformId;
         ru = encodeURIComponent(ru);
         ru = "&ru=" + ru;
 
-        var deepLink = "/quickstart/graphIO?publicClientSupport=" + platformInfo.public + "&appName=" + platformInfo.name + "&redirectUrl=" + platformInfo.redirectUri;
-        if (platformId === "option-dotnet" || platformId === "option-angular") {
-            deepLink = deepLink + "&allowImplicitFlow=true";
-        }
-        deepLink = deepLink + ru;
+        var deepLink = "/quickstart/graphIO?publicClientSupport=" + codeSample.Public + "&appName=" + codeSample.Name + "&redirectUrl=" + codeSample.RedirectUri;
+        deepLink = deepLink + "&allowImplicitFlow=" + codeSample.AllowImplicitFlow + ru;
         deepLink = encodeURIComponent(deepLink);
         deepLink = "deepLink=" + deepLink;
         var appregistrationUrl = "https://apps.dev.microsoft.com/?" + deepLink;
