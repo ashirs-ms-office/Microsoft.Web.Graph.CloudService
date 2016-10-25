@@ -26,7 +26,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                 PreDownloadInstruction = new Instruction
                 {
                     Description = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_INSTALL_INSTRUCTION,
-                    "<a href='https://www.visualstudio.com/vs-2015-product-editions' target='_blank'>isual Studio 2015 Community or Enterprise</a>"),
+                    "<a href='https://www.visualstudio.com/vs-2015-product-editions' target='_blank'>Visual Studio 2015 Community or Enterprise</a>"),
                     Notes = Resources.GettingStarted.Index.PICK_PLATFORM_NOTE,
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, name)
                 },

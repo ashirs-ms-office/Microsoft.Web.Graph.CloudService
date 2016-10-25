@@ -261,82 +261,6 @@ function getRepoById(platform) {
 }
 
 /*
- * Adds the suggestion for selected platform in the given divid
- * 
- * selectedPlatform=> user selected platform
- * divId=> a div where the panels for multiple download will be added.
- */
-function addSuggestions(divId, selectedPlatform, product) {
-    var repos = searchSampleDownloads(selectedPlatform, product);
-    if (repos.length <= 0) { 
-        alert("No Suggestion found"); // TBD, need to remove, currently for debug purpose only
-        return;
-    }
-    var innerHtml = "";
-    for (var i = 0; i < repos.length; ++i) {
-        innerHtml += "<li>" + getPanelHtml(repos[i]) + "</li>";
-    }
-    $("#" + divId).html("<ul class='panel-collection'>" + innerHtml + "</ul>");
-
-    // do binding for each download button
-    for (var i = 0; i < repos.length; ++i) {
-        var btnid = "codesample-download-button-" + repos[i].uid;
-        $('#' + btnid).click(downloadCodeSampleHandler);
-    }
-}
-
-
-/*
- * builds the panel html from the given repo
- */
-function getPanelHtml(repo) {
-    return "<div class='panel panel-default text-center panel-download'>" +
-                "<div class='panel-heading'>" +
-                    "<div class='panel-title'>" + repo.CodeSampleName + "</div>" +
-                "</div>" +
-               "<div class='panel-body'>" +
-                  repo.Description +
-               "</div>" +
-                "<div class='panel-footer'>" + getDownloadButtonHTML(repo.uid) + "</div>" +
-            "</div>";
-}
-
-/*
- * build the download html for the given repo
- */
-function getDownloadButtonHTML(uid) {
-    return "<a class='btn btn-success' "+ 
-        "id='codesample-download-button-" + uid +"'"+ 
-        "data-uid='" + uid + "'" +
-        ">" + "<i class='fa fa-download'></i> Download" + "</a>";
-}
-
-
-
-function downloadCodeSampleHandler()
-{
-    var uid = $(this).attr("data-uid"); 
-    codeSamplePackageAndDownload(uid, registerAppParams.clientId, registerAppParams.clientSecret,
-    registerAppParams.redirectUri, registerAppParams.signonUri);
-    
-}
-
-//$(function () {
-//    $('#go-get-code-msg-done').click(function () {
-//        $('#go-get-code-msg-done').addClass('hidden');
-//        $('#spinner-for-downloading').addClass('fa-spin');
-//        $('#spinner-for-injecting').addClass('fa-spin');        
-//        $('#spinner-for-downloading').addClass('hidden');
-//        $('#spinner-for-injecting').addClass('hidden');
-//        $('#check-for-downloading').addClass('hidden');
-//        $('#check-for-injecting').addClass('hidden');
-//        $('#msg-for-downloading').addClass('hidden');
-//        $('#msg-for-injecting').addClass('hidden');
-//        $('#go-get-code-msg').addClass('hidden');
-//    });
-//});
-
-/*
  * The core function that downloads the code sample and embeds the client id and other details in
  * code sample
  * 
@@ -345,16 +269,7 @@ function downloadCodeSampleHandler()
  * sdk is true if the sdk download button was clicked, false if not
  * 
  */
-function codeSamplePackageAndDownload(uid, clientId, clientSecret, appRedirectUrl, signOnUrl, sdk) {
-    //For sdk options, append -sdk so a different 
-    if (sdk) {
-        uid = uid + "-sdk";
-    }
-    var repo = getRepoById(uid);
-    if (repo == null) {
-        alert("No repo found for the given uid = " + uid); // TBD, need to remove, currently for debug purpose only
-        return;
-    }
+function codeSamplePackageAndDownload(repo, clientId, clientSecret, appRedirectUrl, signOnUrl) {
     try {
         _resetFlags();
         var platformName = repo.Platform;
@@ -370,13 +285,6 @@ function codeSamplePackageAndDownload(uid, clientId, clientSecret, appRedirectUr
         {
             throw new Error('ClientIdIsUndefnied');
         }
-
-        //$('#go-get-code-msg-done').addClass('hidden');
-        //$('#go-get-code-msg').removeClass('hidden');
-        //$('#spinner-for-downloading').removeClass('hidden');
-        //$('#msg-for-downloading').removeClass('hidden');
-        //$('#spinner-for-injecting').removeClass('hidden');
-        //$('#msg-for-injecting').removeClass('hidden');
 
         var clientIdOriginalFormat = clientId;
         $.support.cors = true; //this is required for IE support
@@ -435,7 +343,7 @@ function codeSamplePackageAndDownload(uid, clientId, clientSecret, appRedirectUr
             window.saveAs(content, repo.GitHubRepoName + ".zip");
            
             ga('send', 'event', 'DownloadCodeSample', 'Success-' + platformName, platformName, 1);
-            appInsights.trackEvent("DownloadCodeSampleWithClientId", { ClientId: clientIdOriginalFormat, Platform: platformName, IsSdkDownload: sdk});
+            appInsights.trackEvent("DownloadCodeSampleWithClientId", { ClientId: clientIdOriginalFormat, Platform: platformName});
             MscomCustomEvent('ms.InteractionType', '4', 'ms.controlname', 'O365apis', 'ms.ea_action', 'DownloadCodeSample-Success', 'ms.contentproperties', platformName + '-withClientId');
         });
         _progressStatus(100);   

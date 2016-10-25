@@ -34,8 +34,8 @@
                 },
                 AppRegistrationInstruction = AppRegistrationInstructionViewModel.GetInstructionForMobilePlatform(),
                 CodeSample = new CodeSample[] {
-                    CodeSampleFactory.Instance.GetCodeSample("option-windowsuniversal-outlook"),
-                    CodeSampleFactory.Instance.GetCodeSample("option-windowsuniversal-sdk-outlook")
+                    CodeSampleFactory.Instance.GetCodeSample("option-windowsuniversal-sdk-outlook"),
+                    CodeSampleFactory.Instance.GetCodeSample("option-windowsuniversal-outlook")
                 }
 
             };

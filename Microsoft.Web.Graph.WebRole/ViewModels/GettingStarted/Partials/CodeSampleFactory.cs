@@ -56,7 +56,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'ClientSecretStringToReplace': 'ENTER_CLIENTSECRET_ID_HERE_HackWillNotReplace', //TODO: check if this matters!
             'RedirectURLStringToReplace': 'ENTER_YOUR_REDIRECT_URI',
             'SignOnURLStringToReplace': 'ENTER_SIGNON_URI_HERE_HackWillNotReplace', //TODO: check if this matters!
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples/O365-iOS-Microsoft-Graph-Connect-master.zip',
+            'LocalZipFile': '\/staticres/O365-iOS-Microsoft-Graph-Connect-master.zip',
             'GitHubRepoName': 'O365-iOS-Microsoft-Graph-Connect',
             'GitHubMasterZipUrl': 'https://github.com/OfficeDev/O365-iOS-Microsoft-Graph-Connect/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/OfficeDev/O365-iOS-Microsoft-Graph-Connect'
@@ -72,7 +72,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'ClientSecretStringToReplace': 'ENTER_CLIENTSECRET_ID_HERE_HackWillNotReplace', //TODO: check if this matters!
             'RedirectURLStringToReplace': 'ENTER_YOUR_REDIRECT_URI',
             'SignOnURLStringToReplace': 'ENTER_SIGNON_URI_HERE_HackWillNotReplace', //TODO: check if this matters!
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/O365-Android-Microsoft-Graph-Connect-master.zip',
+            'LocalZipFile': '\/staticres\/O365-Android-Microsoft-Graph-Connect-master.zip',
             'GitHubRepoName': 'O365-Android-Microsoft-Graph-Connect',
             'GitHubMasterZipUrl': 'https://github.com/OfficeDev/O365-Android-Microsoft-Graph-Connect/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/OfficeDev/O365-Android-Microsoft-Graph-Connect'
@@ -86,7 +86,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'FileName': 'O365-AspNetMVC-Microsoft-Graph-Connect-master\/UnifiedApiConnect\/Web.config',
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
             'ClientSecretStringToReplace': 'ENTER_YOUR_SECRET',
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/O365-AspNetMVC-Microsoft-Graph-Connect-master.zip',
+            'LocalZipFile': '\/staticres\/O365-AspNetMVC-Microsoft-Graph-Connect-master.zip',
             'GitHubRepoName': 'O365-AspNetMVC-Microsoft-Graph-Connect',
             'GitHubMasterZipUrl': 'https://github.com/OfficeDev/O365-AspNetMVC-Microsoft-Graph-Connect/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/OfficeDev/O365-AspNetMVC-Microsoft-Graph-Connect'
@@ -100,7 +100,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'FileName': 'php-connect-rest-sample-master\/src\/Constants.php',
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
             'ClientSecretStringToReplace': 'ENTER_YOUR_SECRET',            
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/php-connect-rest-sample-master.zip',
+            'LocalZipFile': '\/staticres\/php-connect-rest-sample-master.zip',
             'GitHubRepoName': 'php-connect-rest-sample',
             'GitHubMasterZipUrl': 'https://github.com/microsoftgraph/php-connect-rest-sample/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/microsoftgraph/php-connect-rest-sample.git'
@@ -114,7 +114,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'FileName': 'nodejs-connect-rest-sample-master\/authHelper.js',
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
             'ClientSecretStringToReplace': 'ENTER_YOUR_SECRET',
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/nodejs-connect-rest-sample-master.zip',
+            'LocalZipFile': '\/staticres\/nodejs-connect-rest-sample-master.zip',
             'GitHubRepoName': 'nodejs-connect-rest-sample',
             'GitHubMasterZipUrl': 'https://github.com/microsoftgraph/nodejs-connect-rest-sample/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/microsoftgraph/nodejs-connect-rest-sample.git'
@@ -128,7 +128,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'FileName': 'O365-Python-Microsoft-Graph-Connect-master\/connect\/config.py',
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
             'ClientSecretStringToReplace': 'ENTER_YOUR_SECRET',
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/O365-Python-Microsoft-Graph-Connect-master.zip',
+            'LocalZipFile': '\/staticres\/O365-Python-Microsoft-Graph-Connect-master.zip',
             'GitHubRepoName': 'O365-Python-Microsoft-Graph-Connect',
             'GitHubMasterZipUrl': 'https://github.com/OfficeDev/O365-Python-Microsoft-Graph-Connect/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/OfficeDev/O365-Python-Microsoft-Graph-Connect'
@@ -143,7 +143,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
             'ClientSecretStringToReplace': 'ENTER_YOUR_SECRET',
             'TenantNameToReplace': 'ENTER_YOUR_TENANT',
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/ruby-connect-rest-sample-master.zip',
+            'LocalZipFile': '\/staticres\/ruby-connect-rest-sample-master.zip',
             'GitHubRepoName': 'ruby-connect-rest-sample',
             'GitHubMasterZipUrl': 'https://github.com/microsoftgraph/ruby-connect-rest-sample.git',
             'GitHubRepoUrl': 'https://github.com/microsoftgraph/ruby-connect-rest-sample.git'
@@ -154,7 +154,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'App': 'outlook',
             'FileName': 'angular-connect-rest-sample-master\/public\/scripts\/config.js',
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/angular-connect-rest-sample-master.zip',
+            'LocalZipFile': '\/staticres\/angular-connect-rest-sample-master.zip',
             'GitHubRepoName': 'angular-connect-rest-sample',
             'GitHubMasterZipUrl': 'https://github.com/microsoftgraph/angular-connect-rest-sample/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/microsoftgraph/angular-connect-rest-sample.git'
@@ -166,7 +166,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'FileName': 'uwp-csharp-connect-rest-sample-master\/O365-UWP-Unified-API-Connect\/App.xaml',
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
             'TenantNameToReplace': 'ENTER_YOUR_TENANT',
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/uwp-csharp-connect-rest-sample-master.zip',
+            'LocalZipFile': '\/staticres\/uwp-csharp-connect-rest-sample-master.zip',
             'GitHubRepoName': 'uwp-csharp-connect-rest-sample',
             'GitHubMasterZipUrl': 'https://github.com/microsoftgraph/uwp-csharp-connect-rest-sample/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/microsoftgraph/uwp-csharp-connect-rest-sample.git'
@@ -178,7 +178,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'FileName': 'uwp-csharp-connect-sample-master\/Microsoft-Graph-UWP-Connect-SDK\/App.xaml',
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
             'TenantNameToReplace': 'ENTER_YOUR_TENANT',
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/uwp-csharp-connect-sample-master.zip',
+            'LocalZipFile': '\/staticres\/uwp-csharp-connect-sample-master.zip',
             'GitHubRepoName': 'uwp-csharp-connect-sample',
             'GitHubMasterZipUrl': 'https://github.com/microsoftgraph/uwp-csharp-connect-sample/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/microsoftgraph/uwp-csharp-connect-sample.git'
@@ -191,7 +191,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
             'TenantNameToReplace': 'ENTER_YOUR_TENANT',
             'ClientSecretStringToReplace': 'ENTER_YOUR_SECRET',
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/aspnet-connect-sample-master.zip',
+            'LocalZipFile': '\/staticres\/aspnet-connect-sample-master.zip',
             'GitHubRepoName': 'aspnet-connect-sample-master',
             'GitHubMasterZipUrl': 'https://github.com/microsoftgraph/aspnet-connect-sample/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/microsoftgraph/aspnet-connect-sample.git'
@@ -203,7 +203,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'FileName': 'android-java-connect-sample-master\/app\/src\/main\/java\/com\/microsoft\/graph\/connect\/Constants.java', //TODO
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
             'RedirectURLStringToReplace': 'ENTER_YOUR_REDIRECT_URI',
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/android-java-connect-sample-master.zip',
+            'LocalZipFile': '\/staticres\/android-java-connect-sample-master.zip',
             'GitHubRepoName': 'android-java-connect-sample',
             'GitHubMasterZipUrl': 'https://github.com/microsoftgraph/android-java-connect-sample/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/microsoftgraph/android-java-connect-sample.git'
@@ -214,7 +214,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'App': 'outlook',
             'FileName': 'ios-swift-connect-sample-master\/Graph-iOS-Swift-Connect\/ApplicationConstants.swift',
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/ios-swift-connect-sample-master.zip',
+            'LocalZipFile': '\/staticres\/ios-swift-connect-sample-master.zip',
             'GitHubRepoName': 'ios-swift-connect-sample',
             'GitHubMasterZipUrl': 'https://github.com/microsoftgraph/ios-swift-connect-sample/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/microsoftgraph/ios-swift-connect-sample.git'
@@ -226,7 +226,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'FileName': 'ios-swift-connect-rest-sample-master\/O365-iOS-Microsoft-Graph-Connect-Swift\/AuthenticationConstants.swift',
             'ClientIdStringToReplace': 'ENTER_CLIENT_ID_HERE', //TODO: change?
             'RedirectURLStringToReplace': 'ENTER_REDIRECT_URI_HERE', //TODO: change?
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/ios-swift-connect-rest-sample-master.zip',
+            'LocalZipFile': '\/staticres\/ios-swift-connect-rest-sample-master.zip',
             'GitHubRepoName': 'ios-swift-connect-rest-sample',
             'GitHubMasterZipUrl': 'https://github.com/microsoftgraph/ios-swift-connect-rest-sample/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/microsoftgraph/ios-swift-connect-rest-sample.git'
@@ -237,7 +237,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'App': 'outlook',
             'FileName': 'ios-objectivec-connect-sample-master\/O365-iOS-Microsoft-Graph-SDK\/AuthenticationConstants.m',
             'ClientIdStringToReplace': 'ENTER_CLIENT_ID_HERE', //TODO: change?
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/ios-objectivec-connect-sample-master.zip',
+            'LocalZipFile': '\/staticres\/ios-objectivec-connect-sample-master.zip',
             'GitHubRepoName': 'ios-objectivec-connect-sample',
             'GitHubMasterZipUrl': 'https://github.com/microsoftgraph/ios-objectivec-connect-sample/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/microsoftgraph/ios-objectivec-connect-sample.git'
@@ -249,7 +249,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'FileName': 'ios-objectivec-connect-rest-sample-master\/O365-iOS-Microsoft-Graph-Connect\/ConnectViewController.m',
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
             'RedirectURLStringToReplace': 'ENTER_YOUR_REDIRECT_URI',
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/ios-objectivec-connect-rest-sample-master.zip',
+            'LocalZipFile': '\/staticres\/ios-objectivec-connect-rest-sample-master.zip',
             'GitHubRepoName': 'ios-objectivec-connect-rest-sample',
             'GitHubMasterZipUrl': 'https://github.com/microsoftgraph/ios-objectivec-connect-rest-sample/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/microsoftgraph/ios-objectivec-connect-rest-sample.git'
@@ -260,7 +260,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
             'App': 'outlook',
             'FileName': 'xamarin-csharp-connect-sample-master\/XamarinConnect\/XamarinConnect\/App.cs',
             'ClientIdStringToReplace': 'ENTER_YOUR_CLIENT_ID',
-            'LocalZipFile': '\/Modules\/Graph.GettingStarted\/CodeSamples\/xamarin-csharp-connect-sample-master.zip',
+            'LocalZipFile': '\/staticres\/xamarin-csharp-connect-sample-master.zip',
             'GitHubRepoName': 'xamarin-csharp-connect-sample',
             'GitHubMasterZipUrl': 'https://github.com/microsoftgraph/xamarin-csharp-connect-sample/archive/master.zip',
             'GitHubRepoUrl': 'https://github.com/microsoftgraph/xamarin-csharp-connect-sample.git'
