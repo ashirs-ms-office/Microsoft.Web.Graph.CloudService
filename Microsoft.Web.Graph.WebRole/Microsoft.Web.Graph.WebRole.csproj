@@ -355,28 +355,6 @@
     <Content Include="Views\GettingStarted\Partial\_Intro.cshtml" />
     <Content Include="Views\GettingStarted\Partial\_PickPlatform.cshtml" />
     <Content Include="Views\GettingStarted\Partial\_TryOut.cshtml" />
-    <Content Include="staticres\android-java-connect-sample-master.zip" />
-    <Content Include="staticres\angular-connect-rest-sample-master.zip" />
-    <Content Include="staticres\aspnet-connect-sample-master.zip" />
-    <Content Include="staticres\ios-objectivec-connect-rest-sample-master.zip" />
-    <Content Include="staticres\ios-objectivec-connect-sample-master.zip" />
-    <Content Include="staticres\ios-swift-connect-rest-sample-master.zip" />
-    <Content Include="staticres\ios-swift-connect-sample-master.zip" />
-    <Content Include="staticres\nodejs-connect-rest-sample-master.zip" />
-    <Content Include="staticres\O365-Android-Microsoft-Graph-Connect-master.zip" />
-    <Content Include="staticres\O365-Angular-Microsoft-Graph-Connect-master.zip" />
-    <Content Include="staticres\O365-AspNetMVC-Microsoft-Graph-Connect-master.zip" />
-    <Content Include="staticres\O365-iOS-Microsoft-Graph-Connect-master.zip" />
-    <Content Include="staticres\O365-Nodejs-Microsoft-Graph-Connect-master.zip" />
-    <Content Include="staticres\O365-PHP-Microsoft-Graph-Connect-master.zip" />
-    <Content Include="staticres\O365-Python-Microsoft-Graph-Connect-master.zip" />
-    <Content Include="staticres\O365-Ruby-Microsoft-Graph-Connect-master.zip" />
-    <Content Include="staticres\O365-UWP-Microsoft-Graph-Connect-master.zip" />
-    <Content Include="staticres\php-connect-rest-sample-master.zip" />
-    <Content Include="staticres\ruby-connect-rest-sample-master.zip" />
-    <Content Include="staticres\uwp-csharp-connect-rest-sample-master.zip" />
-    <Content Include="staticres\uwp-csharp-connect-sample-master.zip" />
-    <Content Include="staticres\xamarin-csharp-connect-sample-master.zip" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
