@@ -57,6 +57,9 @@ $(document).ready(function () {
         }
         else {
             updatePlatform(document.getElementById(getQueryString("platform")), "");
+            document.getElementById("appIdField").value = registerAppParams.clientId;
+            document.getElementById("redirectUriField").value = registerAppParams.redirectUri;
+
             if (typeof (cardTracker) != "undefined") {
                 if ($("#registration-successful:visible").length == 0) {
                     cardTracker.showCard("registration-successful");
@@ -68,17 +71,17 @@ $(document).ready(function () {
 
             disablePlatformSelection();
 
-            if (platformId !== "option-windowsuniversal" && platformId !== "option-android" && platformId !== "option-ios-swift" && platformId !== "option-ios-objective-c" && platformId !== "option-dotnet" && platformId !== "option-xamarin") {
-                $("#downloadCodeSampleButtonSdk").hide();
-            }
-
-            //currently no v2 Xamarin, dotnet, ios-swift, ios-objective-c REST samples, so hide that button
-            if (platformId === "option-xamarin" || platformId === "option-python" || platformId === "option-ios-swift" || platformId === "option-ios-objective-c" || platformId === "option-dotnet" || platformId === "option-android") {
+            if (getPlatformInfo(platformId).RestCodeSample == null) {
                 $("#downloadCodeSampleButtonRest").hide();
             }
 
+            //currently no v2 Xamarin, dotnet, ios-swift, ios-objective-c REST samples, so hide that button
+            if (getPlatformInfo(platformId).SDKCodeSample == null) {
+                $("#downloadCodeSampleButtonSdk").hide();
+        }
+
             //Hide secret prompt if on mobile
-            if (getPlatformInfo(platformId).CodeSample[0].Public == true) {
+            if (getPlatformInfo(platformId).Public == true) {
                 $("#app-secret-prompt").hide();
             }
         }
@@ -93,7 +96,7 @@ $(document).ready(function () {
         ru = encodeURIComponent(ru);
         ru = "&ru=" + ru;
 
-        var deepLink = "/quickstart/graphIO?publicClientSupport=" + codeSample.Public + "&appName=" + codeSample.Name + "&redirectUrl=" + codeSample.RedirectUri;
+        var deepLink = "/quickstart/graphIO?publicClientSupport=" + platformInfo.Public + "&appName=" + codeSample.Name + "&redirectUrl=" + codeSample.RedirectUri;
         deepLink = deepLink + "&allowImplicitFlow=" + codeSample.AllowImplicitFlow + ru;
         deepLink = encodeURIComponent(deepLink);
         deepLink = "deepLink=" + deepLink;

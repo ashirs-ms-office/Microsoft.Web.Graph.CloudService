@@ -11,6 +11,7 @@
                 Icon = Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_ruby_grey_41x41.png"),
                 Name = "Ruby",
                 Alt = "Ruby",
+                Public = false,
                 PostDownloadInstruction = new Instruction
                 {
                     Description = Resources.GettingStarted.Index.POST_DOWNLOAD_INSTRUCTION_NODE,
@@ -24,7 +25,7 @@
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "Ruby")
                 },
                 AppRegistrationInstruction = AppRegistrationInstructionViewModel.GetInstructionForBackendPlatform(),
-                CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("option-ruby-outlook") }
+                RestCodeSample = CodeSampleFactory.Instance.GetCodeSample("option-ruby-outlook")
             };
         }
     }

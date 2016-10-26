@@ -28,7 +28,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
     {
         public string Id { get; set; }
         public string RedirectUri { get; set; }
-        public bool Public { get; set; }
         public string Name { get; set; }
         public string V1Link { get; set; }
         public bool AllowImplicitFlow { get; set; }
@@ -317,7 +316,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 new CodeSample { /* Android */
                    Name="My Android App",
                    RedirectUri="http://localhost:8000",
-                   Public = true,
                    V1Link = "https://github.com/microsoftgraph/uwp-csharp-connect-rest-sample/tree/last_v1_auth",
                    Repo = GetRepo("O365-Android-Connect-outlook"),
                    AllowImplicitFlow = false,
@@ -326,7 +324,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 new CodeSample { /* Angular */
                    Name="My Angular App",
                    RedirectUri="http://localhost:8080/login",
-                   Public = true,
                    V1Link = null,
                    Repo = GetRepo("option-angular-outlook"),
                    AllowImplicitFlow = true,
@@ -335,8 +332,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 new CodeSample { /* ASP.NET MVC */
                    Name="My ASP.NET App",
                    RedirectUri="http://localhost:55065",
-                   Public = false,
-                   V1Link = null,
                    Repo = GetRepo("option-dotnet-mail-api"),
                    AllowImplicitFlow = true,
                    Id="option-dotnet-mail-api"
@@ -344,7 +339,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 new CodeSample { /* iOS Swift  */
                    Name="My iOS Swift App",
                    RedirectUri="http://localhost:8000",
-                   Public = true,
                    V1Link = "https://github.com/microsoftgraph/ios-swift-connect-rest-sample",
                    Repo = GetRepo("O365-iOS-Swift-Connect-outlook"),
                    AllowImplicitFlow = false,
@@ -353,7 +347,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 new CodeSample { /* iOS Swift  SDK*/
                    Name="My iOS Swift App",
                    RedirectUri="http://localhost:8000",
-                   Public = true,
                    V1Link = "https://github.com/microsoftgraph/ios-swift-connect-rest-sample",
                    Repo = GetRepo("O365-iOS-Swift-sdk-Connect-outlook"),
                    AllowImplicitFlow = false,
@@ -362,7 +355,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 new CodeSample { /* iOS Objective C */
                    Name="My iOS Objective C App",
                    RedirectUri="http://localhost:8000",
-                   Public = true,
                    V1Link = "https://github.com/microsoftgraph/ios-objectivec-connect-rest-sample",
                    Repo = GetRepo("O365-iOS-Objective-C-Connect-outlook"),
                    AllowImplicitFlow = false,
@@ -371,7 +363,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 new CodeSample { /* iOS Objective C SDK*/
                    Name="My iOS Objective C App",
                    RedirectUri="http://localhost:8000",
-                   Public = true,
                    V1Link = "https://github.com/microsoftgraph/ios-objectivec-connect-rest-sample",
                    Repo = GetRepo("O365-iOS-Objective-C-sdk-Connect-outlook"),
                    AllowImplicitFlow = false,
@@ -380,7 +371,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 new CodeSample { /* Node */
                    Name="My Node.js App",
                    RedirectUri="http://localhost:3000/login",
-                   Public = true,
                    V1Link = "https://github.com/microsoftgraph/ios-objectivec-connect-rest-sample",
                    Repo = GetRepo("option-node-outlook"),
                    AllowImplicitFlow = false,
@@ -389,7 +379,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 new CodeSample { /* PHP */
                    Name="My PHP App",
                    RedirectUri="http://localhost:8000/oauth.php",
-                   Public = false,
                    V1Link = null,
                    Repo = GetRepo("option-php-outlook"),
                    AllowImplicitFlow = false,
@@ -398,7 +387,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 new CodeSample { /* Ruby */
                    Name="My Ruby App",
                    RedirectUri="http://localhost:3000/auth/microsoft_v2_auth/callback",
-                   Public = false,
                    V1Link = null,
                    Repo = GetRepo("option-node-outlook"),
                    AllowImplicitFlow = false,
@@ -407,7 +395,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 new CodeSample { /* UWP */
                    Name="My UWP App",
                    RedirectUri="http://localhost:8000",
-                   Public = true,
                    V1Link = "https://github.com/microsoftgraph/uwp-csharp-connect-rest-sample/tree/last_v1_auth",
                    Repo = GetRepo("option-windowsuniversal-outlook"),
                    AllowImplicitFlow = false,
@@ -416,7 +403,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 new CodeSample { /* UWP SDK*/
                    Name="My UWP App",
                    RedirectUri="http://localhost:8000",
-                   Public = true,
                    V1Link = "https://github.com/microsoftgraph/uwp-csharp-connect-rest-sample/tree/last_v1_auth",
                    Repo = GetRepo("option-windowsuniversal-sdk-outlook"),
                    AllowImplicitFlow = false,
@@ -425,7 +411,6 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
                 new CodeSample { /* Xamarin */
                    Name="My Xamarin App",
                    RedirectUri="http://localhost:8000",
-                   Public = true,
                    V1Link = "https://azure.microsoft.com/en-us/documentation/articles/active-directory-devquickstarts-xamarin",
                    Repo = GetRepo("option-windowsuniversal-outlook"),
                    AllowImplicitFlow = false,

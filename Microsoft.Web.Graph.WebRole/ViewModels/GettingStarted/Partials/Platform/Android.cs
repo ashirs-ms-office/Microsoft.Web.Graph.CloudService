@@ -16,6 +16,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                 Icon = Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_android_grey_34x41.png"),
                 Name = Resources.GettingStarted.Index.PLATFORM_NAME_ANDROID,
                 Alt = "Android",
+                Public = true,
                 PostDownloadInstruction = new Instruction
                 {
                     Description = Resources.GettingStarted.Index.POST_DOWNLOAD_INSTRUCTION_ANDROID,
@@ -30,7 +31,8 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "Android")
                 },
                 AppRegistrationInstruction = AppRegistrationInstructionViewModel.GetInstructionForMobilePlatform(),
-                CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("O365-Android-Connect-outlook") }
+                SDKCodeSample = CodeSampleFactory.Instance.GetCodeSample("O365-Android-Connect-outlook"),
+
             };
         }
     }

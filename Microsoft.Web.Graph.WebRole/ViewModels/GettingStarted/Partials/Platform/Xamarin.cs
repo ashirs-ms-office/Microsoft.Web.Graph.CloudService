@@ -24,6 +24,7 @@
                 Icon = Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_xamarin_grey_.png"),
                 Name = "Xamarin",
                 Alt = "Xamarin",
+                Public = true,
                 PostDownloadInstruction = new Instruction
                 {
                     Description = Resources.GettingStarted.Index.POST_DOWNLOAD_INSTRUCTION_DOTNET,
@@ -38,7 +39,7 @@
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "Xamarin")
                 },
                 AppRegistrationInstruction = AppRegistrationInstructionViewModel.GetInstructionForMobilePlatform(),
-                CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("Xamarin-Connect-outlook") }
+                SDKCodeSample = CodeSampleFactory.Instance.GetCodeSample("Xamarin-Connect-outlook")
             };
         }
     }

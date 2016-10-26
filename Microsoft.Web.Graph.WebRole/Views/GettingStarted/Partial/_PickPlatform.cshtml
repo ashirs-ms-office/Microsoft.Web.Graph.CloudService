@@ -58,7 +58,7 @@
                     <label id="redirectUriLabel" class="" title="The URI to which we will redirect in response to an OAuth 2.0 request." for="redirectUri">Redirect URI <i class="fa fa-question-circle"></i> :</label>
                     <input readonly id="redirectUriField" class="form-control" type="text" name="redirectUri" value="FILLER2" /> @*TODO: add redirect from querystring. was value="@Model.redirectUri" *@
                     <div id="redirect-uri-error-div" class="ms-font-color-error ms-font-l"></div>
-                </div>S
+                </div>
             </form>
         </div>
     </div>
@@ -80,11 +80,11 @@
                         <div id="redirect-uri-error-div" class="ms-font-color-error ms-font-l"></div>
                     </div>
                 </div>
-                <button class="download-button" type="button" value="Download starter project" id="downloadCodeSampleButtonSdk" onclick="registerAppParams.clientSecret = $('#appPasswordField').val(); codeSamplePackageAndDownload(getPlatformInfo(platformId).CodeSample[0].Repo, registerAppParams.clientId, registerAppParams.clientSecret, registerAppParams.redirectUri, registerAppParams.signonUri, true); setAllSetDiv();">
+                <button class="download-button" type="button" value="Download starter project" id="downloadCodeSampleButtonSdk" onclick="registerAppParams.clientSecret = $('#appPasswordField').val(); codeSamplePackageAndDownload(getPlatformInfo(platformId).SDKCodeSample.Repo, registerAppParams.clientId, registerAppParams.clientSecret, registerAppParams.redirectUri, registerAppParams.signonUri, true); setAllSetDiv();">
                     @Model.DownloadSdkCodeSample&nbsp;&nbsp;
                     @*<img class="img-white-foreground" src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_downloadarrow_22x22.png") alt="download" />*@
                 </button>
-                <button class="download-button" type="button" value="Download starter project" id="downloadCodeSampleButtonRest" onclick="registerAppParams.clientSecret = $('#appPasswordField').val(); codeSamplePackageAndDownload(getPlatformInfo(platformId).CodeSample[1].Repo, registerAppParams.clientId, registerAppParams.clientSecret, registerAppParams.redirectUri, registerAppParams.signonUri, false); setAllSetDiv();">
+                <button class="download-button" type="button" value="Download starter project" id="downloadCodeSampleButtonRest" onclick="registerAppParams.clientSecret = $('#appPasswordField').val(); codeSamplePackageAndDownload(getPlatformInfo(platformId).RestCodeSample.Repo, registerAppParams.clientId, registerAppParams.clientSecret, registerAppParams.redirectUri, registerAppParams.signonUri, false); setAllSetDiv();">
                     @Model.DownloadRestCodeSample&nbsp;&nbsp;
                     @*<img class="img-white-foreground" src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_downloadarrow_22x22.png") alt="download" />*@
                 </button>
@@ -97,4 +97,23 @@
     <div id="write-code-from-scratch" hidden></div>
     <div id="suggestionlistId" hidden></div>
     <div id="post-download-instructions" hidden class="note"></div>
+</div>
+
+<div class="card" id="next-step" name="6. More resources">
+    <h1>More Resources</h1>
+    <div>
+        <button class="resourceOption col-xs-12 col-sm-4 col-md-4" onclick="window.open('http://graph.microsoft.io/docs');">
+            <img class="img-responsive imgGS imgSelectApp" src=@Microsoft.Web.Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_reference_70x56.png") alt="Microsoft Graph Documenation" />
+            <h4>Microsoft Graph Documentation</h4>
+        </button>
+        <button class="resourceOption col-xs-12 col-sm-4 col-md-4" onclick="window.open('http://graph.microsoft.io/code-samples-and-sdks');">
+            <img class="img-responsive imgGS imgSelectApp" src=@Microsoft.Web.Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_morecodesamples_56x56.png") alt="code samples" />
+            <h4>Code samples</h4>
+        </button>
+        <button class="resourceOption col-xs-12 col-sm-4 col-md-4" onclick="window.open('https://apps.dev.microsoft.com/');">
+            <img class="img-responsive imgGS imgSelectApp" src=@Microsoft.Web.Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_azure_74x52.png") alt="Microsoft Application Registration Portal" />
+            <h4>App Registration</h4>
+        </button>
+        <div style="clear:both;"></div>
+    </div>
 </div>

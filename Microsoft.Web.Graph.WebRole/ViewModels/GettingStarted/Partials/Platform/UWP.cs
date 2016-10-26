@@ -20,6 +20,7 @@
                 Icon = Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_windows_grey_40x41.png"),
                 Name = "Universal Windows Platform",
                 Alt = "Universal Windows Platform",
+                Public = true,
                 PostDownloadInstruction = new Instruction
                 {
                     Description = Resources.GettingStarted.Index.POST_DOWNLOAD_INSTRUCTION_DOTNET,
@@ -33,11 +34,7 @@
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "Universal Windows Platform (UWP)")
                 },
                 AppRegistrationInstruction = AppRegistrationInstructionViewModel.GetInstructionForMobilePlatform(),
-                CodeSample = new CodeSample[] {
-                    CodeSampleFactory.Instance.GetCodeSample("option-windowsuniversal-sdk-outlook"),
-                    CodeSampleFactory.Instance.GetCodeSample("option-windowsuniversal-outlook")
-                }
-
+                SDKCodeSample = CodeSampleFactory.Instance.GetCodeSample("option-windowsuniversal-outlook"),
             };
         }
     }

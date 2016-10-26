@@ -17,6 +17,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                 Icon = Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_asp_grey_40x41.png"),
                 Name = name,
                 Alt = ".NET",
+                Public = false,
                 PostDownloadInstruction = new Instruction
                 {
                     Description = Resources.GettingStarted.Index.POST_DOWNLOAD_INSTRUCTION_DOTNET,
@@ -31,7 +32,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, name)
                 },
                 AppRegistrationInstruction = AppRegistrationInstructionViewModel.GetInstructionForBackendPlatform(),
-                CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("option-dotnet-mail-api") }
+                SDKCodeSample = CodeSampleFactory.Instance.GetCodeSample("option-dotnet-mail-api")
 
             };
         }

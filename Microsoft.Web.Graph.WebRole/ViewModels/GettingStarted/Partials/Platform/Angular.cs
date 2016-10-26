@@ -16,6 +16,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                 Icon = Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_angular_grey_40x41.png"),
                 Name = "Angular",
                 Alt = "Angular",
+                Public = true,
                 PostDownloadInstruction = new Instruction
                 {
                     Description = Resources.GettingStarted.Index.POST_DOWNLOAD_INSTRUCTION_ANGULAR,
@@ -30,7 +31,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "Angular")
                 },
                 AppRegistrationInstruction = AppRegistrationInstructionViewModel.GetInstructionForFrontEndPlatform(),
-                CodeSample = new CodeSample[] { CodeSampleFactory.Instance.GetCodeSample("option-angular-outlook") }
+                RestCodeSample = CodeSampleFactory.Instance.GetCodeSample("option-angular-outlook")
             };
         }
     }

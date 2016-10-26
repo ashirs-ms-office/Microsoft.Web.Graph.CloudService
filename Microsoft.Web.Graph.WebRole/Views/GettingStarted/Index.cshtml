@@ -1,16 +1,6 @@
 ﻿@model Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.GettingStartedViewModel
 
 @{
-    //if (!Request.IsLocal && !Request.IsSecureConnection)
-    //{
-    //    var returnUrl = "https" + Uri.SchemeDelimiter + this.Request.Url.Authority + this.Request.Url.PathAndQuery;
-    //    Response.Redirect(returnUrl, false);
-    //}
-
-    //default to null in case query string changed in the session
-    Session[Graph.GettingStarted.Utils.Constants.productNameTagStr] = null;
-    Session[Graph.GettingStarted.Utils.Constants.platformNameTagStr] = null;
-
     if (string.IsNullOrEmpty(HttpContext.Current.Request.Url.Query) == false)
     {
         // Parse the query string variables into a NameValueCollection.
@@ -85,22 +75,19 @@
         //hide the banner image
         $(".banner-image").hide();
     });
-
-
-    </script>
-    <div id="main" class="container-fluid">
-        <div id="myNavBar"></div>
-        <div id="o365-progressTrackerContainer">
-            @Html.Partial("./Partial/_Intro", Model.IntroPartialViewModel)
-            @Html.Partial("./Partial/_TryOut", Model.TryOutPartialViewModel)
-            @Html.Partial("./Partial/_PickPlatform", Model.PickPlatformPartialViewModel)
-            <div id="AllSet" class="allset hidden">
-            </div>
-            <div class="sticky-bubble affix" hidden>
-                <a href="#" role="button"><font color="white">Give Feedback</font></a>
-            </div>
+</script>
+<div id="main" class="container-fluid">
+    <div id="myNavBar"></div>
+    <div id="o365-progressTrackerContainer">
+        @Html.Partial("./Partial/_Intro", Model.IntroPartialViewModel)
+        @Html.Partial("./Partial/_TryOut", Model.TryOutPartialViewModel)
+        @Html.Partial("./Partial/_PickPlatform", Model.PickPlatformPartialViewModel)
+        <div id="AllSet" class="allset hidden">
         </div>
-        <i style="font-size:10px; color:black;">* The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.</i>
+        <div class="sticky-bubble affix" hidden>
+            <a href="#" role="button"><font color="white">Give Feedback</font></a>
+        </div>
     </div>
+    <i style="font-size:10px; color:black;">* The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.</i>
+</div>
     <div class="spacer40"></div>
-    <div id="rating"></div>

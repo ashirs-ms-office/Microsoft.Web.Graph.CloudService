@@ -9,6 +9,7 @@ function getPlatformInfo(platformId) {
     }
     return window.platformData[index];
 }
+
 function setDocumentationDivForPlatform(platformId, fileType, divName) {
     var platformInfo = getPlatformInfo(platformId);
     var html = '<h1>' + platformInfo.PreDownloadInstruction.Title + '</h1>';
@@ -70,14 +71,6 @@ function startCodingContentDisplay(selectedItem) {
     $(selectedItem).addClass("selected");
 }
 
-function sendPlatformInfoToServer(platformId)
-{
-    //todo: ashirs, check if setcookie is required
-    //setCookie("platform", platformId);
-    ga('send', 'event', 'O365path-Rest', 'Setup-' + platformId);
-    MscomCustomEvent('ms.InteractionType', '4', 'ms.controlname', 'O365apis', 'ms.ea_action', 'SelectPlatform', 'ms.contentproperties', platformId);
-}
-
 function selectPlatform(platform, product) {
     // restore previous selected icon's image
     if (selectPlatform.FirstTime != true) {
@@ -124,26 +117,6 @@ function selectPlatform(platform, product) {
     
     $('#post-download-instructions').hide();
 
-    //Hide secret-needed note if on mobile
-    if (getPlatformInfo(platformId).CodeSample[0].Public == true) {
-        $("#secretNeededMessage").hide();
-    } else {
-        $("#secretNeededMessage").show();
-    }
-
-    //show or hide link to v1 authentication model
-    var v1Link = getPlatformInfo(platformId).CodeSample[0].V1Link;
-    if (v1Link) {
-        $("#mobileMessage").show();
-        $("#mobileFirstMessage").show();
-        //$("#v1Link").href = v1link;
-        $("#v1Link").attr('href', v1Link);
-        console.log($("#v1Link").href);
-    } else {
-        $("#mobileMessage").hide();
-        $("#mobileFirstMessage").hide();
-        $("#v1Link").attr('href','#');
-    }
 
     if (selectPlatform.FirstTime == true) {
         cardTracker.removeBlockingCard(false);
@@ -152,8 +125,6 @@ function selectPlatform(platform, product) {
 
     //fileType = setupFile //Hardcoded as this will not chnage ; divName is also Hardcoded
     setDocumentationDivForPlatform(platformId, "setupFile", "ShowDocumentationDiv");
-
-    sendPlatformInfoToServer(platformId); 
 }
 
 // add a static proeprty in selectPlatform

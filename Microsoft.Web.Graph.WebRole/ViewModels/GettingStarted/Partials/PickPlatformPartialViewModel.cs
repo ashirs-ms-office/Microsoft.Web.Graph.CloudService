@@ -22,10 +22,12 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials
         public Instruction AppRegistrationInstruction { get; set; }
         public string GitHubMDFileName { get; set; }
 
-        public CodeSample [] CodeSample { get; set; }
+        public bool Public { get; set; }
+        public CodeSample  SDKCodeSample { get; set; }
+        public CodeSample RestCodeSample { get; set; }
     }
-    
-   
+
+
     public class PickPlatformPartialViewModel
     {
         #region MyRegion

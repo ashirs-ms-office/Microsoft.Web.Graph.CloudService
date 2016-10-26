@@ -16,6 +16,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                 Icon = Portal.Common.RunTimeEnvironment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_ios_grey_40x41.png"),
                 Name = "iOS Objective-C",
                 Alt = "iOS",
+                Public = true,
                 PostDownloadInstruction = new Instruction
                 {
                     Description = Resources.GettingStarted.Index.POST_DOWNLOAD_INSTRUCTION_IOS_OBJECTIVE_C,
@@ -32,11 +33,7 @@ namespace Microsoft.Web.Graph.WebRole.ViewModels.GettingStarted.Partials.Platfor
                     Title = string.Format(Resources.GettingStarted.Index.PLATFORM_SETUP_TITLE_COMMON, "iOS")
                 },
                 AppRegistrationInstruction = AppRegistrationInstructionViewModel.GetInstructionForMobilePlatform(),
-                CodeSample = new CodeSample[] {
-                    CodeSampleFactory.Instance.GetCodeSample("O365-iOS-Objective-C-sdk-Connect-outlook"),
-                    CodeSampleFactory.Instance.GetCodeSample("O365-iOS-Objective-C-Connect-outlook")
-                }
-
+                SDKCodeSample = CodeSampleFactory.Instance.GetCodeSample("O365-iOS-Objective-C-sdk-Connect-outlook")
             };
         }
     }
