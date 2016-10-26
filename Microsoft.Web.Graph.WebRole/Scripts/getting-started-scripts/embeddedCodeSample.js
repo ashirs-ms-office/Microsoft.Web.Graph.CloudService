@@ -3,263 +3,6 @@ var inError = false;
 var zipHasContent = false;
 var selectedPlatformIndex = undefined; //to identify which platform is selected in reposList
 
-//repos in GitHub
-var reposList = {
-    "Repo": [
-        {
-            "Platform": "option-ios",
-            "uid": "O365-iOS-Connect-outlook",
-            "App": "outlook",
-            "CodeSampleName": "O365-iOS-Connect",
-            "Description": "This Connect sample for iOS shows how to connect your app to Office 365. Once connected, the sample shows how to send a simple service call. Comes in both Swift and Objective-C",
-            "FileName": "O365-iOS-Microsoft-Graph-Connect-master\/O365-iOS-Unified-API-Connect\/ConnectViewController.m",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "ClientSecretStringToReplace": "ENTER_CLIENTSECRET_ID_HERE_HackWillNotReplace", //TODO: check if this matters!
-            "RedirectURLStringToReplace": "ENTER_YOUR_REDIRECT_URI",
-            "SignOnURLStringToReplace": "ENTER_SIGNON_URI_HERE_HackWillNotReplace", //TODO: check if this matters!
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples/O365-iOS-Microsoft-Graph-Connect-master.zip",
-            "GitHubRepoName": "O365-iOS-Microsoft-Graph-Connect",
-            "GitHubMasterZipUrl": "https://github.com/OfficeDev/O365-iOS-Microsoft-Graph-Connect/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/OfficeDev/O365-iOS-Microsoft-Graph-Connect"
-        },
-        {
-            "Platform": "option-android",
-            "uid": "O365-Android-Connect-outlook",
-            "App": "outlook",
-            "CodeSampleName": "O365-Android-Connect",
-            "Description": "This Connect sample for Android shows you how to connect your app to Office 365. It also demonstrates how to issue a simple service call, like sending an email.",
-            "FileName": "O365-Android-Microsoft-Graph-Connect-master\/app\/src\/main\/java\/com\/microsoft\/office365\/connectmicrosoftgraph\/Constants.java",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "ClientSecretStringToReplace": "ENTER_CLIENTSECRET_ID_HERE_HackWillNotReplace", //TODO: check if this matters!
-            "RedirectURLStringToReplace": "ENTER_YOUR_REDIRECT_URI",
-            "SignOnURLStringToReplace": "ENTER_SIGNON_URI_HERE_HackWillNotReplace", //TODO: check if this matters!
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/O365-Android-Microsoft-Graph-Connect-master.zip",
-            "GitHubRepoName": "O365-Android-Microsoft-Graph-Connect",
-            "GitHubMasterZipUrl": "https://github.com/OfficeDev/O365-Android-Microsoft-Graph-Connect/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/OfficeDev/O365-Android-Microsoft-Graph-Connect"
-        },
-        {
-            "Platform": "option-dotnet",
-            "uid": "option-dotnet-mail-api",
-            "App": "outlook",
-            "CodeSampleName": "DotNet-tutorial", /* we need to add name */
-            "Description": "An ASP.NET MVC tutorial for using the Mail API. ",
-            "FileName": "O365-AspNetMVC-Microsoft-Graph-Connect-master\/UnifiedApiConnect\/Web.config",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "ClientSecretStringToReplace": "ENTER_YOUR_SECRET",
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/O365-AspNetMVC-Microsoft-Graph-Connect-master.zip",
-            "GitHubRepoName": "O365-AspNetMVC-Microsoft-Graph-Connect",
-            "GitHubMasterZipUrl": "https://github.com/OfficeDev/O365-AspNetMVC-Microsoft-Graph-Connect/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/OfficeDev/O365-AspNetMVC-Microsoft-Graph-Connect"
-        },
-        {
-            "Platform": "option-php",
-            "uid": "option-php-outlook",
-            "App": "outlook",
-            "CodeSampleName": "Simple PHP tutorial",
-            "Description": "A simple tutorial for creating a PHP app that uses the Outlook Mail API",
-            "FileName": "php-connect-rest-sample-master\/src\/Constants.php",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "ClientSecretStringToReplace": "ENTER_YOUR_SECRET",            
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/php-connect-rest-sample-master.zip",
-            "GitHubRepoName": "php-connect-rest-sample",
-            "GitHubMasterZipUrl": "https://github.com/microsoftgraph/php-connect-rest-sample/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/microsoftgraph/php-connect-rest-sample.git"
-        },
-        {
-            "Platform": "option-node",
-            "uid": "option-node-outlook",
-            "CodeSampleName": "Simple Node.js tutorial",
-            "Description": "A simple Node.js tutorial to use the Mail API.",
-            "App": "outlook",
-            "FileName": "nodejs-connect-rest-sample-master\/authHelper.js",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "ClientSecretStringToReplace": "ENTER_YOUR_SECRET",
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/nodejs-connect-rest-sample-master.zip",
-            "GitHubRepoName": "nodejs-connect-rest-sample",
-            "GitHubMasterZipUrl": "https://github.com/microsoftgraph/nodejs-connect-rest-sample/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/microsoftgraph/nodejs-connect-rest-sample.git"
-        },
-        {
-            "Platform": "option-python",
-            "uid": "option-python-outlook",
-            "CodeSampleName": "Simple Python tutorial",
-            "Description": "A simple tutorial for creating a Python app that uses the Outlook Mail API.",
-            "App": "outlook",
-            "FileName": "O365-Python-Microsoft-Graph-Connect-master\/connect\/config.py",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "ClientSecretStringToReplace": "ENTER_YOUR_SECRET",
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/O365-Python-Microsoft-Graph-Connect-master.zip",
-            "GitHubRepoName": "O365-Python-Microsoft-Graph-Connect",
-            "GitHubMasterZipUrl": "https://github.com/OfficeDev/O365-Python-Microsoft-Graph-Connect/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/OfficeDev/O365-Python-Microsoft-Graph-Connect"
-        },
-        {
-            "Platform": "option-ruby",
-            "uid": "option-ruby-outlook",
-            "CodeSampleName": "O365-tutorial",
-            "Description": "A simple guide to writing your first Ruby on Rails app using the Outlook Mail API.", /* we need to add description */
-            "App": "outlook",
-            "FileName": "ruby-connect-rest-sample-master\/config\/environment.rb",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "ClientSecretStringToReplace": "ENTER_YOUR_SECRET",
-            "TenantNameToReplace": "ENTER_YOUR_TENANT",
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/ruby-connect-rest-sample-master.zip",
-            "GitHubRepoName": "ruby-connect-rest-sample",
-            "GitHubMasterZipUrl": "https://github.com/microsoftgraph/ruby-connect-rest-sample.git",
-            "GitHubRepoUrl": "https://github.com/microsoftgraph/ruby-connect-rest-sample.git"
-        },
-        {
-            "Platform": "option-angular",
-            "uid": "option-angular-outlook",            
-            "App": "outlook",
-            "FileName": "angular-connect-rest-sample-master\/public\/scripts\/config.js",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/angular-connect-rest-sample-master.zip",
-            "GitHubRepoName": "angular-connect-rest-sample",
-            "GitHubMasterZipUrl": "https://github.com/microsoftgraph/angular-connect-rest-sample/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/microsoftgraph/angular-connect-rest-sample.git"
-        },
-        {
-            "Platform": "option-windowsuniversal",
-            "uid": "option-windowsuniversal-outlook",            
-            "App": "outlook",
-            "FileName": "uwp-csharp-connect-rest-sample-master\/O365-UWP-Unified-API-Connect\/App.xaml",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "TenantNameToReplace": "ENTER_YOUR_TENANT",
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/uwp-csharp-connect-rest-sample-master.zip",
-            "GitHubRepoName": "uwp-csharp-connect-rest-sample",
-            "GitHubMasterZipUrl": "https://github.com/microsoftgraph/uwp-csharp-connect-rest-sample/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/microsoftgraph/uwp-csharp-connect-rest-sample.git"
-        },
-        {
-            "Platform": "option-windowsuniversal-sdk",
-            "uid": "option-windowsuniversal-sdk-outlook",
-            "App": "outlook",
-            "FileName": "uwp-csharp-connect-sample-master\/Microsoft-Graph-UWP-Connect-SDK\/App.xaml",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "TenantNameToReplace": "ENTER_YOUR_TENANT",
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/uwp-csharp-connect-sample-master.zip",
-            "GitHubRepoName": "uwp-csharp-connect-sample",
-            "GitHubMasterZipUrl": "https://github.com/microsoftgraph/uwp-csharp-connect-sample/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/microsoftgraph/uwp-csharp-connect-sample.git"
-        },
-        {
-            "Platform": "option-dotnet-sdk",
-            "uid": "option-dotnet-sdk-mail-api",
-            "App": "outlook",
-            "FileName": "aspnet-connect-sample-master\/Microsoft Graph SDK ASPNET Connect\/Microsoft Graph SDK ASPNET Connect\/Web.config",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "TenantNameToReplace": "ENTER_YOUR_TENANT",
-            "ClientSecretStringToReplace": "ENTER_YOUR_SECRET",
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/aspnet-connect-sample-master.zip",
-            "GitHubRepoName": "aspnet-connect-sample-master",
-            "GitHubMasterZipUrl": "https://github.com/microsoftgraph/aspnet-connect-sample/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/microsoftgraph/aspnet-connect-sample.git"
-        },
-        {
-            "Platform": "option-android-sdk",
-            "uid": "option-android-sdk-outlook",
-            "App": "outlook",
-            "FileName": "android-java-connect-sample-master\/app\/src\/main\/java\/com\/microsoft\/graph\/connect\/Constants.java", //TODO
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "RedirectURLStringToReplace": "ENTER_YOUR_REDIRECT_URI",
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/android-java-connect-sample-master.zip",
-            "GitHubRepoName": "android-java-connect-sample",
-            "GitHubMasterZipUrl": "https://github.com/microsoftgraph/android-java-connect-sample/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/microsoftgraph/android-java-connect-sample.git"
-        },
-        {
-            "Platform": "option-ios-swift-sdk",
-            "uid": "O365-iOS-Swift-sdk-Connect-outlook",
-            "App": "outlook",
-            "FileName": "ios-swift-connect-sample-master\/Graph-iOS-Swift-Connect\/ApplicationConstants.swift",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/ios-swift-connect-sample-master.zip",
-            "GitHubRepoName": "ios-swift-connect-sample",
-            "GitHubMasterZipUrl": "https://github.com/microsoftgraph/ios-swift-connect-sample/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/microsoftgraph/ios-swift-connect-sample.git"
-        },
-        {
-            "Platform": "option-ios-swift",
-            "uid": "O365-iOS-Swift-Connect-outlook",
-            "App": "outlook",
-            "FileName": "ios-swift-connect-rest-sample-master\/O365-iOS-Microsoft-Graph-Connect-Swift\/AuthenticationConstants.swift",
-            "ClientIdStringToReplace": "ENTER_CLIENT_ID_HERE", //TODO: change?
-            "RedirectURLStringToReplace": "ENTER_REDIRECT_URI_HERE", //TODO: change?
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/ios-swift-connect-rest-sample-master.zip",
-            "GitHubRepoName": "ios-swift-connect-rest-sample",
-            "GitHubMasterZipUrl": "https://github.com/microsoftgraph/ios-swift-connect-rest-sample/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/microsoftgraph/ios-swift-connect-rest-sample.git"
-        },
-        {
-            "Platform": "option-ios-objective-c-sdk",
-            "uid": "O365-iOS-Objective-C-sdk-Connect-outlook",
-            "App": "outlook",
-            "FileName": "ios-objectivec-connect-sample-master\/O365-iOS-Microsoft-Graph-SDK\/AuthenticationConstants.m",
-            "ClientIdStringToReplace": "ENTER_CLIENT_ID_HERE", //TODO: change?
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/ios-objectivec-connect-sample-master.zip",
-            "GitHubRepoName": "ios-objectivec-connect-sample",
-            "GitHubMasterZipUrl": "https://github.com/microsoftgraph/ios-objectivec-connect-sample/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/microsoftgraph/ios-objectivec-connect-sample.git"
-        },
-        {
-            "Platform": "option-ios-objective-c",
-            "uid": "O365-iOS-Objective-C-sdk-Connect-outlook",
-            "App": "outlook",
-            "FileName": "ios-objectivec-connect-rest-sample-master\/O365-iOS-Microsoft-Graph-Connect\/ConnectViewController.m",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "RedirectURLStringToReplace": "ENTER_YOUR_REDIRECT_URI",
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/ios-objectivec-connect-rest-sample-master.zip",
-            "GitHubRepoName": "ios-objectivec-connect-rest-sample",
-            "GitHubMasterZipUrl": "https://github.com/microsoftgraph/ios-objectivec-connect-rest-sample/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/microsoftgraph/ios-objectivec-connect-rest-sample.git"
-        },
-        {
-            "Platform": "option-xamarin-sdk",
-            "uid": "Xamarin-Connect-outlook",
-            "App": "outlook",
-            "FileName": "xamarin-csharp-connect-sample-master\/XamarinConnect\/XamarinConnect\/App.cs",
-            "ClientIdStringToReplace": "ENTER_YOUR_CLIENT_ID",
-            "LocalZipFile": "\/Modules\/Graph.GettingStarted\/CodeSamples\/xamarin-csharp-connect-sample-master.zip",
-            "GitHubRepoName": "xamarin-csharp-connect-sample",
-            "GitHubMasterZipUrl": "https://github.com/microsoftgraph/xamarin-csharp-connect-sample/archive/master.zip",
-            "GitHubRepoUrl": "https://github.com/microsoftgraph/xamarin-csharp-connect-sample.git"
-        }
-    ]
-}
-
-/*
- * Searchs for list of suggestion based on the platform
- * 
- * platform=> platform to search for e.g. option-ios
- */
-function searchSampleDownloads(platform, product) {
-    var filteredRepo = $.map(reposList.Repo, function (value, index) {
-        var matchPlatform = false; var matchProduct = false;
-        matchPlatform = platform==undefined || platform==null || platform=="" ? true : value.Platform == platform;
-        matchProduct = product==undefined || product==null || product=="" ? true : value.App == product;
-        if (matchPlatform && matchProduct) {
-            return value;
-        }
-    });
-    return filteredRepo;
-}
-
-/*
- * returns the repo details  based on the uid
- * 
- * Returns the first platform match
- */
-function getRepoById(platform) {
-    for (var i = 0; i < reposList.Repo.length; ++i) {
-        if (reposList.Repo[i].Platform === platform) {
-            return reposList.Repo[i];
-        }
-    }
-    return null;
-}
-
 /*
  * The core function that downloads the code sample and embeds the client id and other details in
  * code sample
@@ -273,7 +16,7 @@ function codeSamplePackageAndDownload(repo, clientId, clientSecret, appRedirectU
     try {
         _resetFlags();
         var platformName = repo.Platform;
-        _setPlatformSelectedIndex(platformName);
+
         ga('send', 'event', 'DownloadCodeSample', 'Begin-' + platformName, platformName, 0);
 
         if (typeof navigator !== "undefined" && /(Safari\/[1-9])/.test(navigator.userAgent) && /(Chrome\/[1-9])/.test(navigator.userAgent)==false)  {
@@ -353,27 +96,12 @@ function codeSamplePackageAndDownload(repo, clientId, clientSecret, appRedirectU
             }
 }
 
-function ViewCodeSampleInGithub(platformName) {
-    var gitHubRepoLocation = "https://github.com/OfficeDev"; //onError it will redirect to Office Dev repo
-    $.each(reposList, function (key, repos) {
-        $(repos).each(function (index, repo) {
-            if (repo.Platform === platformName) {
-                gitHubRepoLocation = platform.GitHubRepoUrl;
-                return;
-            }
-        });
-    });
-    window.open(gitHubRepoLocation, "_blank");
-    ga('send', 'event', 'DownloadCodeSample', 'ViewOnGithub-' + platformName);
-    MscomCustomEvent('ms.InteractionType', '4', 'ms.controlname', 'O365apis', 'ms.ea_action', 'ViewCodeSampleOnGithub', 'ms.contentproperties', platformName);
-}
-
 
 
 //To be edited for production, elements name will be different.
 function _resetFlags() {
     inError = false; zipHasContent = false; selectedPlatformIndex = undefined;
-    }
+}
 
 //Need to improve this function to show error in UI. Show download link from GitHub if in Error.
 function _errorHandlerDownloadSample(error, repo) {
@@ -411,17 +139,6 @@ function _errorHandlerDownloadSample(error, repo) {
     }
     ga('send', 'event', 'DownloadCodeSample', 'Error-' + msg, '', 0);
     MscomCustomEvent('ms.InteractionType', '4', 'ms.controlname', 'O365apis', 'ms.ea_action', 'DownloadCodeSample-Error', 'ms.callresult', error.message);
-}
-
-function _setPlatformSelectedIndex(platformSelected) {
-    $.each(reposList, function (key, repos) {
-        $(repos).each(function (index, platform) {
-            if (platform.Platform === platformSelected) {
-                selectedPlatformIndex = index;
-                return;
-            }
-        });
-    });
 }
 
 

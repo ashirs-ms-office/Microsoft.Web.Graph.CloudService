@@ -1,6 +1,30 @@
 ﻿var previousIconId = "";
 var previousIconSrc = "";
 
+function getPlatformInfo(platformId) {
+    var index = 0;
+    for (; index < window.platformData.length; ++index) {
+        if (platformId == window.platformData[index].Id)
+            break;
+    }
+    return window.platformData[index];
+}
+function setDocumentationDivForPlatform(platformId, fileType, divName) {
+    var platformInfo = getPlatformInfo(platformId);
+    var html = '<h1>' + platformInfo.PreDownloadInstruction.Title + '</h1>';
+    html += '<p>' + platformInfo.PreDownloadInstruction.Description + '</p>';
+    document.getElementById(divName).innerHTML = html;
+    document.getElementById("app-reg-title").innerHTML = platformInfo.AppRegistrationInstruction.Title;
+    document.getElementById("app-reg-desc").innerHTML = platformInfo.AppRegistrationInstruction.Description;
+    if (platformInfo.AppRegistrationInstruction.Notes == "") {
+        document.getElementById("app-reg-notes").style.display = 'none';
+    }
+    else {
+        document.getElementById("app-reg-notes").style.display = 'block';
+        document.getElementById("app-reg-notes").innerHTML = platformInfo.AppRegistrationInstruction.Notes;
+    }
+}
+
 // it fetches the user selected platform and updates the page
 function updatePlatform(platform, product) {
     //load content
@@ -28,39 +52,6 @@ function disablePlatformSelection() {
     });
     $("#pickPlatformDisableDiv").show();
 }
-function SetAppTypeBasedOnPlatform(id) {
-    //move setup card to the top so the user can see what they just clicked
-    if (id == "option-ios" || id == "option-android" || id == "option-windowsuniversal") {
-        // update the app type in app registration
-        $("#appTypeField").val("Native App");
-        $('#redirectUriLabel').attr("title", "A URI used for additional validation of the native client app.");
-
-        //disable the items
-        $("#signOnUrlFieldGroup").hide();
-
-        //disable redirect uri field for UWP platform as the redirect uri is dynamtically generated when actually run the app. No way to know before.
-        if (id == "option-windowsuniversal") {
-            $("#redirectUriFieldGroup").hide();
-        }
-        else {
-            $("#redirectUriFieldGroup").show();
-        }
-    }
-    else {
-        $("#appTypeField").val("Web App");
-        $('#redirectUriLabel').attr("title", "The URI to which we will redirect in response to an OAuth 2.0 request.");
-
-        if (id == "option-angular") {
-            $("#signOnUrlFieldGroup").hide();
-            $("#redirectUriFieldGroup").show();
-        }
-        else {
-            
-            $("#signOnUrlFieldGroup").show();
-            $("#redirectUriFieldGroup").show();
-        }
-    }
-}
 
 function startCodingContentDisplay(selectedItem) {
     $(selectedItem).closest(".tabs").find(".selected").removeClass("selected");
@@ -77,85 +68,6 @@ function startCodingContentDisplay(selectedItem) {
 
     }
     $(selectedItem).addClass("selected");
-}
-
-//TODO: missing Android, ios swift, ios obj-C, Xamarin
-function getNameTypeAndRedirectByPlatformId(platformId) {
-    switch (platformId) {
-        case "option-ruby":
-            return { name: "My Ruby App", redirectUri: "http://localhost:3000/auth/microsoft_v2_auth/callback", public: false };
-            break;
-        case "option-node":
-            return { name: "My Node.js App", redirectUri: "http://localhost:3000/login", public: false };
-            break;
-        case "option-php":
-            return { name: "My PHP App", redirectUri: "http://localhost:8000/oauth.php", public: false };
-            break;
-        case "option-dotnet":
-            return { name: "My ASP.NET App", redirectUri: "http://localhost:55065", public: false };
-            break;
-            //127.0.0.1 is used to avoid issues with IE
-        case "option-angular":
-            return { name: "My Angular App", redirectUri: "http://localhost:8080/login", public: true }; //Note: not mobile, but uses an SPA that uses the Implicit Auth Flow
-            break;
-        case "option-python":
-            return { name: "My Python App", redirectUri: "http://127.0.0.1:8000/connect/get_token/", public: false };
-            break;
-        case "option-windowsuniversal":
-            return { name: "My Win-Universal App", redirectUri: "http://localhost:8000", public: true, v1Link: "https://github.com/microsoftgraph/uwp-csharp-connect-rest-sample/tree/last_v1_auth" };
-            break;
-        case "option-android":
-            return { name: "My Android App", redirectUri: "http://localhost:8000", public: true, v1Link: "https://github.com/microsoftgraph/android-java-connect-sample/tree/last_v1_auth" };
-            break;
-        case "option-ios-swift":
-            return { name: "My iOS Swift App", redirectUri: "http://localhost:8000", public: true, v1Link: "https://github.com/microsoftgraph/ios-swift-connect-rest-sample" };
-            break;
-        case "option-ios-objective-c":
-            return { name: "My iOS Objective C App", redirectUri: "http://localhost:8000", public: true, v1Link: "https://github.com/microsoftgraph/ios-objectivec-connect-rest-sample" };
-            break;
-        case "option-xamarin":
-            return { name: "My Xamarin App", redirectUri: "http://localhost:8000", public: true, v1Link: "https://azure.microsoft.com/en-us/documentation/articles/active-directory-devquickstarts-xamarin" };
-            break;
-        default:
-            return { name: "My Sample App", redirectUri: "http://localhost:8000", public: false };
-    }
-}
-
-function setRedirectUri(platformId) {
-    switch (platformId) {
-        case "option-ruby":
-            $("#redirectUriField").val("http://localhost:3000/auth/azureactivedirectory/callback");
-            $("#signOnUrlField").val("http://localhost:3000");
-            break;
-        case "option-node":
-            $("#redirectUriField").val("http://localhost:3000/login");
-            $("#signOnUrlField").val("http://localhost:3000");
-            break;
-        case "option-php":
-            $("#redirectUriField").val("http://localhost:8000/callback.php");
-            $("#signOnUrlField").val("http://localhost:8000");
-            break;
-        case "option-dotnet":
-            $("#redirectUriField").val("http://localhost:55065");
-            $("#signOnUrlField").val("http://localhost:55065");
-            break;
-        //127.0.0.1 is used to avoid issues with IE
-        case "option-angular":
-            $("#redirectUriField").val("http://127.0.0.1:8080/");
-            $("#signOnUrlField").val("http://127.0.0.1:8080/");
-            break;
-        case "option-python":
-            $("#redirectUriField").val("http://127.0.0.1:8000/connect/get_token/");
-            $("#signOnUrlField").val("http://127.0.0.1:8080/");
-            break;
-        case "option-windowsuniversal":
-            $("#redirectUriField").val("");
-            $("#signOnUrlField").val("");
-            break;
-        default:
-            $("#redirectUriField").val("http://localhost:8000");
-            $("#signOnUrlField").val("http://localhost:8000");
-    }
 }
 
 function sendPlatformInfoToServer(platformId)
@@ -213,14 +125,14 @@ function selectPlatform(platform, product) {
     $('#post-download-instructions').hide();
 
     //Hide secret-needed note if on mobile
-    if (getNameTypeAndRedirectByPlatformId(platformId).public == true) {
+    if (getPlatformInfo(platformId).CodeSample[0].Public == true) {
         $("#secretNeededMessage").hide();
     } else {
         $("#secretNeededMessage").show();
     }
 
     //show or hide link to v1 authentication model
-    var v1Link = getNameTypeAndRedirectByPlatformId(platformId).v1Link;
+    var v1Link = getPlatformInfo(platformId).CodeSample[0].V1Link;
     if (v1Link) {
         $("#mobileMessage").show();
         $("#mobileFirstMessage").show();
@@ -233,10 +145,6 @@ function selectPlatform(platform, product) {
         $("#v1Link").attr('href','#');
     }
 
-    //platformName = platform.innerText;
-    //save this platform info  on server
-  //  SetAppTypeBasedOnPlatform(platformId);
-  //  setRedirectUri(platformId);
     if (selectPlatform.FirstTime == true) {
         cardTracker.removeBlockingCard(false);
         selectPlatform.FirstTime = false;
@@ -245,22 +153,7 @@ function selectPlatform(platform, product) {
     //fileType = setupFile //Hardcoded as this will not chnage ; divName is also Hardcoded
     setDocumentationDivForPlatform(platformId, "setupFile", "ShowDocumentationDiv");
 
-    sendPlatformInfoToServer(platformId);
-
-    //Uncomment this to re-add mutliple downloads
-    //_SetupProject.cshtml will also need to have the existing button commented out
-    //addSuggestions("suggestionlistId", platformId, product);    
-}
-
-function hidePlatformsWithoutSamples(product) {
-    if (product !== null && product != "") {
-        $("#pickPlatform div button a").each(function () {
-            var platform = $(this).attr("id");
-            var found = searchSampleDownloads(platform, product);
-            $(this).toggle(found.length > 0);
-        });
-        //TODO: What to do if no samples exist?
-    }
+    sendPlatformInfoToServer(platformId); 
 }
 
 // add a static proeprty in selectPlatform

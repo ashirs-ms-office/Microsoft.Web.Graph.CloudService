@@ -287,10 +287,8 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\getting-started-scripts\browserInfo.js" />
     <Content Include="Scripts\getting-started-scripts\embeddedCodeSample.js" />
     <Content Include="Scripts\getting-started-scripts\FileSaver.js" />
-    <Content Include="Scripts\getting-started-scripts\gettingStarted.js" />
     <None Include="Scripts\getting-started-scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\getting-started-scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\getting-started-scripts\jquery.json-view.min.js" />
@@ -303,7 +301,6 @@
     <Content Include="Scripts\getting-started-scripts\tryitout.js" />
     <Content Include="Scripts\getting-started-scripts\userPlatformManager.js" />
     <Content Include="Scripts\getting-started-scripts\Utils.js" />
-    <Content Include="Scripts\getting-started-scripts\websiteContent.js" />
     <Content Include="Scripts\graph-explorer-scripts\ace.js" />
     <Content Include="Scripts\graph-explorer-scripts\adal-angular.js" />
     <Content Include="Scripts\graph-explorer-scripts\adal.js" />
