@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="APP_REG_SUCCESS" xml:space="preserve">
+    <value>Registration Successful!</value>
+  </data>
+  <data name="CAN_NOT_CHANGE_PLATFORM_MSG" xml:space="preserve">
+    <value>You can not change the platform once an app has been registered. To change the platform, please {0} click here{1} to start over.</value>
+  </data>
+  <data name="CODESAMPLE_DOWNLOAD" xml:space="preserve">
+    <value>Download our code sample to get going. This sample will introduce you to authentication and send an email from your acccount.</value>
+  </data>
+  <data name="CODESAMPLE_DOWNLOAD_SDK_REST" xml:space="preserve">
+    <value>Download the {0} based code sample</value>
+  </data>
+  <data name="ENTER_APPSECRET" xml:space="preserve">
+    <value>Please re-enter the App Secret that you generated and saved:</value>
+  </data>
   <data name="LETS_GO" xml:space="preserve">
     <value>Let's go</value>
   </data>
@@ -125,6 +140,9 @@
   </data>
   <data name="MS_GRAPH_QUICK_START_DESCRIPTION" xml:space="preserve">
     <value>This quick start will let you try out calls, register your app, and download a sample app that connects to data using Microsoft Graph. The sample app sends an email on a user's behalf. It will show you how to authenticate and make calls to Microsoft Graph using a school or work or a Microsoft account.</value>
+  </data>
+  <data name="NOTE" xml:space="preserve">
+    <value>Note</value>
   </data>
   <data name="ON_ERROR" xml:space="preserve">
     <value>&lt;h4&gt;Something weird has happened&lt;/h4&gt;
@@ -324,6 +342,12 @@
   </data>
   <data name="REGISTER_APP_TITLE" xml:space="preserve">
     <value>Register the sample app</value>
+  </data>
+  <data name="RETGISTER_APP_THANKS" xml:space="preserve">
+    <value>Thanks for registering your app. By the way, we also set the Redirect URI on your behalf so it can work with our code sample.</value>
+  </data>
+  <data name="START_CODING" xml:space="preserve">
+    <value>Start coding</value>
   </data>
   <data name="TRY_OUT_DESCRIPTION" xml:space="preserve">
     <value>Pick an API, try different values, and choose the Try button to see the responses from a sample tenant.</value>

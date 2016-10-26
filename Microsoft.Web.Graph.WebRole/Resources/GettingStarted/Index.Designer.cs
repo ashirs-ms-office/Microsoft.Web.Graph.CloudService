@@ -61,6 +61,51 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Registration Successful!.
+        /// </summary>
+        public static string APP_REG_SUCCESS {
+            get {
+                return ResourceManager.GetString("APP_REG_SUCCESS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can not change the platform once an app has been registered. To change the platform, please {0} click here{1} to start over..
+        /// </summary>
+        public static string CAN_NOT_CHANGE_PLATFORM_MSG {
+            get {
+                return ResourceManager.GetString("CAN_NOT_CHANGE_PLATFORM_MSG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download our code sample to get going. This sample will introduce you to authentication and send an email from your acccount..
+        /// </summary>
+        public static string CODESAMPLE_DOWNLOAD {
+            get {
+                return ResourceManager.GetString("CODESAMPLE_DOWNLOAD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Download the {0} based code sample.
+        /// </summary>
+        public static string CODESAMPLE_DOWNLOAD_SDK_REST {
+            get {
+                return ResourceManager.GetString("CODESAMPLE_DOWNLOAD_SDK_REST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please re-enter the App Secret that you generated and saved:.
+        /// </summary>
+        public static string ENTER_APPSECRET {
+            get {
+                return ResourceManager.GetString("ENTER_APPSECRET", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Let&apos;s go.
         /// </summary>
         public static string LETS_GO {
@@ -84,6 +129,15 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         public static string MS_GRAPH_QUICK_START_DESCRIPTION {
             get {
                 return ResourceManager.GetString("MS_GRAPH_QUICK_START_DESCRIPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Note.
+        /// </summary>
+        public static string NOTE {
+            get {
+                return ResourceManager.GetString("NOTE", resourceCulture);
             }
         }
         
@@ -558,6 +612,24 @@ namespace Microsoft.Web.Graph.WebRole.Resources.GettingStarted {
         public static string REGISTER_APP_TITLE {
             get {
                 return ResourceManager.GetString("REGISTER_APP_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thanks for registering your app. By the way, we also set the Redirect URI on your behalf so it can work with our code sample..
+        /// </summary>
+        public static string RETGISTER_APP_THANKS {
+            get {
+                return ResourceManager.GetString("RETGISTER_APP_THANKS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start coding.
+        /// </summary>
+        public static string START_CODING {
+            get {
+                return ResourceManager.GetString("START_CODING", resourceCulture);
             }
         }
         

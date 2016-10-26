@@ -19,9 +19,8 @@
         </div>
         <div style="clear:both;"></div>
     </div>
-
     <div id="pickPlatformDisableDiv" hidden class="yellowNote">
-        <p><strong>Note: </strong> You can not change the platform once an app has been registered. To change the platform, please <a onclick="window.location.href = window.location.href.split('?')[0];">click here</a> to start over.</p>
+        <p><strong>@Model.Note: </strong> @Model.CanNotChangePlatformMessage</p>
     </div>
 </div>
 
@@ -30,7 +29,7 @@
     </div>
 </div>
 
-<div class="card" id="register-app" name="4. Setup & Register" isblocking="false">
+<div class="card" id="register-app" name="4. Setup & Register" isblocking="true">
     <div class="ms-Grid-row">
         <div id="app-reg-title"></div>      
         <div id="app-reg-desc"class="ms-Grid-col ms-u-sm12"></div>
@@ -45,9 +44,9 @@
 </div>
 
 <div class="card-question" id="registration-successful" style="display:none">
-    <div class=""><h1>Registration Successful!</h1></div>
+    <div class=""><h1>@Model.RegistrationSuccess</h1></div>
     <div id="app-info-box">
-        <p id="registeredText">Thanks for registering your app. By the way, we also set the Redirect URI on your behalf so it can work with our code sample.</p>
+        <p id="registeredText">@Model.RegistrationThanks</p>
         <br />
         <div id="registered-form">
             <form role="form">
@@ -59,7 +58,7 @@
                     <label id="redirectUriLabel" class="" title="The URI to which we will redirect in response to an OAuth 2.0 request." for="redirectUri">Redirect URI <i class="fa fa-question-circle"></i> :</label>
                     <input readonly id="redirectUriField" class="form-control" type="text" name="redirectUri" value="FILLER2" /> @*TODO: add redirect from querystring. was value="@Model.redirectUri" *@
                     <div id="redirect-uri-error-div" class="ms-font-color-error ms-font-l"></div>
-                </div>
+                </div>S
             </form>
         </div>
     </div>
@@ -68,13 +67,13 @@
 <div class="card" id="setup-project" name="5. Code">
     <div class=""><h1>Start coding</h1></div>
     <div id="use-starter-project">
-        <p id="downloadText">Download our code sample to get going. This sample will introduce you to authentication and send an email from your acccount.</p>
+        <p id="downloadText">@Model.DownloadCodeSample</p>
         <br />
 
         <div id="registration-form">
             <form role="form">
                 <div id="app-secret-prompt">
-                    <p>Please re-enter the App Secret that you generated and saved:</p>
+                    <p>@Model.EnterAppSecret</p>
                     <div class="form-group" id="appPasswordFieldGroup">
                         @*<label id="appPasswordLabel" class="" title="The password associated with the App ID." for="appPassword">App Password <i class="fa fa-question-circle"></i> :</label>*@
                         <input id="appPasswordField" class="form-control" type="text" name="appId" placeholder="<App Secret Here>" />
@@ -82,11 +81,11 @@
                     </div>
                 </div>
                 <button class="download-button" type="button" value="Download starter project" id="downloadCodeSampleButtonSdk" onclick="registerAppParams.clientSecret = $('#appPasswordField').val(); codeSamplePackageAndDownload(getPlatformInfo(platformId).CodeSample[0].Repo, registerAppParams.clientId, registerAppParams.clientSecret, registerAppParams.redirectUri, registerAppParams.signonUri, true); setAllSetDiv();">
-                    Download the SDK based code sample&nbsp;&nbsp;
+                    @Model.DownloadSdkCodeSample&nbsp;&nbsp;
                     @*<img class="img-white-foreground" src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_downloadarrow_22x22.png") alt="download" />*@
                 </button>
                 <button class="download-button" type="button" value="Download starter project" id="downloadCodeSampleButtonRest" onclick="registerAppParams.clientSecret = $('#appPasswordField').val(); codeSamplePackageAndDownload(getPlatformInfo(platformId).CodeSample[1].Repo, registerAppParams.clientId, registerAppParams.clientSecret, registerAppParams.redirectUri, registerAppParams.signonUri, false); setAllSetDiv();">
-                    Download the REST based code sample&nbsp;&nbsp;
+                    @Model.DownloadRestCodeSample&nbsp;&nbsp;
                     @*<img class="img-white-foreground" src=@Microsoft.Web.Portal.Common.Environment.GetMediaUrl("/media/Default/GettingStarted/devOffice_getting_started_downloadarrow_22x22.png") alt="download" />*@
                 </button>
             </form>
