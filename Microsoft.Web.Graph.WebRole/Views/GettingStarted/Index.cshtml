@@ -6,7 +6,6 @@
     //    var returnUrl = "https" + Uri.SchemeDelimiter + this.Request.Url.Authority + this.Request.Url.PathAndQuery;
     //    Response.Redirect(returnUrl, false);
     //}
-    string signinError = null;
 
     //default to null in case query string changed in the session
     Session[Graph.GettingStarted.Utils.Constants.productNameTagStr] = null;
@@ -19,32 +18,10 @@
         if (qscoll.Count > 0)
         {
             ViewBag.SigninError = qscoll["error_msg"];
-            string platform = qscoll["platform"];
-            if (Graph.GettingStarted.Utils.InputValidation.isValidPlatform(platform))
-            {
-                Session[Graph.GettingStarted.Utils.Constants.platformNameTagStr] = platform;
-            }
-            else
-            {
-                Session[Graph.GettingStarted.Utils.Constants.platformNameTagStr] = null;
-            }
-
-            string product = qscoll["product"];
-            if (Graph.GettingStarted.Utils.InputValidation.isValidProduct(product))
-            {
-                Session[Graph.GettingStarted.Utils.Constants.productNameTagStr] = product;
-            }
-            else
-            {
-                Session[Graph.GettingStarted.Utils.Constants.productNameTagStr] = null;
-            }
         }
     }
 }
 @{
-    //SetMeta(httpEquiv: "X-UA-Compatible", content: "IE=edge,chrome=1");
-
-    //@Styles.Render("./Content/css");
     @Styles.Render("./Content/getting-started-styles/gettingStarted.css")
     @Styles.Render("./Content/getting-started-styles/jquery.json-view.min.css")
     @Styles.Render("https://appsforoffice.microsoft.com/fabric/1.0/fabric.min.css")
@@ -67,81 +44,46 @@
     @Scripts.Render("./Scripts/getting-started-scripts/tryitout.js")
 }
 <script>
-    //if (window.location.protocol != "https:")
-    //    window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
-</script>
-<title>Getting started with Graph APIs</title>
-
-<meta http-equiv="Pragma" name="description" content="Get started with Office 365 REST APIs.">
-
-<style>
-    <!--
-    .banner-image {
-        height: 0;
-        visibility: hidden;
-    }
-    -->
-</style>
-<script>
     var cardTracker = new CardTracker("o365-progressTrackerContainer", "myNavBar");
     var currentProduct = "@Session[Graph.GettingStarted.Utils.Constants.productNameTagStr]";  //product name passed in on querystring
     var platformId = "@Session[Graph.GettingStarted.Utils.Constants.platformNameTagStr]";  //product name passed in on querystring
     $(document).scroll(function () {
-    cardTracker.updateScroll();
-    @*feedback.updateProgress(cardTracker.lastVisibleCard(), platformId, currentProduct);*@
+        cardTracker.updateScroll();
+        @*feedback.updateProgress(cardTracker.lastVisibleCard(), platformId, currentProduct);*@
     });
-    var userDontWantToSign = false;
     $(document).ready(function () {
-    // initialize progress tracker
-    cardTracker.init(1.0);
+        // initialize progress tracker
+        cardTracker.init(1.0);
 
-    function elementIDs() { };
-    elementIDs.services = "serviceOptions";
-    elementIDs.urlValue = "urlValue";
-    elementIDs.invokeurlBtn = "invokeurlBtn";
-    elementIDs.responseBody = "responseBody";
-    elementIDs.parameterDetails = "parameterDetails";
-    elementIDs.responseBodyContainer = "parameterDetails";
+        function elementIDs() { };
+        elementIDs.services = "serviceOptions";
+        elementIDs.urlValue = "urlValue";
+        elementIDs.invokeurlBtn = "invokeurlBtn";
+        elementIDs.responseBody = "responseBody";
+        elementIDs.parameterDetails = "parameterDetails";
+        elementIDs.responseBodyContainer = "parameterDetails";
 
-    function elementClasses() { };
-    elementClasses.CodeContainer = "code-container";
+        function elementClasses() { };
+        elementClasses.CodeContainer = "code-container";
 
-    TryItOut(elementIDs, elementClasses, currentProduct);
+        TryItOut(elementIDs, elementClasses, currentProduct);
 
-    //see if we are opening a specific card
-    var urlTarget = document.location.hash;
-    if (urlTarget != "") {
-    cardTracker.showCard(urlTarget);
-    }
+        //see if we are opening a specific card
+        var urlTarget = document.location.hash;
+        if (urlTarget != "") {
+            cardTracker.showCard(urlTarget);
+        }
 
-    //attach to platform filters
-    //TBD: temp code
-    $("#pickPlatform div button").click(function () {
-    selectPlatform(this, currentProduct);
-    });
-    $('#startCoding ul li a').click(function () { startCodingContentDisplay(this) });
-    $('#post-download-instructions').hide();
+        //attach to platform filters
+        //TBD: temp code
+        $("#pickPlatform div button").click(function () {
+            selectPlatform(this, currentProduct);
+        });
+        $('#startCoding ul li a').click(function () { startCodingContentDisplay(this) });
+        $('#post-download-instructions').hide();
 
-    var tryitOutCardId = "try-it-out";
-    $('#loginLink').click(function () {
-    document.cookie = "current-card=" + tryitOutCardId + "; path=/";
-    document.cookie = "current-product=" + currentProduct + "; path=/";
-    document.cookie = "current-platform=" + platformID + "; path=/";
-    });
-
-    $('#loginLink-tocontinue').click(function () {
-    document.cookie = "current-card=" + window.location.href + "; path=/";
-    });
-    $('#app-reg-signin-later').click(function (e) {
-    e.preventDefault();
-    cardTracker.removeAllBlockingCards();
-    ga('send', 'event', 'O365path-Rest', 'Signin-Later');
-    MscomCustomEvent('ms.InteractionType', '4', 'ms.controlname', 'O365apis', 'ms.ea_action', 'Signin-Later');
-    });
-
-
-    //hide the banner image
-    $(".banner-image").hide();
+        //hide the banner image
+        $(".banner-image").hide();
     });
 
 
