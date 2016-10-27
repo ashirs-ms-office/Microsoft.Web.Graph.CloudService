@@ -90,7 +90,11 @@ $(document).ready(function () {
     $("#go-reg-app").click(function () {
         //ru = the URL which the app registration page will redirect back to
         var platformInfo = getPlatformInfo(platformId);
-        var codeSample = platformInfo.CodeSample[0];
+    
+        var codeSample = platformInfo.SDKCodeSample;
+        if (codeSample == null) {
+            codeSample = platformInfo.RestCodeSample;
+        }
         //NOTE: removing any existing querystrings from current URL. In case of bad appId, user should not be stopped from clicking "Let's Go" again without those bad querystrings being sent
         var ru = window.location.href.split('?')[0] + "?appID=_appId_&appName=_appName_&redirectUrl=" + codeSample.RedirectUri + "&platform=" + platformId;
         ru = encodeURIComponent(ru);
